@@ -14,17 +14,26 @@ export const Content = styled.div`
   justify-content: space-between;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   padding: ${({ theme }) => theme.spaces.m}px 0px;
-`;
-
-export const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+    margin: 0 ${({ theme }) => theme.spaces.m}px;
+  }
 `;
 
 export const Image = styled.img``;
 
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  margin: 0 20px;
-  color: #9497a1;
+export const ButtonTitle = styled.div`
+  margin-left: ${({ theme }) => theme.spaces.s}px;
+`;
+export const ButtonContainer = styled.div`
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+    display: none;
+  }
+`;
+export const BurgerContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  @media (min-width: ${({ theme }) => theme.endPoints.tablet}) {
+    display: none;
+  }
 `;

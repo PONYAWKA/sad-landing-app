@@ -1,21 +1,32 @@
+import play from "@/assets/icons/play.png";
 import logo from "@/assets/images/logo_blue.png";
-import { NAV_ROUTES } from "@/constants/routs";
+import { Burger } from "@/sad-components-lib/components/Burger";
 import { Button } from "@/sad-components-lib/components/Button";
 
-import { Container, Content, Image, LinkContainer, StyledLink } from "./styled";
+import { LinkElement } from "../Links";
+import {
+  BurgerContainer,
+  ButtonContainer,
+  ButtonTitle,
+  Container,
+  Content,
+  Image,
+} from "./styled";
 export const NavBar = () => {
   return (
     <Container>
       <Content>
         <Image src={logo} />
-        <LinkContainer>
-          {NAV_ROUTES.map(({ name, to, children }) => (
-            <StyledLink theme={name} to={to} key={name}>
-              {name}
-            </StyledLink>
-          ))}
-        </LinkContainer>
-        <Button>Watch video</Button>
+        <LinkElement />
+        <ButtonContainer>
+          <Button>
+            <Image src={play} />
+            <ButtonTitle>Watch the demo</ButtonTitle>
+          </Button>
+        </ButtonContainer>
+        <BurgerContainer>
+          <Burger />
+        </BurgerContainer>
       </Content>
     </Container>
   );

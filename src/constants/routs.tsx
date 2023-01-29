@@ -26,7 +26,12 @@ export const NAV_ROUTES = [
   {
     to: "/",
     name: "Pages",
-    children: null,
+    children: [
+      { name: "About Us", to: "/" },
+      { name: "About Ussdafafdasf", to: "/" },
+      { name: "About Ussdafafdas", to: "/" },
+      { name: "About Ussdafafda", to: "/" },
+    ],
   },
   {
     to: "/Elements",
