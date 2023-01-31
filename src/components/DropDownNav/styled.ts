@@ -17,7 +17,7 @@ export const MoreLinks = styled.div`
     height: ${({ theme }) => theme.spaces.so}px;
     background-image: url(${downArrow});
   }
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     padding: 0;
     font-weight: bold;
   }
@@ -26,7 +26,7 @@ interface IProps {
   visible: boolean;
 }
 export const MoreLinksBody = styled.div`
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     padding: ${({ theme }) => theme.spaces.m}px 0;
     margin: 0 ${({ theme }) => theme.spaces.m}px;
     border-bottom: 1px solid #9497a1;
@@ -42,7 +42,7 @@ export const ChildrenLinkContainer = styled.div<IProps>`
   border-radius: ${({ theme }) => theme.spaces.s}px;
   filter: drop-shadow(0px 2px 6px rgba(0, 43, 78, 0.15))
     drop-shadow(0px 1px 2px rgba(0, 43, 78, 0.3));
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     position: static;
     filter: none;
   }
@@ -70,7 +70,7 @@ export const ChildrenStyledLink = styled(Link)`
       opacity: 1;
     }
   }
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     &::after {
       transition: none;
       opacity: 1;

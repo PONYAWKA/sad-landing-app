@@ -15,7 +15,7 @@ export const Content = styled.div`
   justify-content: space-between;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   padding: ${({ theme }) => theme.spaces.m}px 0px;
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     margin: 0 ${({ theme }) => theme.spaces.m}px;
   }
 `;
@@ -26,7 +26,7 @@ export const ButtonTitle = styled.div`
   margin-left: ${({ theme }) => theme.spaces.s}px;
 `;
 export const ButtonContainer = styled.div`
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     display: none;
   }
 `;
@@ -34,7 +34,7 @@ export const BurgerContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  @media (min-width: ${({ theme }) => theme.endPoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.endPoints.tablet}px) {
     display: none;
   }
 `;

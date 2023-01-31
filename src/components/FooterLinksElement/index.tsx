@@ -7,7 +7,7 @@ import { LinkContainer, LinkTitle, List, StyledLink } from "./styled";
 export const FooterLinkElement = ({ elements, title }: IProps) => {
   const theme = useContext(ThemeContext);
 
-  const isPhone = window.screen.width < theme.spaces.tablet;
+  const isPhone = window.screen.width < theme.endPoints.tablet;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +18,7 @@ export const FooterLinkElement = ({ elements, title }: IProps) => {
   return (
     <List>
       <LinkTitle onClick={isOpenHandler}>{title}</LinkTitle>
-      <LinkContainer isOpen={isOpen}>
+      <LinkContainer isOpen={isPhone ? isOpen : true}>
         {elements.map(({ title, to }) => (
           <StyledLink to={to} key={title}>
             {title}

@@ -12,10 +12,10 @@ export const Body = styled.div`
   max-width: ${libTheme.spaces.l}px;
   width: 100%;
   justify-content: space-between;
-  @media (max-width: ${libTheme.endPoints.tablet}) {
+  @media (max-width: ${libTheme.endPoints.tablet}px) {
     flex-direction: column;
     background-color: transparent;
-    margin: 0 ${libTheme.spaces.sss}px;
+    margin: ${libTheme.spaces.sss}px;
   }
 `;
 export const Field = styled.input`
@@ -25,7 +25,7 @@ export const Field = styled.input`
   border: 0px;
   outline: none;
   padding: ${libTheme.spaces.sss}px;
-  @media (max-width: ${libTheme.endPoints.tablet}) {
+  @media (max-width: ${libTheme.endPoints.tablet}px) {
     border: 2px solid ${libTheme.colors.helperB2};
     color: ${libTheme.colors.helperB2};
     margin-bottom: ${libTheme.spaces.m}px;
@@ -36,7 +36,7 @@ export const Send = styled.button`
   padding: 0 ${libTheme.spaces.m}px;
   border: 0px;
   border-radius: ${libTheme.spaces.s}px;
-  @media (max-width: ${libTheme.endPoints.tablet}) {
+  @media (max-width: ${libTheme.endPoints.tablet}px) {
     height: ${libTheme.spaces.mmm}px;
   }
 `;

@@ -12,11 +12,13 @@ import {
   EndPageContainer,
   EndPageLine,
   EndPageLink,
+  EndPageMediaContainer,
   EndPageTitle,
   Image,
   Line,
   LinkContainer,
   MailContainer,
+  MediaContainer,
   SubscribeContainer,
   SubTitleText,
   TextBlock,
@@ -49,9 +51,14 @@ export const Footer = () => {
               Ut enim ad minima veniam, quis nostrum exercitationem ullam
               corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
             </DescriptionText>
-            <Media />
+            <MediaContainer>
+              <Media />
+            </MediaContainer>
           </Description>
           <FooterLinks />
+          <EndPageMediaContainer>
+            <Media>Follow Us</Media>
+          </EndPageMediaContainer>
         </DescriptionContainer>
         <EndPageLine />
       </Content>

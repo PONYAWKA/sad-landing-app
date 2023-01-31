@@ -25,7 +25,7 @@ const fonts = {
 };
 
 const endPoints = {
-  tablet: "767px",
+  tablet: 900,
 };
 
 export const theme = { colors, spaces, endPoints, fonts };
