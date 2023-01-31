@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import downArrow from "@/assets/icons/downArrow.png";
+
 import { IStyledProps } from "./interface";
 
 export const List = styled.div`
@@ -9,7 +11,7 @@ export const List = styled.div`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     border-bottom: 2px solid ${({ theme }) => theme.colors.helperB2};
   }
-  width: 90%;
+  width: 95%;
 `;
 
 export const StyledLink = styled(Link)`
@@ -18,17 +20,6 @@ export const StyledLink = styled(Link)`
   padding: 0;
   margin: 0;
   margin-bottom: ${({ theme }) => theme.spaces.sss}px;
-  &::after {
-    content: " ";
-    position: absolute;
-    background-image: url(${rightArrow});
-    background-repeat: no-repeat;
-    width: ${({ theme }) => theme.spaces.m}px;
-    height: ${({ theme }) => theme.spaces.ss}px;
-    margin-top: ${({ theme }) => theme.spaces.s}px;
-    margin-left: ${({ theme }) => theme.spaces.s}px;
-    opacity: 0;
-  }
 `;
 
 export const LinkContainer = styled.div<IStyledProps>`
@@ -39,5 +30,15 @@ export const LinkContainer = styled.div<IStyledProps>`
 export const LinkTitle = styled.h2`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     cursor: pointer;
+    &::after {
+      content: " ";
+      position: absolute;
+      background-image: url(${downArrow});
+      background-repeat: no-repeat;
+      width: ${({ theme }) => theme.spaces.m}px;
+      height: ${({ theme }) => theme.spaces.ss}px;
+      margin-top: ${({ theme }) => theme.spaces.sss}px;
+      right: 10%;
+    }
   }
 `;

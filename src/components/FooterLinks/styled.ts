@@ -8,6 +8,5 @@ export const Body = styled.div`
   justify-content: space-around;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     flex-direction: column;
-    align-items: center;
   }
 `;
