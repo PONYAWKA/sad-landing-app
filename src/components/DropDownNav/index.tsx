@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { IProps } from "./interfaces";
 import {
   ChildrenLinkContainer,
   ChildrenStyledLink,
@@ -7,13 +8,7 @@ import {
   MoreLinksBody,
 } from "./styled";
 
-export const DropDownNav = ({
-  name,
-  routs,
-}: {
-  name: string;
-  routs: { name: string; to: string }[];
-}) => {
+export const DropDownNav = ({ name, routs }: IProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const onClickHandler = () => {

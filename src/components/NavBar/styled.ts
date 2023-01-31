@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.nav`
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;

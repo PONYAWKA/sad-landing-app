@@ -44,3 +44,76 @@ export const NAV_ROUTES = [
     children: null,
   },
 ];
+
+export const FOOTER_ROUTES = [
+  {
+    to: "Home",
+    title: "Home",
+  },
+  {
+    to: "Solutions",
+    title: "Solutions",
+  },
+  {
+    to: "Blog",
+    title: "Blog",
+  },
+  {
+    to: "Contacts",
+    title: "Contacts",
+  },
+  {
+    to: "Our team",
+    title: "Our team",
+  },
+  {
+    to: "About Us",
+    title: "About Us",
+  },
+  {
+    to: "Services",
+    title: "Services",
+  },
+  {
+    to: "FAQ",
+    title: "FAQ",
+  },
+];
+
+export const SERVICE_ROUTS = [
+  {
+    to: "",
+    title: "Pages",
+  },
+  {
+    to: "",
+    title: "Elements",
+  },
+  {
+    to: "",
+    title: "Pricing",
+  },
+  {
+    to: "",
+    title: "FAQ",
+  },
+  {
+    to: "",
+    title: "Site map",
+  },
+];
+
+export const CONTACT_INFO = [
+  {
+    to: "",
+    title: "ensome@info.co.us",
+  },
+  {
+    to: "",
+    title: "+1 601-201-5580",
+  },
+  {
+    to: "",
+    title: "1642 Washington Avenue, Jackson, MS, Mississippi, 39201",
+  },
+];

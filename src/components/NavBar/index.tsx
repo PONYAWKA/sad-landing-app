@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import play from "@/assets/icons/play.png";
 import logo from "@/assets/images/logo_blue.png";
 import { Burger } from "@/sad-components-lib/components/Burger";
@@ -13,11 +15,16 @@ import {
   Image,
 } from "./styled";
 export const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const BurgerClickHandler = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <Container>
       <Content>
         <Image src={logo} />
-        <LinkElement />
+        <LinkElement isOpen={isOpen} />
         <ButtonContainer>
           <Button>
             <Image src={play} />
@@ -25,7 +32,7 @@ export const NavBar = () => {
           </Button>
         </ButtonContainer>
         <BurgerContainer>
-          <Burger />
+          <Burger onClick={BurgerClickHandler} />
         </BurgerContainer>
       </Content>
     </Container>
