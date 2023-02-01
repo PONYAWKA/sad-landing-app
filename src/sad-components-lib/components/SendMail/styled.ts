@@ -17,6 +17,8 @@ export const Body = styled.div`
     background-color: transparent;
     margin: ${libTheme.spaces.sss}px;
   }
+  @media (max-width: ${libTheme.endPoints.fold}) {
+  }
 `;
 export const Field = styled.input`
   font-weight: bold;
@@ -29,6 +31,9 @@ export const Field = styled.input`
     border: 2px solid ${libTheme.colors.helperB2};
     color: ${libTheme.colors.helperB2};
     margin-bottom: ${libTheme.spaces.m}px;
+  }
+  @media (max-width: ${libTheme.endPoints.fold}) {
+    max-width: ${libTheme.spaces.x}px;
   }
 `;
 export const Send = styled.button`

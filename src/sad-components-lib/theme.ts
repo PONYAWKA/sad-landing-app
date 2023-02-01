@@ -14,11 +14,14 @@ const spaces = {
   m: 20,
   mm: 40,
   mmm: 60,
+  x: 100,
+  xm: 120,
   l: 500,
   maxContentWidth: 1110,
 };
 const endPoints = {
   tablet: "767px",
+  fold: "400px",
 };
 
 export const libTheme = { colors, spaces, endPoints };

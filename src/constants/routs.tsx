@@ -39,6 +39,11 @@ export const NAV_ROUTES = [
     children: null,
   },
   {
+    to: "/Blog",
+    name: "Blog",
+    children: null,
+  },
+  {
     to: "/Contacts",
     name: "Contacts",
     children: null,

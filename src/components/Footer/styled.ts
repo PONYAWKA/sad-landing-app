@@ -12,6 +12,7 @@ export const Body = styled.footer`
 export const Content = styled.div`
   align-self: center;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
+  margin: 0 ${({ theme }) => theme.spaces.m}px;
   width: 100%;
   display: flex;
   flex: 2;
@@ -116,7 +117,9 @@ export const EndPageContainer = styled.div`
 export const EndPageTitle = styled.h3`
   color: ${({ theme }) => theme.colors.helperB2};
   font-size: ${({ theme }) => theme.fonts.s}px;
-  margin-left: ${({ theme }) => theme.spaces.m}px;
+  @media (min-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    margin-left: ${({ theme }) => theme.spaces.m}px;
+  }
 `;
 
 export const EndPageLink = styled(Link)`
