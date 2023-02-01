@@ -12,6 +12,9 @@ export const Content = styled.div`
   align-self: center;
   display: flex;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    max-width: ${({ theme }) => theme.spaces.l};
+  }
 `;
 
 export const PowerContent = styled.div`
@@ -45,7 +48,7 @@ export const PowerTitle = styled.h1`
 export const PowerText = styled.h4`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.gray};
-  margin: 0 ${({ theme }) => theme.spaces.m}px;
+  margin: 0;
   max-width: ${({ theme }) => theme.spaces.xxx}px;
   align-self: center;
 `;
@@ -162,70 +165,15 @@ export const SolutionsTextText = styled.h4`
   color: ${({ theme }) => theme.colors.gray};
 `;
 
-export const SuccessContent = styled.section`
-  margin: ${({ theme }) => theme.spaces.x}px ${({ theme }) => theme.spaces.m}px;
-  max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
+export const CarouselContainer = styled.div`
   display: flex;
-  align-self: center;
-  flex-direction: column;
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    flex-direction: column;
-    max-width: ${({ theme }) => theme.spaces.l}px;
-  }
+  justify-content: center;
+  width: 100%;
+  margin: ${({ theme }) => theme.spaces.mmm}px 0;
 `;
 
-export const SuccessBody = styled.div`
+export const PriceContainer = styled.div`
+  width: 100vw;
   display: flex;
-  flex-direction: row;
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    flex-direction: column;
-    align-self: center;
-  }
-`;
-export const SuccessTitle = styled.h2`
-  text-align: center;
-  font-weight: 800;
-  margin-bottom: ${({ theme }) => theme.spaces.m}px;
-`;
-export const SuccessMetric = styled.div`
-  display: flex;
-  flex-direction: row;
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    justify-content: center;
-  }
-`;
-export const SuccessMetricElement = styled.div`
-  margin: 0 ${({ theme }) => theme.spaces.sss}px;
-`;
-export const SuccessMetricTitle = styled.div`
-  font-size: ${({ theme }) => theme.fonts.x}px;
-  color: ${({ theme }) => theme.colors.primary};
-  font-weight: 800;
-  @media (max-width: ${({ theme }) => theme.endPoints.phone}px) {
-    font-size: ${({ theme }) => theme.fonts.m}px;
-  }
-`;
-export const SuccessMetricSubTitle = styled.h6`
-  color: ${({ theme }) => theme.colors.gray};
-  font-weight: normal;
-  margin: 0;
-`;
-export const SuccessText = styled.h4`
-  color: ${({ theme }) => theme.colors.gray};
-  font-weight: normal;
-  max-width: ${({ theme }) => theme.spaces.l}px;
-  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    align-self: center;
-    text-align: center;
-  }
-`;
-export const SuccessIconsContainer = styled.div`
-  align-self: center;
-  display: flex;
-  overflow: hidden;
-`;
-export const SuccessIcon = styled.img`
-  width: 100%;
-  max-width: ${({ theme }) => theme.spaces.xm}px;
-  height: auto;
+  justify-content: center;
 `;

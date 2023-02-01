@@ -25,4 +25,7 @@ export const Content = styled.div`
   border-radius: 50%;
   border: 0.5px solid ${libTheme.colors.white};
   color: ${libTheme.colors.white};
+  &:hover {
+    background-color: ${libTheme.colors.hoverBlue};
+  }
 `;

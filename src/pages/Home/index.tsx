@@ -1,19 +1,23 @@
-import log1 from "@/assets/icons/logo_1.png";
-import log3 from "@/assets/icons/logo_3.png";
-import log4 from "@/assets/icons/logo_4.png";
-import log5 from "@/assets/icons/logo_5.png";
-import log6 from "@/assets/icons/logo_6.png";
-import log7 from "@/assets/icons/logo_7.png";
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
+
 import solutionsImage from "@/assets/images/img_9.png";
 import newestImage from "@/assets/images/img_10.png";
 import powerImage from "@/assets/images/img_11.png";
+import { Benefits } from "@/components/Home/Benefits";
+import { Price } from "@/components/Home/Price";
+import { Success } from "@/components/Home/Success";
+import { blogArticles } from "@/constants/blogs";
 import { Button } from "@/sad-components-lib/components/Button";
+import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
+import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 import { CircleButton } from "@/sad-components-lib/components/CircleButton";
 
-import { Metrics } from "./mock";
+import { ElementsToShow, Testimonials } from "./mock";
 import {
   Body,
   ButtonText,
+  CarouselContainer,
   CircleButtonContainer,
   Content,
   Image,
@@ -24,6 +28,7 @@ import {
   PowerContent,
   PowerText,
   PowerTitle,
+  PriceContainer,
   SolutionsContent,
   SolutionsImage,
   SolutionsImageMobile,
@@ -31,19 +36,13 @@ import {
   SolutionsTextContainer,
   SolutionsTextText,
   SolutionsTextTitle,
-  SuccessBody,
-  SuccessContent,
-  SuccessIcon,
-  SuccessIconsContainer,
-  SuccessMetric,
-  SuccessMetricElement,
-  SuccessMetricSubTitle,
-  SuccessMetricTitle,
-  SuccessText,
-  SuccessTitle,
 } from "./styled";
 
 export const Home = () => {
+  const theme = useContext(ThemeContext);
+  const isMobile = window.screen.width < theme.endPoints.tablet;
+  console.log(theme.endPoints.tablet);
+
   return (
     <Body>
       <Content>
@@ -108,36 +107,29 @@ export const Home = () => {
           </SolutionsText>
         </SolutionsTextContainer>
       </SolutionsContent>
-
-      <SuccessContent>
-        <SuccessTitle>
-          We provide services that guarantee your success
-        </SuccessTitle>
-        <SuccessBody>
-          <SuccessMetric>
-            {Metrics.map(({ title, sub }) => (
-              <SuccessMetricElement key={title}>
-                <SuccessMetricTitle>{title}</SuccessMetricTitle>
-                <SuccessMetricSubTitle>{sub}</SuccessMetricSubTitle>
-              </SuccessMetricElement>
-            ))}
-          </SuccessMetric>
-          <SuccessText>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptat
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quaeab illo inventore. Donec tincidunt tempor quam, non mollis quam
-            finibus nec.
-          </SuccessText>
-        </SuccessBody>
-        <SuccessIconsContainer>
-          <SuccessIcon src={log1} />
-          <SuccessIcon src={log3} />
-          <SuccessIcon src={log4} />
-          <SuccessIcon src={log5} />
-          <SuccessIcon src={log6} />
-          <SuccessIcon src={log7} />
-        </SuccessIconsContainer>
-      </SuccessContent>
+      <Success />
+      <Benefits />
+      <CarouselContainer>
+        <CarouselTeam
+          items={Testimonials.items}
+          title={Testimonials.title}
+          itemsToShow={
+            isMobile ? ElementsToShow.mobile : ElementsToShow.desktop
+          }
+        />
+      </CarouselContainer>
+      <PriceContainer>
+        <Price />
+      </PriceContainer>
+      <CarouselContainer>
+        <CarouselBlog
+          items={blogArticles}
+          title={"Our blog"}
+          itemsToShow={
+            isMobile ? ElementsToShow.mobile : ElementsToShow.desktop
+          }
+        />
+      </CarouselContainer>
     </Body>
   );
 };

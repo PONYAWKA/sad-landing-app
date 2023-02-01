@@ -5,6 +5,8 @@ const colors = {
   helperB2: "#607D94",
   gray: "#9497A1",
   white: "#FFFFFF",
+  tertiary: "#F0F9FF",
+  black: "#292D33",
 };
 
 const spaces = {
@@ -14,7 +16,10 @@ const spaces = {
   m: 20,
   mm: 40,
   mmm: 60,
+  mmmm: 80,
   x: 100,
+  xx: 200,
+  xxx: 300,
   xm: 120,
   l: 500,
   maxContentWidth: 1110,
