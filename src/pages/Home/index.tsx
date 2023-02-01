@@ -4,6 +4,7 @@ import { ThemeContext } from "styled-components";
 import solutionsImage from "@/assets/images/img_9.png";
 import newestImage from "@/assets/images/img_10.png";
 import powerImage from "@/assets/images/img_11.png";
+import { Help } from "@/components/Help";
 import { Benefits } from "@/components/Home/Benefits";
 import { Price } from "@/components/Home/Price";
 import { Success } from "@/components/Home/Success";
@@ -130,6 +131,7 @@ export const Home = () => {
           }
         />
       </CarouselContainer>
+      <Help />
     </Body>
   );
 };
