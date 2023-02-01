@@ -5,6 +5,8 @@ const colors = {
   white: "#FFFFFF",
   secondary: "#002B4E",
   primary: "#185CFF",
+  background: "#F1F6FA",
+  black: "#292D33",
 };
 const spaces = {
   s: 5,
@@ -19,8 +21,6 @@ const spaces = {
   xm: 120,
   xx: 200,
   xxx: 300,
-  xxxm: 320,
-  xxxmm: 340,
   xxxx: 400,
   l: 500,
   maxContentWidth: 1110,
@@ -32,10 +32,11 @@ const fonts = {
   x: 40,
 };
 
+const tops = { s: 240, m: 280, x: 300, xx: 340 };
 const endPoints = {
   tablet: 900,
-  phone: 400,
-  fold: 326,
+  phone: 495,
+  fold: 300,
 };
 
-export const theme = { colors, spaces, endPoints, fonts };
+export const theme = { colors, spaces, endPoints, fonts, tops };

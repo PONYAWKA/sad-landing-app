@@ -11,7 +11,7 @@ export const Body = styled.button`
   margin: 0;
   padding: ${libTheme.spaces.ss}px;
   background-color: ${libTheme.colors.blue};
-  border-radius: ${libTheme.spaces.ss}px;
+  border-radius: ${libTheme.spaces.s}px;
   color: ${libTheme.colors.white};
   box-shadow: 0px ${libTheme.spaces.s}px ${libTheme.spaces.m}px
     rgba(24, 92, 255, 0.18);

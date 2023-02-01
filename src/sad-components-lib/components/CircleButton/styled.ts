@@ -13,6 +13,7 @@ export const Body = styled.div`
   display: flex;
   justify-content: center;
   z-index: -1;
+  cursor: pointer;
 `;
 
 export const Content = styled.div`
