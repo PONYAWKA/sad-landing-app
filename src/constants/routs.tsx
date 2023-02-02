@@ -8,7 +8,7 @@ export const ROUTES = [
     element: <Home />,
   },
   {
-    path: "About",
+    path: "AboutUs",
     element: <About />,
   },
   {
@@ -77,7 +77,7 @@ export const FOOTER_ROUTES = [
     title: "Our team",
   },
   {
-    to: "About Us",
+    to: "AboutUs",
     title: "About Us",
   },
   {

@@ -1,14 +1,19 @@
 import { Help } from "@/components/Help";
 import { ServiceList } from "@/components/ServicesComponents/ServiceList";
-import { Top } from "@/components/ServicesComponents/Top";
 import { Success } from "@/components/Success";
+import { Top } from "@/components/Top";
+import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
-import { Body } from "./styled";
+import { crumbs, topConfig } from "./mock";
+import { Body, CrumbContainer } from "./styled";
 
 export const Services = () => {
   return (
     <Body>
-      <Top />
+      <CrumbContainer>
+        <BreadCrumbs {...crumbs} />
+      </CrumbContainer>
+      <Top {...topConfig} />
       <ServiceList />
       <Success />
       <Help />

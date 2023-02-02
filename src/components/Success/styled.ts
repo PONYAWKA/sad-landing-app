@@ -56,13 +56,3 @@ export const SuccessText = styled.h4`
     text-align: center;
   }
 `;
-export const SuccessIconsContainer = styled.div`
-  align-self: center;
-  display: flex;
-  overflow: hidden;
-`;
-export const SuccessIcon = styled.img`
-  width: 100%;
-  max-width: ${({ theme }) => theme.spaces.xm}px;
-  height: auto;
-`;

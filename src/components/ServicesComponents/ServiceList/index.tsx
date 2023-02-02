@@ -1,4 +1,4 @@
-import { useQuery } from "@/utils/useQuery";
+import { useQuery } from "@/hooks/useQuery";
 
 import { ServiceElement } from "../ServiceElement";
 import { servicesItems } from "./mock";

@@ -7,6 +7,7 @@ const colors = {
   primary: "#185CFF",
   background: "#F1F6FA",
   black: "#292D33",
+  red: "#C14040",
 };
 const spaces = {
   s: 5,
@@ -31,6 +32,7 @@ const fonts = {
   s: 10,
   m: 24,
   x: 40,
+  xx: 60,
 };
 
 const tops = { s: 240, m: 280, x: 300, xx: 340 };

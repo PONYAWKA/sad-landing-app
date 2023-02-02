@@ -34,7 +34,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonContent = styled.div`
-  padding: ${({ theme }) => theme.spaces.ss}px;
+  padding: ${({ theme }) => theme.spaces.s}px ${({ theme }) => theme.spaces.m}px;
   width: 100%;
 `;
 export const Text = styled.h4`

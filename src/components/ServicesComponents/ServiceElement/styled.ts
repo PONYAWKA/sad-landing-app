@@ -6,6 +6,7 @@ export const Body = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.l}px;
+  margin-bottom: ${({ theme }) => theme.spaces.mm}px;
 `;
 
 export const Icon = styled.img`

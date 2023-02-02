@@ -14,7 +14,7 @@ import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
 import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 import { CircleButton } from "@/sad-components-lib/components/CircleButton";
 
-import { ElementsToShow, Testimonials } from "./mock";
+import { ElementsToShow, SuccessConfig, Testimonials } from "./mock";
 import {
   Body,
   ButtonText,
@@ -92,9 +92,7 @@ export const Home = () => {
             <SolutionsTextTitle>
               Radically new solutions for data
             </SolutionsTextTitle>
-
             <SolutionsImageMobile src={solutionsImage} />
-
             <SolutionsTextText>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -107,7 +105,7 @@ export const Home = () => {
           </SolutionsText>
         </SolutionsTextContainer>
       </SolutionsContent>
-      <Success />
+      <Success {...SuccessConfig} />
       <Benefits />
       <CarouselContainer>
         <CarouselTeam

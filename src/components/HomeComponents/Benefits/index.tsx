@@ -1,5 +1,6 @@
 import { Card } from "@/sad-components-lib/components/Card";
 
+import { BenefitsInterface } from "./interfaces";
 import { CARDS } from "./mock";
 import {
   CardContainer,
@@ -12,12 +13,12 @@ import {
   Title,
 } from "./styled";
 
-export const Benefits = () => (
+export const Benefits = ({ title, text }: BenefitsInterface) => (
   <Container>
     <Content>
       <TextContainer>
         <Text>
-          <Title>The benefits of Ensome </Title>
+          <Title>The benefits of Ensome</Title>
           <SubTitle>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

@@ -24,9 +24,14 @@ const spaces = {
   l: 500,
   maxContentWidth: 1110,
 };
+const fonts = {
+  x: 46,
+  m: 24,
+  s: 16,
+};
 const endPoints = {
   tablet: "767px",
   fold: "400px",
 };
 
-export const libTheme = { colors, spaces, endPoints };
+export const libTheme = { colors, spaces, endPoints, fonts };
