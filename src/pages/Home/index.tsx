@@ -5,9 +5,9 @@ import solutionsImage from "@/assets/images/img_9.png";
 import newestImage from "@/assets/images/img_10.png";
 import powerImage from "@/assets/images/img_11.png";
 import { Help } from "@/components/Help";
-import { Benefits } from "@/components/Home/Benefits";
-import { Price } from "@/components/Home/Price";
-import { Success } from "@/components/Home/Success";
+import { Benefits } from "@/components/HomeComponents/Benefits";
+import { Price } from "@/components/HomeComponents/Price";
+import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
 import { Button } from "@/sad-components-lib/components/Button";
 import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
@@ -42,7 +42,6 @@ import {
 export const Home = () => {
   const theme = useContext(ThemeContext);
   const isMobile = window.screen.width < theme.endPoints.tablet;
-  console.log(theme.endPoints.tablet);
 
   return (
     <Body>

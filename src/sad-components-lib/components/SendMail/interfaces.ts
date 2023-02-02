@@ -1,5 +1,3 @@
-import { SyntheticEvent } from "react";
-
 export interface IProps {
   value?: string;
   onChange?: (e: IEvent) => void;

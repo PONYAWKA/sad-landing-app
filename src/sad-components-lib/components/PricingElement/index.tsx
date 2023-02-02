@@ -43,7 +43,6 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
   const payPalHandler = () => {
     setPayPal((prev) => !prev);
     setTimeout(() => setPayPal((prev) => !prev), 3000);
-    console.log(PayPal);
   };
 
   return (

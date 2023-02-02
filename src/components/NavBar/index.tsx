@@ -27,8 +27,6 @@ export const NavBar = () => {
     setIsOpen((prev) => !prev);
   };
 
-  console.log(isYouOpen);
-
   return (
     <Container>
       <Content>

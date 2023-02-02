@@ -32,8 +32,6 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
     });
   };
 
-  console.log(itemsLits);
-
   const isLeftActive = itemsLits - 1 >= 0;
   const isRightActive = itemsLits + 1 <= items?.length - itemsToShow;
   return (
@@ -57,7 +55,7 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
         {items
           ?.slice(itemsLits, itemsLits + itemsToShow)
           .map(({ icon, info, heading, text, id }) => (
-            <Element key={title}>
+            <Element key={id}>
               <ElementIcon src={icon} />
               <ElementText>{info}</ElementText>
               <ElementTitle>{heading}</ElementTitle>

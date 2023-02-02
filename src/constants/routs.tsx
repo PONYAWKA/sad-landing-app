@@ -1,5 +1,6 @@
 import { About } from "@/pages/About";
 import { Home } from "@/pages/Home/index";
+import { Services } from "@/pages/Services";
 export const HOME_PAGE = "";
 export const ROUTES = [
   {
@@ -7,8 +8,12 @@ export const ROUTES = [
     element: <Home />,
   },
   {
-    path: "about",
+    path: "About",
     element: <About />,
+  },
+  {
+    path: "Services",
+    element: <Services />,
   },
 ];
 
@@ -19,7 +24,7 @@ export const NAV_ROUTES = [
     children: null,
   },
   {
-    to: "/Solutions",
+    to: "Solutions",
     name: "Solutions",
     children: null,
   },
@@ -34,17 +39,17 @@ export const NAV_ROUTES = [
     ],
   },
   {
-    to: "/Elements",
+    to: "Elements",
     name: "Elements",
     children: null,
   },
   {
-    to: "/Blog",
+    to: "Blog",
     name: "Blog",
     children: null,
   },
   {
-    to: "/Contacts",
+    to: "Contacts",
     name: "Contacts",
     children: null,
   },
@@ -52,7 +57,7 @@ export const NAV_ROUTES = [
 
 export const FOOTER_ROUTES = [
   {
-    to: "Home",
+    to: "",
     title: "Home",
   },
   {

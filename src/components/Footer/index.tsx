@@ -1,4 +1,4 @@
-import { SyntheticEvent, useState } from "react";
+import { useState } from "react";
 
 import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/logo_white.png";

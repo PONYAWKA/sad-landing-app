@@ -23,6 +23,7 @@ const spaces = {
   xxx: 300,
   xxxx: 400,
   l: 500,
+  z: 700,
   maxContentWidth: 1110,
 };
 
