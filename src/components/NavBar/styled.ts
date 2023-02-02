@@ -39,3 +39,15 @@ export const BurgerContainer = styled.div`
     display: none;
   }
 `;
+
+export const YouTubeContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(41, 51, 49, 0.5);
+`;

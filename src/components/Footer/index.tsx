@@ -1,8 +1,12 @@
+import { SyntheticEvent, useState } from "react";
+
+import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/logo_white.png";
 import { FooterLinks } from "@/components/FooterLinks";
 import { Media } from "@/sad-components-lib/components/Media";
 import { SendMail } from "@/sad-components-lib/components/SendMail";
 
+import { IEvent } from "./interfaces";
 import {
   Body,
   Content,
@@ -26,6 +30,15 @@ import {
 } from "./styled";
 
 export const Footer = () => {
+  const [mail, setMail] = useState("");
+
+  const Subscribe = () => {
+    SubEmail(mail);
+  };
+
+  const onChangeHandler = (e: IEvent) => {
+    setMail(e.target.value);
+  };
   return (
     <Body>
       <Content>
@@ -38,7 +51,11 @@ export const Footer = () => {
             </SubTitleText>
           </TextBlock>
           <MailContainer>
-            <SendMail />
+            <SendMail
+              value={mail}
+              onChange={onChangeHandler}
+              onClick={Subscribe}
+            />
           </MailContainer>
         </SubscribeContainer>
       </Content>
