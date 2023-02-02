@@ -63,6 +63,7 @@ export const CardElement = styled.div`
   border-radius: ${({ theme }) => theme.spaces.s}px;
   padding: ${({ theme }) => theme.spaces.m}px;
   box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
+  margin: 0 ${({ theme }) => theme.spaces.ss}px;
   @media (min-width: ${({ theme }) => theme.endPoints.tablet}px) {
     &:nth-child(2n-1) {
       margin-bottom: 40px;

@@ -13,7 +13,7 @@ import {
   SuccessText,
   SuccessTitle,
 } from "./styled";
-export const Success = ({ text, title }: SuccessInterface) => (
+export const Success = ({ text, title, hide }: SuccessInterface) => (
   <SuccessContent>
     <SuccessTitle>{title}</SuccessTitle>
     <SuccessBody>
@@ -27,6 +27,6 @@ export const Success = ({ text, title }: SuccessInterface) => (
       </SuccessMetric>
       <SuccessText>{text}</SuccessText>
     </SuccessBody>
-    <IconsMapper Icons={Icons} />
+    {!hide && <IconsMapper Icons={Icons} />}
   </SuccessContent>
 );

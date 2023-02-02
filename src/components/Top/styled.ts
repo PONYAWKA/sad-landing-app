@@ -13,11 +13,17 @@ export const Title = styled.h6`
   color: ${({ theme }) => theme.colors.primary};
   margin: 0;
   padding: 0;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    text-align: center;
+  }
 `;
 export const Text = styled.h3`
   font-size: ${({ theme }) => theme.fonts.x}px;
   font-weight: bold;
   margin: ${({ theme }) => theme.spaces.m}px 0;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    text-align: center;
+  }
 `;
 
 export const SubText = styled.h4`

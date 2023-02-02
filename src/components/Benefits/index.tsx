@@ -18,13 +18,8 @@ export const Benefits = ({ title, text }: BenefitsInterface) => (
     <Content>
       <TextContainer>
         <Text>
-          <Title>The benefits of Ensome</Title>
-          <SubTitle>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </SubTitle>
+          <Title>{title}</Title>
+          <SubTitle>{text}</SubTitle>
         </Text>
       </TextContainer>
       <CardContainer>

@@ -4,8 +4,8 @@ import { ThemeContext } from "styled-components";
 import solutionsImage from "@/assets/images/img_9.png";
 import newestImage from "@/assets/images/img_10.png";
 import powerImage from "@/assets/images/img_11.png";
+import { Benefits } from "@/components/Benefits";
 import { Help } from "@/components/Help";
-import { Benefits } from "@/components/HomeComponents/Benefits";
 import { Price } from "@/components/HomeComponents/Price";
 import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
@@ -14,7 +14,12 @@ import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
 import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 import { CircleButton } from "@/sad-components-lib/components/CircleButton";
 
-import { ElementsToShow, SuccessConfig, Testimonials } from "./mock";
+import {
+  BenefitConfig,
+  ElementsToShow,
+  SuccessConfig,
+  Testimonials,
+} from "./mock";
 import {
   Body,
   ButtonText,
@@ -106,7 +111,7 @@ export const Home = () => {
         </SolutionsTextContainer>
       </SolutionsContent>
       <Success {...SuccessConfig} />
-      <Benefits />
+      <Benefits {...BenefitConfig} />
       <CarouselContainer>
         <CarouselTeam
           items={Testimonials.items}
