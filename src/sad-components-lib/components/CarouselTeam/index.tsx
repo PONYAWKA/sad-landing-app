@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import cLeft from "../../assets/cLeft.png";
 import cRight from "../../assets/cRight.png";
@@ -18,9 +19,10 @@ import {
   TitleButtonContainer,
   TitleContainer,
 } from "./styled";
-export const CarouselTeam = ({ title, itemsToShow = 1, items }: IProps) => {
+export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
   const [itemsLits, setItemsList] = useState(0);
 
+  const navigate = useNavigate();
   const nextHandler = () => {
     setItemsList((prev) => {
       if (prev + 1 <= items?.length - itemsToShow) return prev + 1;
@@ -32,6 +34,10 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items }: IProps) => {
       if (prev - 1 >= 0) return prev - 1;
       return prev;
     });
+  };
+
+  const onClickHandler = () => {
+    if (to) navigate(to);
   };
 
   const isLeftActive = itemsLits - 1 >= 0;
@@ -57,7 +63,7 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items }: IProps) => {
         {items
           ?.slice(itemsLits, itemsLits + itemsToShow)
           .map(({ text, pos, title, icon }) => (
-            <Element key={title}>
+            <Element key={title} onClick={onClickHandler}>
               <ElementHeader>
                 <ElementIcon src={icon} />
                 <ElementHeaderContainer>

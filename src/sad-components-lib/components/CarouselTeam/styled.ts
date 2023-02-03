@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
-import { IStyledProps } from "./interfaces";
+import { IStyledNav, IStyledProps } from "./interfaces";
 
 export const Body = styled.div`
   max-width: ${libTheme.spaces.maxContentWidth}px;
@@ -42,7 +42,8 @@ export const ElementContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Element = styled.div`
+export const Element = styled.div<IStyledNav>`
+  ${({ to }) => (to ? "cursor: pointer;" : "")};
   box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
   padding: ${libTheme.spaces.m}px;
   margin: 0 ${libTheme.spaces.sss}px;

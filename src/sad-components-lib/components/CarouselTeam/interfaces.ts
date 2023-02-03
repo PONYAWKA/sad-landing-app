@@ -1,6 +1,7 @@
 export interface IProps {
   title?: string;
   itemsToShow?: number;
+  to?: string;
   items: {
     icon: string;
     title: string;
@@ -11,4 +12,7 @@ export interface IProps {
 
 export interface IStyledProps {
   disabled?: boolean;
+}
+export interface IStyledNav {
+  to?: string;
 }

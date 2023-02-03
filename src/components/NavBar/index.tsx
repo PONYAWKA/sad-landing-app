@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 
 import play from "@/assets/icons/play.png";
@@ -27,6 +27,9 @@ export const NavBar = () => {
     setIsOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <Content>

@@ -1,14 +1,9 @@
+import { IBlogItem } from "../BlogItem/interfaces";
+
 export interface IProps {
   title?: string;
   itemsToShow?: number;
-  items: {
-    icon: string;
-    info: string;
-    heading: string;
-    text: string;
-    views: number;
-    id: string;
-  }[];
+  items: IBlogItem[];
 }
 
 export interface IStyledProps {

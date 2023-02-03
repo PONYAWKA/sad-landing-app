@@ -2,15 +2,11 @@ import { useState } from "react";
 
 import cLeft from "../../assets/cLeft.png";
 import cRight from "../../assets/cRight.png";
+import { BlogItem } from "../BlogItem";
 import { IProps } from "./interfaces";
 import {
   Body,
-  Element,
   ElementContainer,
-  ElementIcon,
-  ElementText,
-  ElementTitle,
-  StyledLink,
   Title,
   TitleButton,
   TitleButtonContainer,
@@ -52,17 +48,9 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
         </TitleButtonContainer>
       </TitleContainer>
       <ElementContainer>
-        {items
-          ?.slice(itemsLits, itemsLits + itemsToShow)
-          .map(({ icon, info, heading, text, id }) => (
-            <Element key={id}>
-              <ElementIcon src={icon} />
-              <ElementText>{info}</ElementText>
-              <ElementTitle>{heading}</ElementTitle>
-              <ElementText>{text}</ElementText>
-              <StyledLink to={`Blog/${id}`}>Read more</StyledLink>
-            </Element>
-          ))}
+        {items?.slice(itemsLits, itemsLits + itemsToShow).map((e) => (
+          <BlogItem key={e.id} {...e} />
+        ))}
       </ElementContainer>
     </Body>
   );

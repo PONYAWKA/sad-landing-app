@@ -9,5 +9,5 @@ export const About = () => {
   const isMobile = window.screen.width < theme.endPoints.tablet;
 
   if (isMobile) return <AboutMobile />;
-  else return <AboutDesktop />;
+  return <AboutDesktop />;
 };

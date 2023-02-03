@@ -11,6 +11,7 @@ export const blogArticles = [
     heading: "ISO 13485 compliance of medical devices",
     tags: ["App", "Media"],
     views: 483,
+    author: "smb",
   },
   {
     id: "1",
@@ -20,6 +21,7 @@ export const blogArticles = [
     heading: "IBusiness analysis helps you  in finance",
     tags: ["Management", "CMR"],
     views: 482,
+    author: "smb",
   },
   {
     id: "2",
@@ -29,6 +31,7 @@ export const blogArticles = [
     heading: "5 web portal examples your business can learn from",
     tags: ["Future", "CIO"],
     views: 481,
+    author: "smb",
   },
   {
     id: "3",
@@ -38,6 +41,7 @@ export const blogArticles = [
     heading: "5 web portal examples your business can learn from",
     tags: ["Big data", "Startup"],
     views: 479,
+    author: "smb",
   },
   {
     id: "4",
@@ -47,6 +51,7 @@ export const blogArticles = [
     heading: "IBusiness analysis helps you  in finance",
     tags: ["Team", "Data", "Proxy"],
     views: 476,
+    author: "smb",
   },
   {
     id: "5",
@@ -56,5 +61,6 @@ export const blogArticles = [
     heading: "ISO 13485 compliance of medical devices",
     tags: ["Data analytics", "Information security"],
     views: 474,
+    author: "smb",
   },
 ];
