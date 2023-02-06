@@ -16,11 +16,8 @@ jobs:
         with:
           node-version: 12
       
-      - name: install 
-        run: npm i
-      
       - name: Install Node.js dependencies
-        run: npm run lint
+        run: npx eslint ./src --ext .ts,.tsx
 
       
       - name: Run linters
