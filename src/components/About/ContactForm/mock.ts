@@ -4,3 +4,10 @@ export const validScheme = Yup.object().shape({
   email: Yup.string().email("Incorrect Email").required(),
   message: Yup.string(),
 });
+
+export const initialValue = {
+  name: "",
+  email: "",
+  theme: "",
+  message: "",
+};

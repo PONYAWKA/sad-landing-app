@@ -1,5 +1,6 @@
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
+import { ContactsPage } from "@/pages/ContactsPage";
 import { Home } from "@/pages/Home/index";
 import { Services } from "@/pages/Services";
 export const HOME_PAGE = "";
@@ -19,6 +20,10 @@ export const ROUTES = [
   {
     path: "Blog",
     element: <Blog />,
+  },
+  {
+    path: "Contacts",
+    element: <ContactsPage />,
   },
 ];
 

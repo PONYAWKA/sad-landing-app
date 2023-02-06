@@ -4,7 +4,7 @@ import { IContactUs } from "@/api/interfaces";
 import { Contact } from "@/api/mailAPI";
 import { Button } from "@/sad-components-lib/components/Button";
 
-import { validScheme } from "./mock";
+import { initialValue, validScheme } from "./mock";
 import {
   Body,
   ButtonContainer,
@@ -16,13 +16,6 @@ import {
   StyledForm,
   Title,
 } from "./styled";
-
-const initialValue = {
-  name: "",
-  email: "",
-  theme: "",
-  message: "",
-};
 
 export const ContactForm = () => {
   const onSubmitHandler = (e: IContactUs) => {

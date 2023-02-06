@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/PageHeader";
 
 import { Customers } from "../Customers";
 import { Description } from "../Descrip";
-import { Forma } from "../Forma";
+import { Forma } from "../Form";
 import { Numbers } from "../Numbers";
 import { firstDes, pageHeadConfig, secondDes } from "./mock";
 import { Body, PageHeaderContainer } from "./styled";
