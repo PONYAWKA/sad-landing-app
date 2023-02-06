@@ -33,6 +33,7 @@ const fonts = {
   m: 24,
   x: 40,
   xx: 60,
+  xxx: 80,
 };
 
 const tops = { s: 240, m: 280, x: 300, xx: 340 };

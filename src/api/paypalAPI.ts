@@ -1,5 +1,5 @@
 export const createPaypalOrder =
-  (price: number, type: string) => (_: any, actions: any) =>
+  (price: number, type: string) => (_: unknown, actions: any) =>
     actions.order
       .create({
         purchase_units: [
