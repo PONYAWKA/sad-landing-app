@@ -13,10 +13,10 @@ import {
   SuccessText,
   SuccessTitle,
 } from "./styled";
-export const Success = ({ text, title, hide }: SuccessInterface) => (
+export const Success = ({ text, title, hide, center }: SuccessInterface) => (
   <SuccessContent>
     <SuccessTitle>{title}</SuccessTitle>
-    <SuccessBody>
+    <SuccessBody center={center}>
       <SuccessMetric>
         {Metrics.map(({ title, sub }) => (
           <SuccessMetricElement key={title}>

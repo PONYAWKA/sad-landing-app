@@ -65,7 +65,7 @@ export const Home = () => {
           <CircleButton>Learn more</CircleButton>
         </CircleButtonContainer>
       </Content>
-      <Image src={powerImage} />
+      <Image loading="lazy" src={powerImage} />
 
       <NewestContent>
         <Newest>
@@ -91,13 +91,13 @@ export const Home = () => {
       </CircleButtonContainer>
 
       <SolutionsContent>
-        <SolutionsImage src={newestImage} />
+        <SolutionsImage loading="lazy" src={newestImage} />
         <SolutionsTextContainer>
           <SolutionsText>
             <SolutionsTextTitle>
               Radically new solutions for data
             </SolutionsTextTitle>
-            <SolutionsImageMobile src={solutionsImage} />
+            <SolutionsImageMobile loading="lazy" src={solutionsImage} />
             <SolutionsTextText>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

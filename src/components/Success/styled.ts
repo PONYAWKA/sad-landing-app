@@ -8,9 +8,10 @@ export const SuccessContent = styled.section`
   flex-direction: column;
 `;
 
-export const SuccessBody = styled.div`
+export const SuccessBody = styled.div<{ center?: boolean }>`
   display: flex;
   flex-direction: row;
+  justify-content: ${({ center }) => (center ? "center" : "")};
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     flex-direction: column;
     align-self: center;

@@ -1,7 +1,8 @@
-import { ReactNode, SyntheticEvent } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface ITagButton {
-  children?: ReactNode;
-  onClick?: (e: SyntheticEvent) => void;
+  text: string;
+  setSelected?: Dispatch<SetStateAction<string>>;
+  selected?: string;
   [index: string]: unknown;
 }

@@ -1,4 +1,4 @@
-import burger from "../../assets/burger.png";
+import burger from "../../assets/images/burger.png";
 import { IProps } from "./interfaces";
 import { Body, Line } from "./styled";
 export const Burger = ({ onClick }: IProps) => {

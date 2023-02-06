@@ -17,7 +17,7 @@ import {
   Title,
 } from "./styled";
 
-const initialVal = {
+const initialValue = {
   name: "",
   email: "",
   theme: "",
@@ -30,7 +30,7 @@ export const ContactForm = () => {
   };
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
-    initialValues: initialVal,
+    initialValues: initialValue,
     onSubmit: onSubmitHandler,
     validationSchema: validScheme,
   });

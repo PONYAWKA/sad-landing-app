@@ -5,8 +5,8 @@ import { ThemeProvider } from "styled-components";
 import { createPaypalOrder } from "@/api/paypalAPI";
 import { libTheme } from "@/sad-components-lib/theme";
 
-import bOk from "../../assets/bOk.png";
-import wOk from "../../assets/wOk.png";
+import bOk from "../../assets/images/bOk.png";
+import wOk from "../../assets/images/bOk.png";
 import { IProps } from "./interface";
 import {
   Body,
@@ -69,7 +69,7 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
           <PlusContainer>
             {plus.map((e) => (
               <PlusElement key={e}>
-                <Image src={Icon} />
+                <Image loading="lazy" src={Icon} />
                 <PlusText>{e}</PlusText>
               </PlusElement>
             ))}

@@ -68,7 +68,7 @@ export const CurrentBlog = ({
             <InfoIcon src={tagIcon} />
             Tags:
             {tags?.map((e) => (
-              <TagButton key={e}>{e}</TagButton>
+              <TagButton key={e} text={e} />
             ))}
           </InfoText>
         </InfoElement>

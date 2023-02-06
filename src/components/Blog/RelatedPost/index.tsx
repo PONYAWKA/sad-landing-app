@@ -15,7 +15,7 @@ export const RelatedPost = ({
       {items.slice(0, 3).map((e) => (
         <HorizontalBlogItem
           {...e}
-          key={e.text}
+          key={e.heading}
           hideId={hideId}
           hideText={hiedText}
         />
