@@ -33,11 +33,11 @@ export const NavBar = () => {
   return (
     <Container>
       <Content>
-        <Image src={logo} />
+        <Image loading="lazy" src={logo} />
         <LinkElement isOpen={isOpen} />
         <ButtonContainer>
           <Button onClick={youTubeHandler}>
-            <Image src={play} />
+            <Image loading="lazy" src={play} />
             <ButtonTitle>Watch the demo</ButtonTitle>
           </Button>
         </ButtonContainer>

@@ -5,6 +5,6 @@ export interface ICurrentBlog {
   text?: string;
   heading?: string;
   tags?: string[];
-  views?: number;
+  views: number;
   author?: string;
 }

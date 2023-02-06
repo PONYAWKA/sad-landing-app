@@ -23,6 +23,15 @@ export const BlogContainer = styled.div`
   grid-template-columns: 15fr 9fr;
 `;
 
+export const CategoriesContainer = styled.div`
+  margin: ${({ theme }) => theme.spaces.mm}px 0;
+`;
+
+export const Title = styled.h2`
+  font-weight: bold;
+`;
+export const TagsContainer = styled.div``;
+
 export const LeftSection = styled.div``;
 export const RightSection = styled.div``;
 

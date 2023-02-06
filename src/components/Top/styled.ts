@@ -9,7 +9,7 @@ export const Body = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Title = styled.h6`
+export const Title = styled.h5`
   color: ${({ theme }) => theme.colors.primary};
   margin: 0;
   padding: 0;

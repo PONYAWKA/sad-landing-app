@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import cLeft from "../../assets/cLeft.png";
-import cRight from "../../assets/cRight.png";
+import cLeft from "../../assets/images/cLeft.png";
+import cRight from "../../assets/images/cRight.png";
 import { IProps } from "./interfaces";
 import {
   Body,

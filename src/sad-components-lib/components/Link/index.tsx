@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
-import rightArrow from "../../assets/rightArrow.png";
+import rightArrow from "../../assets/images/rightArrow.png";
 
 export const StyledLick = styled(Link)`
   text-decoration: none;
