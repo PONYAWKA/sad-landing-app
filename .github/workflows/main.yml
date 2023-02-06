@@ -6,7 +6,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: mskelton/setup-npm@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: '16.x'
       - run: npm run lint
