@@ -36,7 +36,7 @@
     "start": "craco start",
     "build": "craco build",
     "eject": "craco eject",
-    "lint": "npx eslint ./src --ext .ts,.tsx",
+    "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "npx eslint ./src --ext .ts,.tsx --fix"
   },
   "eslintConfig": {
