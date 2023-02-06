@@ -1,28 +1,12 @@
-name: Lint
+name: 'Lint checker'
 
 on: [push]
 
 jobs:
-  run-linters:
-    name: Run linters
+  lint:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-        
+          node-version: '16.x'
       - run: npx eslint ./src --ext .ts,.tsx
-
-        
-      
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
