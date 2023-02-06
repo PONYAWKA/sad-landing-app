@@ -15,11 +15,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-
- 
+      
+      - name: install 
+        run: npm i
+      
       - name: Install Node.js dependencies
         run: npm run lint
 
+      
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
