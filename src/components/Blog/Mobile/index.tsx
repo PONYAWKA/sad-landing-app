@@ -1,4 +1,4 @@
-import { Top } from "@/components/Top";
+import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
@@ -24,7 +24,7 @@ export const BlogMobile = () => {
         <BreadCrumbs {...breadCrumb} />
       </CrumbContainer>
 
-      <Top {...headerConfig} />
+      <SecondPageHeader {...headerConfig} />
       {currentBlogInfo && <CurrentBlog {...currentBlogInfo} />}
       <BlogsContainer>
         {blogArticles.map((e) => (

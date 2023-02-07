@@ -1,7 +1,7 @@
 import { Help } from "@/components/Help";
+import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { ServiceList } from "@/components/ServicesComponents/ServiceList";
 import { Success } from "@/components/Success";
-import { Top } from "@/components/Top";
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
 import { crumbs, topConfig } from "./mock";
@@ -13,7 +13,7 @@ export const Services = () => {
       <CrumbContainer>
         <BreadCrumbs {...crumbs} />
       </CrumbContainer>
-      <Top {...topConfig} />
+      <SecondPageHeader {...topConfig} />
       <ServiceList />
       <Success center />
       <Help />

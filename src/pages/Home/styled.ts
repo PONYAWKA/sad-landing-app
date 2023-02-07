@@ -58,7 +58,7 @@ export const CircleButtonContainer = styled.div`
   height: ${({ theme }) => theme.spaces.xm}px;
   width: ${({ theme }) => theme.spaces.xm}px;
   right: 20%;
-  top: ${({ theme }) => theme.tops.xx}px;
+  top: ${({ theme }) => theme.tops.x}px;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     height: ${({ theme }) => theme.spaces.x}px;
     width: ${({ theme }) => theme.spaces.x}px;

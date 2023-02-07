@@ -1,8 +1,8 @@
 import { Benefits } from "@/components/Benefits";
 import { Help } from "@/components/Help";
 import { IconsMapper } from "@/components/IconMapper";
+import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { Success } from "@/components/Success";
-import { Top } from "@/components/Top";
 import { Icons } from "@/constants/icons";
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
@@ -22,7 +22,7 @@ export const AboutMobile = () => {
       <CrumbsContainer>
         <BreadCrumbs {...breadCrumb} />
       </CrumbsContainer>
-      <Top {...topConfig} />
+      <SecondPageHeader {...topConfig} />
       <SuccessContainer>
         <Success {...successConfig} />
       </SuccessContainer>

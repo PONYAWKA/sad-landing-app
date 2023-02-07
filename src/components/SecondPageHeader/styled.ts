@@ -9,10 +9,11 @@ export const Body = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Title = styled.h5`
+export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.primary};
   margin: 0;
   padding: 0;
+  font-weight: bold;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     text-align: center;
   }

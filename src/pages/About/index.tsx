@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { AboutDesktop } from "@/components/About/Desktop";
-import { AboutMobile } from "@/components/About/Mobile";
+import { AboutDesktop } from "@/components/About/AboutDesktop";
+import { AboutMobile } from "@/components/About/AboutMobile";
 
 export const About = () => {
   const theme = useContext(ThemeContext);

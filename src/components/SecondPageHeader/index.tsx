@@ -1,7 +1,7 @@
 import { IProps } from "./interfaces";
 import { Body, SubText, Text, Title } from "./styled";
 
-export const Top = ({ text, title, subtext }: IProps) => {
+export const SecondPageHeader = ({ text, title, subtext }: IProps) => {
   return (
     <Body>
       <Title>{text}</Title>
