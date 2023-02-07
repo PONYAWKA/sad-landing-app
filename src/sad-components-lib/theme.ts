@@ -10,6 +10,8 @@ const colors = {
 };
 
 const spaces = {
+  i: 1,
+  ii: 2,
   s: 5,
   ss: 10,
   sss: 15,
