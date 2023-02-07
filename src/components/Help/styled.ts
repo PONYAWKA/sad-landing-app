@@ -39,6 +39,7 @@ export const ButtonContent = styled.div`
 `;
 export const Text = styled.h4`
   max-width: ${({ theme }) => theme.spaces.l}px;
+  margin: ${({ theme }) => theme.spaces.m}px 0;
   font-weight: normal;
   color: ${({ theme }) => theme.colors.gray};
 `;

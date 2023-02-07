@@ -2,6 +2,7 @@ import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { ContactsPage } from "@/pages/ContactsPage";
 import { Home } from "@/pages/Home/index";
+import { OurTeamPage } from "@/pages/OurTeam";
 import { Services } from "@/pages/Services";
 export const HOME_PAGE = "";
 export const ROUTES = [
@@ -24,6 +25,10 @@ export const ROUTES = [
   {
     path: "Contacts",
     element: <ContactsPage />,
+  },
+  {
+    path: "OurTeam",
+    element: <OurTeamPage />,
   },
 ];
 
@@ -83,7 +88,7 @@ export const FOOTER_ROUTES = [
     title: "Contacts",
   },
   {
-    to: "Our team",
+    to: "OurTeam",
     title: "Our team",
   },
   {

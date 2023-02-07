@@ -7,6 +7,7 @@ import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
 import { CategoriesElement } from "@/sad-components-lib/components/CategoriesElement";
 import { Search } from "@/sad-components-lib/components/Search";
+import { IEvent } from "@/sad-components-lib/components/Search/interfaces";
 import { TagButton } from "@/sad-components-lib/components/TagButton";
 import { sortByPopular } from "@/utils/popular";
 
@@ -23,20 +24,27 @@ import {
 } from "./styled";
 
 export const BlogDesktop = () => {
-  const query = useQuery();
   const [check, setCheck] = useState("All topics");
   const [related, setRelated] = useState(blogArticles);
+  const [search, setSearch] = useState("");
+  const query = useQuery();
   const popular = blogArticles.sort(sortByPopular);
   const blog = query.get("id") as unknown as number;
   const currentBlogInfo = blogArticles[blog];
 
   useEffect(() => {
     setRelated(
-      blogArticles.filter(
-        ({ tags }) => tags.includes(check) || check === "All topics"
-      )
+      blogArticles
+        .filter(({ tags }) => tags.includes(check) || check === "All topics")
+        .filter(({ heading }) =>
+          search ? heading.toLocaleLowerCase().includes(search) : true
+        )
     );
-  }, [check]);
+  }, [check, search]);
+
+  const onChangeHandler = (e: IEvent) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <Body>
@@ -49,7 +57,11 @@ export const BlogDesktop = () => {
           <RelatedPost items={related} title="Related Post" hideId />
         </LeftSection>
         <RightSection>
-          <Search buttonText="Search" />
+          <Search
+            buttonText="Search"
+            value={search}
+            onChange={onChangeHandler}
+          />
           <RelatedPost items={popular} title="Popular posts" hiedText />
           <CategoriesContainer>
             <Title>Categories</Title>

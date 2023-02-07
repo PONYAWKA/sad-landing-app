@@ -36,7 +36,7 @@ const fonts = {
   xxx: 80,
 };
 
-const tops = { s: 240, m: 280, x: 300, xx: 340 };
+const tops = { s: 210, m: 250, x: 300, xx: 340 };
 const endPoints = {
   tablet: 900,
   phone: 495,
