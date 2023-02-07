@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import YouTube from "react-youtube";
 
 import play from "@/assets/icons/play.png";
 import logo from "@/assets/images/logo_blue.png";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Burger } from "@/sad-components-lib/components/Burger";
 import { Button } from "@/sad-components-lib/components/Button";
 
@@ -27,9 +28,8 @@ export const NavBar = () => {
     setIsOpen((prev) => !prev);
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  useScrollToTop();
+
   return (
     <Container>
       <Content>

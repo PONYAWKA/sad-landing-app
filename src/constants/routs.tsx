@@ -1,10 +1,10 @@
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { ContactsPage } from "@/pages/ContactsPage";
+import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { Services } from "@/pages/Services";
-export const HOME_PAGE = "";
 export const ROUTES = [
   {
     path: "",
@@ -29,6 +29,10 @@ export const ROUTES = [
   {
     path: "OurTeam",
     element: <OurTeamPage />,
+  },
+  {
+    path: "FAQ",
+    element: <FAQ />,
   },
 ];
 
