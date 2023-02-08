@@ -1,12 +1,21 @@
-import { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import { v4 } from "uuid";
 
-import { BlogDesktop } from "@/components/Blog/Desktop";
-import { BlogMobile } from "@/components/Blog/Mobile";
+import { DarkHeader } from "@/components/OurTeam/DarkHeader";
+import { blogArticles } from "@/constants/blogs";
+import { LinkedBlogItem } from "@/sad-components-lib/components/LinkedBlogItem";
+
+import { headerConfig } from "./mock";
+import { BlogContainer, Body } from "./styled";
 
 export const Blog = () => {
-  const theme = useContext(ThemeContext);
-  const isMobile = window.screen.width < theme.endPoints.tablet;
-  if (isMobile) return <BlogMobile />;
-  return <BlogDesktop />;
+  return (
+    <Body>
+      <DarkHeader {...headerConfig} />
+      <BlogContainer>
+        {blogArticles.map((e) => (
+          <LinkedBlogItem {...e} vertical key={v4()} />
+        ))}
+      </BlogContainer>
+    </Body>
+  );
 };

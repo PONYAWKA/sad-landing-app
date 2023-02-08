@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { libTheme } from "@/sad-components-lib/theme";
 
 import rightArrow from "../../assets/images/rightArrow.png";
+import { IBlogItem } from "./interfaces";
 
 export const ElementIcon = styled.img`
   max-width: ${libTheme.spaces.xxx}px;
@@ -32,10 +33,12 @@ export const StyledLink = styled(Link)`
     margin-left: ${libTheme.spaces.ss}px;
   }
 `;
-export const Element = styled.div`
+export const Element = styled.div<IBlogItem>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ vertical }) => (vertical ? "column" : "row")};
   margin: ${libTheme.spaces.sss}px 0;
+  ${({ hideId }) => (hideId ? "cursor: pointer;" : "")};
+  overflow: hidden;
 `;
 
 export const Info = styled.h5`
@@ -44,7 +47,8 @@ export const Info = styled.h5`
   font-weight: normal;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled.img<IBlogItem>`
+  ${({ vertical }) => (vertical ? "width: 90%" : "")}
   width: ${libTheme.spaces.xx}px;
   height: auto;
 `;

@@ -6,4 +6,5 @@ export interface IBlogItem {
   text?: string;
   heading?: string;
   id?: string;
+  vertical?: boolean;
 }

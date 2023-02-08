@@ -1,4 +1,4 @@
-import { HorizontalBlogItem } from "@/sad-components-lib/components/HorizontalBlogItem";
+import { LinkedBlogItem } from "@/sad-components-lib/components/LinkedBlogItem";
 
 import { IRelatedPost } from "./interfaces";
 import { Body, PostTitle } from "./styled";
@@ -13,7 +13,7 @@ export const RelatedPost = ({
     <Body>
       <PostTitle>{title}</PostTitle>
       {items.slice(0, 3).map((e) => (
-        <HorizontalBlogItem
+        <LinkedBlogItem
           {...e}
           key={e.heading}
           hideId={hideId}

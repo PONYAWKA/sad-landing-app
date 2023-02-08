@@ -11,7 +11,7 @@ import {
   Title,
 } from "./styled";
 
-export const OurTeamHeaderDesktop = ({ title, text }: IOurTeamHeader) => {
+export const DarkHeader = ({ title, text }: IOurTeamHeader) => {
   return (
     <Body>
       <Content>
