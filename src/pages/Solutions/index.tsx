@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
+
 import { Help } from "@/components/Help";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { Advantages } from "@/components/Solutions/Advantages";
@@ -10,6 +13,8 @@ import { breadCrumb, pageHeaderConfig } from "./mock";
 import { Body, Content, TestimonialsContainer } from "./styled";
 
 export const Solutions = () => {
+  const theme = useContext(ThemeContext);
+  const isMobile = window.screen.width < theme.endPoints.tablet;
   return (
     <Body>
       <Content>
@@ -19,7 +24,14 @@ export const Solutions = () => {
       </Content>
       <Advantages />
       <TestimonialsContainer>
-        <CarouselTeam {...Testimonials} />
+        <CarouselTeam
+          {...Testimonials}
+          itemsToShow={
+            !isMobile
+              ? Testimonials.itemsToShow
+              : Testimonials.itemsToShowMobile
+          }
+        />
       </TestimonialsContainer>
       <Help />
     </Body>

@@ -6,10 +6,16 @@ export const Body = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: ${({ theme }) => theme.spaces.m}px;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const TextContent = styled.div`
   margin: auto 0;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    margin-left: ${({ theme }) => theme.spaces.m}px;
+  }
 `;
 
 export const Title = styled.h1``;

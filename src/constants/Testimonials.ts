@@ -5,6 +5,7 @@ import person3 from "@/assets/images/person3.png";
 export const Testimonials = {
   title: "Testimonials",
   itemsToShow: 3,
+  itemsToShowMobile: 1,
   items: [
     {
       icon: person1,
