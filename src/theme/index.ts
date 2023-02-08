@@ -10,6 +10,8 @@ const colors = {
   red: "#C14040",
 };
 const spaces = {
+  i: 1,
+  ii: 2,
   s: 5,
   so: 6,
   ss: 10,

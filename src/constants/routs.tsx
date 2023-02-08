@@ -5,14 +5,16 @@ import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { Services } from "@/pages/Services";
+import { SolutionInfo } from "@/pages/SolutionInfo";
 import { Solutions } from "@/pages/Solutions";
+
 export const ROUTES = [
   {
     path: "",
     element: <Home />,
   },
   {
-    path: "AboutUs",
+    path: "About",
     element: <About />,
   },
   {
@@ -38,6 +40,10 @@ export const ROUTES = [
   {
     path: "Solutions",
     element: <Solutions />,
+  },
+  {
+    path: "Solutions/Info",
+    element: <SolutionInfo />,
   },
 ];
 

@@ -10,7 +10,6 @@ export const SolutionsElement = ({
   img,
   hide,
 }: IProps) => {
-  console.log(description);
   return (
     <>
       {description && (
@@ -19,7 +18,7 @@ export const SolutionsElement = ({
             <Icon src={img} />
             <Title>{heading}</Title>
             <SubTitle>{description}</SubTitle>
-            {!hide && <StyledLick to={`?solution=${id}`}>Read More</StyledLick>}
+            {!hide && <StyledLick to={"Info"}>Read More</StyledLick>}
           </Content>
         </Body>
       )}
