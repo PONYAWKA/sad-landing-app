@@ -6,7 +6,6 @@ import { Body, Content, Icon, SubTitle, Title } from "./styled";
 export const SolutionsElement = ({
   description,
   heading,
-  id,
   img,
   hide,
 }: IProps) => {

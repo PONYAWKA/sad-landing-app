@@ -1,5 +1,3 @@
-import { useQuery } from "@/hooks/useQuery";
-
 import { SolutionsElement } from "../SolutionsElement";
 import { solutionsItems } from "./mock";
 import { Body, Grid } from "./styled";
