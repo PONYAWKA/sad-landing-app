@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   width: 100%;
-  margin-top: ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   display: flex;
   flex-direction: column;
