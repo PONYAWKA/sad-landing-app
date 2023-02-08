@@ -10,3 +10,7 @@ export const Icon = styled.img`
   max-width: ${({ theme }) => theme.spaces.xm}px;
   height: auto;
 `;
+export const Link = styled.a`
+  text-decoration: none;
+  margin-right: ${({ theme }) => theme.spaces.s}px;
+`;

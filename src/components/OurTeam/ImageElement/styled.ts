@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
+  cursor: pointer;
   @media (min-width: ${({ theme }) => theme.endPoints.tablet}px) {
     &:nth-child(3n - 1) {
       transform: translateY(-120px);
