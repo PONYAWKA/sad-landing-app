@@ -5,6 +5,7 @@ import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { Services } from "@/pages/Services";
+import { Solutions } from "@/pages/Solutions";
 export const ROUTES = [
   {
     path: "",
@@ -33,6 +34,10 @@ export const ROUTES = [
   {
     path: "FAQ",
     element: <FAQ />,
+  },
+  {
+    path: "Solutions",
+    element: <Solutions />,
   },
 ];
 

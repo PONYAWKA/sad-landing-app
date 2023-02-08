@@ -9,17 +9,13 @@ import { Help } from "@/components/Help";
 import { Price } from "@/components/HomeComponents/Price";
 import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
+import { Testimonials } from "@/constants/Testimonials";
 import { Button } from "@/sad-components-lib/components/Button";
 import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
 import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 import { CircleButton } from "@/sad-components-lib/components/CircleButton";
 
-import {
-  BenefitConfig,
-  ElementsToShow,
-  SuccessConfig,
-  Testimonials,
-} from "./mock";
+import { BenefitConfig, ElementsToShow, SuccessConfig } from "./mock";
 import {
   Body,
   ButtonText,
