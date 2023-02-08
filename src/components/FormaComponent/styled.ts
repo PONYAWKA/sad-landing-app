@@ -1,14 +1,29 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
+import { IError } from "./interfaces";
+
+export const Body = styled.div<IError>`
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   display: flex;
   flex-direction: column;
   margin-top: ${({ theme }) => theme.spaces.mmm}px;
+  ${({ alternative, theme, error }) =>
+    alternative &&
+    `
+  input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid
+      ${error ? theme.colors.red : theme.colors.gray};
+  }`}
 `;
 
-export const InputField = styled.input<{ error?: boolean }>`
+export const InputField = styled.input<IError>`
+  &::placeholder {
+    margin-top: 10px;
+  }
+  width: 100%;
   height: ${({ theme }) => theme.spaces.mm}px;
   border-radius: ${({ theme }) => theme.spaces.s}px;
   border: 1px solid
@@ -36,7 +51,8 @@ export const StyledForma = styled.form`
   flex-direction: column;
 `;
 
-export const BigInputField = styled.textarea<{ error?: boolean }>`
+export const BigInputField = styled.textarea<IError>`
+  width: 100%;
   border-radius: ${({ theme }) => theme.spaces.s}px;
   border: 1px solid
     ${({ theme, error }) => (error ? theme.colors.red : theme.colors.gray)};
@@ -59,4 +75,15 @@ export const ButtonContainer = styled.div`
 
 export const ButtonText = styled.div`
   margin: ${({ theme }) => theme.spaces.s}px ${({ theme }) => theme.spaces.mm}px;
+`;
+
+export const InputContainerText = styled.div`
+  display: flex;
+`;
+
+export const TextTitle = styled.h6`
+  color: ${({ theme }) => theme.colors.gray};
+  font-weight: normal;
+  position: absolute;
+  transform: translateY(-200%);
 `;

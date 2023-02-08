@@ -4,6 +4,7 @@ import { ContactsPage } from "@/pages/ContactsPage";
 import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
+import { OurTeamInfo } from "@/pages/OurTeamInfo";
 import { Services } from "@/pages/Services";
 import { SolutionInfo } from "@/pages/SolutionInfo";
 import { Solutions } from "@/pages/Solutions";
@@ -32,6 +33,10 @@ export const ROUTES = [
   {
     path: "OurTeam",
     element: <OurTeamPage />,
+  },
+  {
+    path: "OurTeam/Info",
+    element: <OurTeamInfo />,
   },
   {
     path: "FAQ",

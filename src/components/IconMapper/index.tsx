@@ -1,11 +1,23 @@
-import { IIconsMapper } from "./interfaces";
-import { Icon, IconsContainer } from "./styled";
+import { v4 } from "uuid";
 
-export const IconsMapper = ({ Icons }: IIconsMapper) => {
+import { IIconsMapper } from "./interfaces";
+import { Icon, IconsContainer, Link } from "./styled";
+
+export const IconsMapper = ({ Icons, urls }: IIconsMapper) => {
+  if (urls)
+    return (
+      <IconsContainer>
+        {urls.map((e, index) => (
+          <Link href={e} key={v4()}>
+            <Icon src={Icons[index]} />
+          </Link>
+        ))}
+      </IconsContainer>
+    );
   return (
     <IconsContainer>
-      {Icons.map((e, index) => (
-        <Icon src={e} key={index} />
+      {Icons.map((e) => (
+        <Icon src={e} key={v4()} />
       ))}
     </IconsContainer>
   );

@@ -1,5 +1,5 @@
-import { ContactPageForma } from "@/components/ContactPage/ContactPageForma";
 import { MapComponent } from "@/components/ContactPage/MapComponent";
+import { FormaComponent } from "@/components/FormaComponent";
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
 import { breadCrumb, contacts } from "./mock";
@@ -25,7 +25,7 @@ export const ContactsPage = () => {
           <Title>
             How can we <span>help you?</span>
           </Title>
-          <ContactPageForma />
+          <FormaComponent />
         </FormaContainer>
         <ContactsContainer>
           {contacts.map(({ icon, title, description }) => (

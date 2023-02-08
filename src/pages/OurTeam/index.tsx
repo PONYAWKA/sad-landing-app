@@ -5,13 +5,9 @@ import { v4 as uuidv4 } from "uuid";
 import { ImageElement } from "@/components/OurTeam/ImageElement";
 import { OurTeamHeaderDesktop } from "@/components/OurTeam/OurTeamHeaderDesktop";
 import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
+import { profiles } from "@/constants/profiles";
 
-import {
-  headerConfig,
-  headerConfigMobile,
-  paginationMax,
-  profiles,
-} from "./mock";
+import { headerConfig, headerConfigMobile, paginationMax } from "./mock";
 import { Body, Content, ImageContainer } from "./styled";
 
 export const OurTeamPage = () => {
