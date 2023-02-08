@@ -5,8 +5,8 @@ import { ThemeProvider } from "styled-components";
 import { createPaypalOrder } from "@/api/paypalAPI";
 import { libTheme } from "@/sad-components-lib/theme";
 
-import bOk from "../../assets/images/bOk.png";
-import wOk from "../../assets/images/bOk.png";
+import bOk from "../../assets/images/bOk.svg";
+import wOk from "../../assets/images/wOk.svg";
 import { IProps } from "./interface";
 import {
   Body,
