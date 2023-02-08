@@ -6,11 +6,9 @@ import { Body, Content, Icon, SubTitle, Title } from "./styled";
 export const SolutionsElement = ({
   description,
   heading,
-  id,
   img,
   hide,
 }: IProps) => {
-  console.log(description);
   return (
     <>
       {description && (
@@ -19,7 +17,7 @@ export const SolutionsElement = ({
             <Icon src={img} />
             <Title>{heading}</Title>
             <SubTitle>{description}</SubTitle>
-            {!hide && <StyledLick to={`?solution=${id}`}>Read More</StyledLick>}
+            {!hide && <StyledLick to={"Info"}>Read More</StyledLick>}
           </Content>
         </Body>
       )}
