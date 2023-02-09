@@ -7,8 +7,9 @@ import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { OurTeamInfo } from "@/pages/OurTeamInfo";
 import { Services } from "@/pages/Services";
-import { SolutionInfo } from "@/pages/SolutionInfo";
+import { ServicesInfo } from "@/pages/ServicesInfo";
 import { Solutions } from "@/pages/Solutions";
+import { SolutionInfo } from "@/pages/SolutionsInfo";
 
 export const ROUTES = [
   {
@@ -22,6 +23,10 @@ export const ROUTES = [
   {
     path: "Services",
     element: <Services />,
+  },
+  {
+    path: "Services/Info",
+    element: <ServicesInfo />,
   },
   {
     path: "Blog/Info",
