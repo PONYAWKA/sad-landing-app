@@ -1,7 +1,7 @@
-import AC from "@/assets/icons/AC.png";
-import DA from "@/assets/icons/DA.png";
-import EA from "@/assets/icons/EA.png";
-import ML from "@/assets/icons/ML.png";
+import AC from "@/assets/icons/benefits/accessControl.svg";
+import DA from "@/assets/icons/benefits/dataAnalytics.svg";
+import EA from "@/assets/icons/benefits/embedAnalytics.svg";
+import ML from "@/assets/icons/benefits/machineLearning.svg";
 
 export const CARDS = [
   {

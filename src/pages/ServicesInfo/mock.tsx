@@ -1,3 +1,6 @@
+import { LocationIcon } from "@/assets/icons/servicesInfo/locationIcon";
+import { MailIcon } from "@/assets/icons/servicesInfo/mailIcon";
+import { PhoneIcon } from "@/assets/icons/servicesInfo/phoneIcon";
 import customerImage from "@/assets/images/servicesInfo/img_1.png";
 import solutionImage from "@/assets/images/servicesInfo/img_2.png";
 
@@ -47,5 +50,18 @@ export const services = {
     "Data analytics",
     "Big data consulting",
     "Artificial intelligence",
+  ],
+};
+
+export const footerConfig = {
+  title: "Contact information",
+  text: "Fill up the form and our Team will get back to you with 25 hours.",
+  items: [
+    { Img: <MailIcon fill="#185CFF" />, text: "ensome@info.co.us" },
+    { Img: <PhoneIcon fill="#185CFF" />, text: "+1 601-201-5580" },
+    {
+      Img: <LocationIcon fill="#185CFF" />,
+      text: "1642 Washington Ave, Jackson, MS",
+    },
   ],
 };

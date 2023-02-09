@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import downArrow from "@/assets/icons/downArrow.png";
+import downArrow from "@/assets/icons/header/downArrow.png";
 
 import { IStyledProps } from "./interface";
 
@@ -19,7 +19,7 @@ export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.gray};
   padding: 0;
   margin: 0;
-  margin-bottom: ${({ theme }) => theme.spaces.sss}px;
+  margin: ${({ theme }) => theme.spaces.sss}px 0 0 0;
 `;
 
 export const LinkContainer = styled.div<IStyledProps>`

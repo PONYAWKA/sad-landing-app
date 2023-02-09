@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-import { DarkHeader } from "@/components/OurTeam/DarkHeader";
+import { DarkHeader } from "@/components/DarkHeader";
 import { blogArticles } from "@/constants/blogs";
 import { LinkedBlogItem } from "@/sad-components-lib/components/LinkedBlogItem";
 

@@ -1,18 +1,18 @@
-import photo1 from "@/assets/images/ourTeam/photo (1).png";
-import photo2 from "@/assets/images/ourTeam/photo (2).png";
-import photo3 from "@/assets/images/ourTeam/photo (3).png";
-import photo4 from "@/assets/images/ourTeam/photo (4).png";
-import photo5 from "@/assets/images/ourTeam/photo (5).png";
-import photo6 from "@/assets/images/ourTeam/photo (6).png";
-import photo7 from "@/assets/images/ourTeam/photo (7).png";
-import photo8 from "@/assets/images/ourTeam/photo (8).png";
-import photo9 from "@/assets/images/ourTeam/photo (9).png";
+import araratOhannes from "@/assets/images/ourTeam/ararat-ohannes-data-analyst.png";
+import bagratLeo from "@/assets/images/ourTeam/bagrat-leo-data-engineer.png";
+import eduardVosgi from "@/assets/images/ourTeam/eduard-vosgi-data-scientist.png";
+import evaVosgi from "@/assets/images/ourTeam/eva-vosgi-data-scientist.png";
+import gorSargis from "@/assets/images/ourTeam/gor-sargis-data-analyst.png";
+import hakobJirair from "@/assets/images/ourTeam/hakob-jirair-data-engineer.png";
+import koharMarine from "@/assets/images/ourTeam/kohar-marine-data-scientist.png";
+import maralMari from "@/assets/images/ourTeam/maral-mari-data-analyst.png";
+import sargisGrigor from "@/assets/images/ourTeam/sargis-grigor-data-analyst.png";
 export const profiles = [
   {
     id: 0,
     name: "Sargis Grigor",
     profession: "Data analyst",
-    photo: photo1,
+    photo: sargisGrigor,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -23,7 +23,7 @@ export const profiles = [
     id: 1,
     name: "Bagrat Leo",
     profession: "Data engineer",
-    photo: photo2,
+    photo: bagratLeo,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -34,7 +34,7 @@ export const profiles = [
     id: 2,
     name: "Gor Sargis",
     profession: "Data analyst",
-    photo: photo3,
+    photo: gorSargis,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -45,7 +45,7 @@ export const profiles = [
     id: 3,
     name: "Maral Mari",
     profession: "Data analyst",
-    photo: photo4,
+    photo: maralMari,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -56,7 +56,7 @@ export const profiles = [
     id: 4,
     name: "Hakob Jirair",
     profession: "Data engineer",
-    photo: photo5,
+    photo: hakobJirair,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -67,7 +67,7 @@ export const profiles = [
     id: 5,
     name: "Eva Vosgi",
     profession: "Data scientist",
-    photo: photo6,
+    photo: evaVosgi,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -78,7 +78,7 @@ export const profiles = [
     id: 6,
     name: "Kohar Marine",
     profession: "Data scientist",
-    photo: photo7,
+    photo: koharMarine,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -89,7 +89,7 @@ export const profiles = [
     id: 7,
     name: "Ararat Ohannes",
     profession: "Data analyst",
-    photo: photo8,
+    photo: araratOhannes,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",
@@ -100,7 +100,7 @@ export const profiles = [
     id: 8,
     name: "Eduard Vosgi",
     profession: "Data scientist",
-    photo: photo9,
+    photo: eduardVosgi,
     social: [
       "https://www.facebook.com",
       "https://twitter.com",

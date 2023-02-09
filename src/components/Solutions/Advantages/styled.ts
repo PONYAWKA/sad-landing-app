@@ -23,6 +23,7 @@ export const Title = styled.h1``;
 export const Image = styled.img`
   width: 100%;
   height: auto;
+  align-self: center;
 `;
 
 export const AdvantageElement = styled.div``;

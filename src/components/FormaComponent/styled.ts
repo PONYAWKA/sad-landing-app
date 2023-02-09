@@ -23,6 +23,7 @@ export const InputField = styled.input<IError>`
   &::placeholder {
     margin-top: 10px;
   }
+  background-color: transparent;
   width: 100%;
   height: ${({ theme }) => theme.spaces.mm}px;
   border-radius: ${({ theme }) => theme.spaces.s}px;

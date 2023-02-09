@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 
-import { DarkHeader } from "@/components/OurTeam/DarkHeader";
+import { DarkHeader } from "@/components/DarkHeader";
 import { ImageElement } from "@/components/OurTeam/ImageElement";
 import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
 import { profiles } from "@/constants/profiles";

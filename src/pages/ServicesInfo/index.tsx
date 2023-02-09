@@ -1,10 +1,12 @@
-import { DarkHeader } from "@/components/OurTeam/DarkHeader";
+import { DarkHeader } from "@/components/DarkHeader";
+import { FormaComponent } from "@/components/FormaComponent";
 import { CategoriesElement } from "@/sad-components-lib/components/CategoriesElement";
 import { Search } from "@/sad-components-lib/components/Search";
 
 import {
   challenge,
   customer,
+  footerConfig,
   headerConfig,
   result,
   services,
@@ -14,8 +16,14 @@ import {
 import {
   ArticleContainer,
   Body,
+  Contact,
+  ContactContainer,
+  ContactItem,
   Content,
+  FootContainer,
   Image,
+  ImageContainer,
+  Line,
   List,
   ListContainer,
   ListElement,
@@ -24,6 +32,7 @@ import {
   SearchContainer,
   Sections,
   ServicesContainer,
+  SubTitle,
   Text,
   Title,
 } from "./styled";
@@ -75,6 +84,28 @@ export const ServicesInfo = () => {
           </ServicesContainer>
         </RightSections>
       </Content>
+      <Contact>
+        <Content>
+          <Sections>
+            <FootContainer>
+              <Title>{footerConfig.title}</Title>
+              <Line />
+              <Text>{footerConfig.text}</Text>
+              <ContactContainer>
+                {footerConfig.items.map(({ Img, text }) => (
+                  <ContactItem key={text}>
+                    <ImageContainer>{Img}</ImageContainer>
+                    <SubTitle>{text}</SubTitle>
+                  </ContactItem>
+                ))}
+              </ContactContainer>
+            </FootContainer>
+          </Sections>
+          <Sections>
+            <FormaComponent alternative />
+          </Sections>
+        </Content>
+      </Contact>
     </Body>
   );
 };

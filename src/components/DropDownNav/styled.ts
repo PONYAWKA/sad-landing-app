@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import downArrow from "@/assets/icons/downArrow.png";
-import rightArrow from "@/assets/icons/rightArrow.png";
+import downArrow from "@/assets/icons/header/downArrow.png";
+import rightArrow from "@/assets/icons/header/rightArrow.png";
 
 export const MoreLinks = styled.div`
   cursor: pointer;

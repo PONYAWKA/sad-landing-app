@@ -42,8 +42,8 @@ export const BlogDesktop = () => {
     );
   }, [check, search]);
 
-  const onChangeHandler = (e: IEvent) => {
-    setSearch(e.target.value);
+  const onChangeHandler = ({ target: { value } }: IEvent) => {
+    setSearch(value);
   };
 
   return (

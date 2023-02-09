@@ -1,13 +1,13 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
 
-import play from "@/assets/icons/play.png";
+import play from "@/assets/icons/header/play.png";
 import logo from "@/assets/images/logo_blue.png";
+import { LinkElement } from "@/components/Links";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Burger } from "@/sad-components-lib/components/Burger";
 import { Button } from "@/sad-components-lib/components/Button";
 
-import { LinkElement } from "../Links";
 import { youtubeOptions } from "./mock";
 import {
   BurgerContainer,
