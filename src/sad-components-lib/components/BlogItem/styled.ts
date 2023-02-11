@@ -9,14 +9,13 @@ export const Element = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  max-width: ${libTheme.spaces.xxx}px;
+  max-width: ${libTheme.spaces.xxm}px;
 `;
 
 export const ElementIcon = styled.img`
-  max-width: ${libTheme.spaces.xxx}px;
+  width: ${libTheme.spaces.xxm}px;
   height: auto;
   @media (max-width: ${libTheme.endPoints.fold}) {
-    max-width: 95%;
     align-self: center;
   }
 `;

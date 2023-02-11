@@ -2,7 +2,7 @@ import { IBlogItem } from "../BlogItem/interfaces";
 
 export interface IProps {
   title?: string;
-  itemsToShow?: number;
+  itemsToShow: number;
   items: IBlogItem[];
 }
 

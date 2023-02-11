@@ -7,6 +7,8 @@ import { IStyledProps } from "./interfaces";
 export const Body = styled.div`
   max-width: ${libTheme.spaces.maxContentWidth}px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TitleContainer = styled.div`
@@ -39,7 +41,18 @@ export const TitleButton = styled.img<IStyledProps>`
 export const TitleButtonContainer = styled.div``;
 
 export const ElementContainer = styled.div`
+  transition: "translate";
+  transition-property: "transform";
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  width: 95%;
+  gap: 10px;
 `;
+
+export const Window = styled.div`
+  overflow: hidden;
+  align-self: center;
+`;
+
+export const WindowElementContainer = styled.div``;

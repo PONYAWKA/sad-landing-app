@@ -21,6 +21,7 @@ const spaces = {
   mmmm: 80,
   x: 100,
   xx: 200,
+  xxm: 270,
   xxx: 300,
   xm: 120,
   l: 500,
