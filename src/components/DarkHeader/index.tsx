@@ -1,7 +1,6 @@
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
 import { IOurTeamHeader } from "./interfaces";
-import { breadCrumb } from "./mock";
 import {
   Body,
   BreadCrumbContainer,
@@ -11,12 +10,12 @@ import {
   Title,
 } from "./styled";
 
-export const DarkHeader = ({ title, text }: IOurTeamHeader) => {
+export const DarkHeader = ({ title, text, crumb }: IOurTeamHeader) => {
   return (
     <Body>
       <Content>
         <BreadCrumbContainer>
-          <BreadCrumbs {...breadCrumb} />
+          <BreadCrumbs {...crumb} />
         </BreadCrumbContainer>
       </Content>
       <TextContainer>

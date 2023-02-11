@@ -1,10 +1,13 @@
-import teamPhoto from "@/assets/images/ourTeam/teamPhoto.png";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 
 import { IOurTeamHeader } from "./interfaces";
-import { pageHeaderConfig } from "./mock";
 import { Body, Image, Text } from "./styled";
-export const OurTeamHeaderMobile = ({ text }: IOurTeamHeader) => {
+
+export const OurTeamHeaderMobile = ({
+  text,
+  teamPhoto,
+  pageHeaderConfig,
+}: IOurTeamHeader) => {
   return (
     <Body>
       <SecondPageHeader {...pageHeaderConfig} />

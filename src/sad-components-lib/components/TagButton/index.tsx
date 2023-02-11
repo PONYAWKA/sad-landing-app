@@ -1,5 +1,3 @@
-import { SyntheticEvent, useState } from "react";
-
 import { ITagButton } from "./interfaces";
 import { STagButton } from "./styled";
 

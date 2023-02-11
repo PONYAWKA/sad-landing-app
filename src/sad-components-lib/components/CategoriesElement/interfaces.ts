@@ -1,4 +1,5 @@
 export interface ICategoriesElement {
   name: string;
-  onClick?: () => void;
+  onClick?: (id: number) => () => void;
+  id?: number;
 }

@@ -1,25 +1,21 @@
 import "leaflet/dist/leaflet.css";
 
-import { LatLngExpression } from "leaflet";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
-import { mapConfig, markers } from "./mock";
+import { IMap } from "./interfaces";
 import { Body } from "./styled";
-export const MapComponent = () => {
+
+export const MapComponent = ({ mapConfig, markers }: IMap) => {
   return (
     <Body>
       <MapContainer
-        center={mapConfig.center as LatLngExpression}
+        center={mapConfig.center}
         zoom={mapConfig.zoom}
         scrollWheelZoom={true}
       >
         <TileLayer url={mapConfig.url} />
         {markers.map(({ position, label }) => (
-          <Marker
-            position={position as LatLngExpression}
-            key={label}
-            icon={mapConfig.icon}
-          />
+          <Marker position={position} key={label} icon={mapConfig.icon} />
         ))}
       </MapContainer>
     </Body>

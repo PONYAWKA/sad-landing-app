@@ -1,34 +1,24 @@
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "styled-components";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { DarkHeader } from "@/components/DarkHeader";
 import { ImageElement } from "@/components/OurTeam/ImageElement";
 import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
 import { profiles } from "@/constants/profiles";
+import { useIsMobile } from "@/hooks/useMobile";
+import { usePagination } from "@/hooks/usePagination";
 
-import { headerConfig, headerConfigMobile, paginationMax } from "./mock";
+import { headerConfig, headerConfigMobile } from "./mock";
 import { Body, Content, ImageContainer } from "./styled";
 
 export const OurTeamPage = () => {
   const [posts, setPosts] = useState(profiles);
 
-  const theme = useContext(ThemeContext);
-  const isMobile = window.screen.width < theme.endPoints.tablet;
+  const { isMobile } = useIsMobile();
 
-  useEffect(() => {
-    document.addEventListener("scroll", scrollHandler);
-    return () => document.removeEventListener("scroll", scrollHandler);
-  });
+  const onPagination = () => setPosts((prev) => [...prev, ...profiles]);
 
-  const scrollHandler = () => {
-    const {
-      documentElement: { scrollHeight, scrollTop },
-    } = document;
-    if (scrollHeight - (scrollTop + window.innerHeight) < paginationMax) {
-      setPosts((element) => [...element, ...profiles]);
-    }
-  };
+  usePagination(onPagination);
 
   return (
     <Body>

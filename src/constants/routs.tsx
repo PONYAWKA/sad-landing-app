@@ -1,7 +1,7 @@
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { BlogInfo } from "@/pages/BlogInfo";
-import { ContactsPage } from "@/pages/ContactsPage";
+import { Contacts } from "@/pages/Contacts";
 import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
 import { OurTeamPage } from "@/pages/OurTeam";
@@ -38,7 +38,7 @@ export const ROUTES = [
   },
   {
     path: "Contacts",
-    element: <ContactsPage />,
+    element: <Contacts />,
   },
   {
     path: "OurTeam",
@@ -77,10 +77,9 @@ export const NAV_ROUTES = [
     to: "/",
     name: "Pages",
     children: [
-      { name: "About Us", to: "/" },
-      { name: "About Ussdafafdasf", to: "/" },
-      { name: "About Ussdafafdas", to: "/" },
-      { name: "About Ussdafafda", to: "/" },
+      { name: "FAQ", to: "FAQ" },
+      { name: "Services", to: "Services" },
+      { name: "About", to: "About" },
     ],
   },
   {
@@ -122,7 +121,7 @@ export const FOOTER_ROUTES = [
     title: "Our team",
   },
   {
-    to: "AboutUs",
+    to: "About",
     title: "About Us",
   },
   {

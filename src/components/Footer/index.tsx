@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import { SubEmail } from "@/api/mailAPI";
-import logo from "@/assets/images/logo_white.png";
-import { FooterLinks } from "@/components/FooterLinks";
+import logo from "@/assets/images/header/logo_white.png";
+import { FooterLinks } from "@/components/Footer/FooterLinks";
 import { Media } from "@/sad-components-lib/components/Media";
 import { SendMail } from "@/sad-components-lib/components/SendMail";
 

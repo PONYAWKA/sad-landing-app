@@ -24,64 +24,68 @@ import {
 } from "./styled";
 
 export const BlogDesktop = () => {
-  const [check, setCheck] = useState("All topics");
-  const [related, setRelated] = useState(blogArticles);
-  const [search, setSearch] = useState("");
   const query = useQuery();
-  const popular = blogArticles.sort(sortByPopular);
-  const blog = query.get("id") as unknown as number;
-  const currentBlogInfo = blogArticles[blog];
+  const blog = query.get("id");
 
-  useEffect(() => {
-    setRelated(
-      blogArticles
-        .filter(({ tags }) => tags.includes(check) || check === "All topics")
-        .filter(({ heading }) =>
-          search ? heading.toLocaleLowerCase().includes(search) : true
-        )
+  if (blog) {
+    const [check, setCheck] = useState("All topics");
+    const [related, setRelated] = useState(blogArticles);
+    const [search, setSearch] = useState("");
+    const popular = blogArticles.sort(sortByPopular);
+    const currentBlogInfo = blogArticles[Number(blog)];
+
+    useEffect(() => {
+      setRelated(
+        blogArticles
+          .filter(({ tags }) => tags.includes(check) || check === "All topics")
+          .filter(({ heading }) =>
+            search ? heading.toLocaleLowerCase().includes(search) : true
+          )
+      );
+    }, [check, search]);
+
+    const onChangeHandler = ({ target: { value } }: IEvent) => {
+      setSearch(value);
+    };
+
+    return (
+      <Body>
+        <HeaderContainer>
+          <PageHeader {...pageHeadConfig(currentBlogInfo?.heading)} />
+        </HeaderContainer>
+        <BlogContainer>
+          <LeftSection>
+            {currentBlogInfo && <CurrentBlog {...currentBlogInfo} />}
+            <RelatedPost items={related} title="Related Post" hideId />
+          </LeftSection>
+          <RightSection>
+            <Search
+              buttonText="Search"
+              value={search}
+              onChange={onChangeHandler}
+            />
+            <RelatedPost items={popular} title="Popular posts" hiedText />
+            <CategoriesContainer>
+              <Title>Categories</Title>
+              {categories.map((e) => (
+                <CategoriesElement {...e} key={e.name} />
+              ))}
+            </CategoriesContainer>
+            <TagsContainer>
+              <Title>Tags</Title>
+              {tags.map((e) => (
+                <TagButton
+                  key={e}
+                  selected={check}
+                  setSelected={setCheck}
+                  text={e}
+                />
+              ))}
+            </TagsContainer>
+          </RightSection>
+        </BlogContainer>
+      </Body>
     );
-  }, [check, search]);
-
-  const onChangeHandler = ({ target: { value } }: IEvent) => {
-    setSearch(value);
-  };
-
-  return (
-    <Body>
-      <HeaderContainer>
-        <PageHeader {...pageHeadConfig(currentBlogInfo?.heading)} />
-      </HeaderContainer>
-      <BlogContainer>
-        <LeftSection>
-          {currentBlogInfo && <CurrentBlog {...currentBlogInfo} />}
-          <RelatedPost items={related} title="Related Post" hideId />
-        </LeftSection>
-        <RightSection>
-          <Search
-            buttonText="Search"
-            value={search}
-            onChange={onChangeHandler}
-          />
-          <RelatedPost items={popular} title="Popular posts" hiedText />
-          <CategoriesContainer>
-            <Title>Categories</Title>
-            {categories.map((e) => (
-              <CategoriesElement {...e} key={e.name} />
-            ))}
-          </CategoriesContainer>
-          <TagsContainer>
-            <Title>Tags</Title>
-            {tags.map((e) => (
-              <TagButton
-                key={e}
-                selected={check}
-                setSelected={setCheck}
-                text={e}
-              />
-            ))}
-          </TagsContainer>
-        </RightSection>
-      </BlogContainer>
-    </Body>
-  );
+  }
+  return null;
 };

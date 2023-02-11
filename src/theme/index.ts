@@ -41,6 +41,7 @@ const fonts = {
 const tops = { s: 210, m: 250, x: 300, xx: 340 };
 const endPoints = {
   tabletL: 1140,
+  tabletM: 1000,
   tablet: 900,
   phone: 495,
   fold: 300,

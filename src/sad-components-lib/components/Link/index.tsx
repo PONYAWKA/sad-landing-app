@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import rightArrow from "@/sad-components-lib/assets/images/rightArrow.png";
 import { libTheme } from "@/sad-components-lib/theme";
-
-import rightArrow from "../../assets/images/rightArrow.png";
 
 export const StyledLick = styled(Link)`
   text-decoration: none;

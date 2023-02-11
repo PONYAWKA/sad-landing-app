@@ -6,6 +6,7 @@ import { IStyledProps } from "./interfaces";
 
 export const Body = styled.div`
   max-width: ${libTheme.spaces.maxContentWidth}px;
+  width: 100%;
 `;
 
 export const TitleContainer = styled.div`
@@ -39,4 +40,6 @@ export const TitleButtonContainer = styled.div``;
 
 export const ElementContainer = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: space-around;
 `;

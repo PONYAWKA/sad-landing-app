@@ -12,6 +12,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "babel-eslint": "^10.1.0",
+    "dotenv": "^16.0.3",
     "emailjs": "^4.0.1",
     "eslint": "^8.33.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -19,10 +20,12 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "formik": "^2.2.9",
+    "html-webpack-plugin": "^5.5.0",
     "i": "^0.3.7",
     "leaflet": "^1.9.3",
     "npm": "^9.4.0",
     "prettier": "^2.8.3",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.0",
@@ -37,6 +40,7 @@
   },
   "scripts": {
     "start": "craco start",
+    "start:wp": "webpack serve --mode development",
     "build": "craco build",
     "eject": "craco eject",
     "lint": "eslint ./src --ext .ts,.tsx",
@@ -63,10 +67,14 @@
   "devDependencies": {
     "@craco/craco": "^7.0.0",
     "@types/leaflet": "^1.9.0",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.13.0",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^9.0.0",
+    "css-loader": "^6.7.3",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0"
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "webpack-cli": "^5.0.1"
   }
 }

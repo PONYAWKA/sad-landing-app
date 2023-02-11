@@ -78,8 +78,8 @@ export const ServicesInfo = () => {
               <Search buttonText="Search" />
             </SearchContainer>
             <Title>{services.text}</Title>
-            {services.items.map((e) => (
-              <CategoriesElement name={e} key={e} />
+            {services.items.map(({ text, id }) => (
+              <CategoriesElement name={text} key={text} id={id} />
             ))}
           </ServicesContainer>
         </RightSections>

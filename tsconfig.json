@@ -14,12 +14,11 @@
     "typeRoots": ["./src/globals.d.ts"],
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["src", "craco.config.js"]
+  "include": ["src"]
 }

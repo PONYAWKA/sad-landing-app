@@ -1,12 +1,12 @@
 import { SolutionsElement } from "../SolutionsElement";
-import { solutionsItems } from "./mock";
+import { ISolutionsList } from "./interfaces";
 import { Body, Grid } from "./styled";
 
-export const SolutionsList = () => {
+export const SolutionsList = ({ items }: ISolutionsList) => {
   return (
     <Body>
       <Grid>
-        {solutionsItems.map((e) => (
+        {items.map((e) => (
           <SolutionsElement key={e.id} {...e} />
         ))}
       </Grid>

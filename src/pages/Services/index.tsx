@@ -4,7 +4,7 @@ import { ServiceList } from "@/components/ServicesComponents/ServiceList";
 import { Success } from "@/components/Success";
 import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
-import { crumbs, topConfig } from "./mock";
+import { crumbs, serviceConfig, successItems, topConfig } from "./mock";
 import { Body, CrumbContainer } from "./styled";
 
 export const Services = () => {
@@ -14,8 +14,8 @@ export const Services = () => {
         <BreadCrumbs {...crumbs} />
       </CrumbContainer>
       <SecondPageHeader {...topConfig} />
-      <ServiceList />
-      <Success center />
+      <ServiceList {...serviceConfig} />
+      <Success center items={successItems} />
       <Help />
     </Body>
   );

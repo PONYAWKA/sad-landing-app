@@ -8,7 +8,6 @@ import rightArrow from "../../assets/images/rightArrow.png";
 export const Element = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 ${libTheme.spaces.m}px;
   box-sizing: border-box;
   max-width: ${libTheme.spaces.xxx}px;
 `;
@@ -17,7 +16,8 @@ export const ElementIcon = styled.img`
   max-width: ${libTheme.spaces.xxx}px;
   height: auto;
   @media (max-width: ${libTheme.endPoints.fold}) {
-    max-width: ${({ theme }) => theme.spaces.xx}px;
+    max-width: 95%;
+    align-self: center;
   }
 `;
 

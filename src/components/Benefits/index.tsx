@@ -1,7 +1,6 @@
 import { Card } from "@/sad-components-lib/components/Card";
 
 import { BenefitsInterface } from "./interfaces";
-import { CARDS } from "./mock";
 import {
   CardContainer,
   CardElement,
@@ -13,7 +12,7 @@ import {
   Title,
 } from "./styled";
 
-export const Benefits = ({ title, text }: BenefitsInterface) => (
+export const Benefits = ({ title, text, cards }: BenefitsInterface) => (
   <Container>
     <Content>
       <TextContainer>
@@ -23,7 +22,7 @@ export const Benefits = ({ title, text }: BenefitsInterface) => (
         </Text>
       </TextContainer>
       <CardContainer>
-        {CARDS.map(({ title, text, icon }) => (
+        {cards.map(({ title, text, icon }) => (
           <CardElement key={title}>
             <Card title={title} subTitle={text} icon={icon} />
           </CardElement>

@@ -1,6 +1,7 @@
 import person1 from "@/assets/images/person1.png";
 import person2 from "@/assets/images/person2.png";
 import person3 from "@/assets/images/person3.png";
+import { card } from "@/constants/benefidsCard";
 
 export const breadCrumb = {
   curPage: "About Us",
@@ -20,6 +21,7 @@ export const successConfig = {
 export const benefitConfig = {
   title: "Why our clients chosse Ensome?",
   text: "Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+  cards: card,
 };
 export const Testimonials = {
   title: "Testimonials",

@@ -16,24 +16,27 @@ import {
 
 export const BlogMobile = () => {
   const query = useQuery();
-  const blog = query.get("id") as unknown as number;
-  const currentBlogInfo = blogArticles[blog];
-  return (
-    <Body>
-      <CrumbContainer>
-        <BreadCrumbs {...breadCrumb} />
-      </CrumbContainer>
+  const blog = query.get("id");
+  if (blog) {
+    const currentBlogInfo = blogArticles[Number(blog)];
+    return (
+      <Body>
+        <CrumbContainer>
+          <BreadCrumbs {...breadCrumb} />
+        </CrumbContainer>
 
-      <SecondPageHeader {...headerConfig} />
-      {currentBlogInfo && <CurrentBlog {...currentBlogInfo} />}
-      <BlogsContainer>
-        {blogArticles.map((e) => (
-          <MobileBlogItem {...e} key={e.heading} />
-        ))}
-      </BlogsContainer>
-      <ButtonContainer>
-        <Button>See more</Button>
-      </ButtonContainer>
-    </Body>
-  );
+        <SecondPageHeader {...headerConfig} />
+        {currentBlogInfo && <CurrentBlog {...currentBlogInfo} />}
+        <BlogsContainer>
+          {blogArticles.map((e) => (
+            <MobileBlogItem {...e} key={e.heading} />
+          ))}
+        </BlogsContainer>
+        <ButtonContainer>
+          <Button>See more</Button>
+        </ButtonContainer>
+      </Body>
+    );
+  }
+  return null;
 };

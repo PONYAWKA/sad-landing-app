@@ -1,12 +1,16 @@
 import { LocationIcon } from "@/assets/icons/servicesInfo/locationIcon";
 import { MailIcon } from "@/assets/icons/servicesInfo/mailIcon";
 import { PhoneIcon } from "@/assets/icons/servicesInfo/phoneIcon";
-import customerImage from "@/assets/images/servicesInfo/img_1.png";
-import solutionImage from "@/assets/images/servicesInfo/img_2.png";
+import customerImage from "@/assets/images/servicesInfo/service-info-image-1.png";
+import solutionImage from "@/assets/images/servicesInfo/service-info-image-2.png";
 
 export const headerConfig = {
   title: "Access control",
   text: "Sed ut perspiciatis unde omnis iste natus error volupta accusantium doloremque laudantium, totam remiga aperiam, eaque ipsa.",
+  crumb: {
+    curPage: "Access control",
+    links: [{ name: "Home", to: "/" }],
+  },
 };
 
 export const customer = {
@@ -45,11 +49,11 @@ export const technologies = {
 export const services = {
   text: "Services",
   items: [
-    "Machine learning",
-    "Embed analytics",
-    "Data analytics",
-    "Big data consulting",
-    "Artificial intelligence",
+    { text: "Machine learning", id: 0 },
+    { text: "Embed analytics", id: 1 },
+    { text: "Data analytics", id: 2 },
+    { text: "Big data consulting", id: 3 },
+    { text: "Artificial intelligence", id: 4 },
   ],
 };
 

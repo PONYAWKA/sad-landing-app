@@ -1,8 +1,7 @@
 import { Icons } from "@/constants/icons";
 
 import { IconsMapper } from "../IconMapper";
-import { SuccessInterface } from "./interfaces";
-import { Metrics } from "./mock";
+import { ISuccess } from "./interfaces";
 import {
   SuccessBody,
   SuccessContent,
@@ -13,12 +12,12 @@ import {
   SuccessText,
   SuccessTitle,
 } from "./styled";
-export const Success = ({ text, title, hide, center }: SuccessInterface) => (
+export const Success = ({ text, title, hide, center, items }: ISuccess) => (
   <SuccessContent>
     <SuccessTitle>{title}</SuccessTitle>
     <SuccessBody center={center}>
       <SuccessMetric>
-        {Metrics.map(({ title, sub }) => (
+        {items?.map(({ title, sub }) => (
           <SuccessMetricElement key={title}>
             <SuccessMetricTitle>{title}</SuccessMetricTitle>
             <SuccessMetricSubTitle>{sub}</SuccessMetricSubTitle>

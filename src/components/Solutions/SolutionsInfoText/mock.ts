@@ -1,5 +1,5 @@
 import practice from "@/assets/images/solutions/practice.png";
-import typesOfVisualization from "@/assets/images/solutions/typesOfVisualization.png";
+import typesOfVisualization from "@/assets/images/solutions/types-of-visualization.png";
 
 export const WhatIs = {
   title: `What is data visualization?`,
