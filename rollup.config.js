@@ -18,8 +18,13 @@ const Resolver = resolve({
 });
 export default [
   {
-    input: "src/sad-components-lib/index.ts",
-    external: ["styled-components"],
+    input: "src/sad-components-lib/index.tsx",
+    external: [
+      "styled-components",
+      "react",
+      "react-router-dom",
+      "react-router",
+    ],
     output: [
       {
         file: "RollDown/index.js",
@@ -33,8 +38,8 @@ export default [
       },
     ],
     plugins: [
-      image(),
       peerDepsExternal(),
+      image(),
       resolve(),
       commonjs(),
       babel({

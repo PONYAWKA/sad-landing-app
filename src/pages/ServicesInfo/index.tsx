@@ -1,5 +1,5 @@
-import { CategoriesElement } from "sad-components-lib";
-import { Search } from "sad-components-lib";
+import { CategoriesElement } from "sad-landing-lib";
+import { Search } from "sad-landing-lib";
 
 import { DarkHeader } from "@/components/DarkHeader";
 import { FormaComponent } from "@/components/FormaComponent";

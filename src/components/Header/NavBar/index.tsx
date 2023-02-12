@@ -1,7 +1,7 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
-import { Burger } from "sad-components-lib";
-import { Button } from "sad-components-lib";
+import { Burger } from "sad-landing-lib";
+import { Button } from "sad-landing-lib";
 
 import play from "@/assets/icons/header/play.png";
 import logo from "@/assets/images/header/logo_blue.png";

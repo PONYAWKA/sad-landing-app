@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Media } from "sad-components-lib";
-import { SendMail } from "sad-components-lib";
+import { Media } from "sad-landing-lib";
+import { SendMail } from "sad-landing-lib";
 
 import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/header/logo_white.png";

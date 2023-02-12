@@ -1,4 +1,4 @@
-import { Media } from "sad-components-lib";
+import { Media } from "sad-landing-lib";
 
 import { DropDownNav } from "@/components/Header/DropDownNav";
 import { NAV_ROUTES } from "@/constants/routs";

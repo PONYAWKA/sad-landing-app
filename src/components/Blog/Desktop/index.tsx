@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { CategoriesElement } from "sad-components-lib";
-import { Search } from "sad-components-lib";
-import { TagButton } from "sad-components-lib";
-import { IEvent } from "sad-components-lib/components/Search/interfaces";
+import { CategoriesElement } from "sad-landing-lib";
+import { Search } from "sad-landing-lib";
+import { TagButton } from "sad-landing-lib";
+import { v4 } from "uuid";
 
 import { CurrentBlog } from "@/components/Blog/CurrentBlog";
 import { RelatedPost } from "@/components/Blog/RelatedPost";
@@ -45,7 +45,7 @@ export const BlogDesktop = () => {
       );
     }, [check, search]);
 
-    const onChangeHandler = ({ target: { value } }: IEvent) => {
+    const onChangeHandler = ({ target: { value } }: any) => {
       setSearch(value);
     };
 
@@ -70,7 +70,7 @@ export const BlogDesktop = () => {
               <CategoriesContainer>
                 <Title>Categories</Title>
                 {categories.map((e) => (
-                  <CategoriesElement {...e} key={e.name} />
+                  <CategoriesElement {...e} key={v4()} />
                 ))}
               </CategoriesContainer>
               <TagsContainer>

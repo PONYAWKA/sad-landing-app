@@ -1,5 +1,5 @@
-import { BreadCrumbs } from "sad-components-lib";
-import { Button } from "sad-components-lib";
+import { BreadCrumbs } from "sad-landing-lib";
+import { Button } from "sad-landing-lib";
 
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { blogArticles } from "@/constants/blogs";

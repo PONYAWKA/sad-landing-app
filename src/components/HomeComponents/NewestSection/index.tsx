@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "sad-components-lib";
+import { Button } from "sad-landing-lib";
 
 import {
   ButtonText,

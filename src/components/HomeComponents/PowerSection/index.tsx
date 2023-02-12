@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { CircleButton } from "sad-components-lib";
+import { CircleButton } from "sad-landing-lib";
 
 import {
   CircleButtonContainer,

@@ -1,5 +1,5 @@
-import { BreadCrumbs } from "sad-components-lib";
-import { CarouselTeam } from "sad-components-lib";
+import { BreadCrumbs } from "sad-landing-lib";
+import { CarouselTeam } from "sad-landing-lib";
 
 import { Help } from "@/components/Help";
 import { SecondPageHeader } from "@/components/SecondPageHeader";

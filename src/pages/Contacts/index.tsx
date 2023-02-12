@@ -1,4 +1,4 @@
-import { BreadCrumbs } from "sad-components-lib";
+import { BreadCrumbs } from "sad-landing-lib";
 
 import { MapComponent } from "@/components/ContactPage/MapComponent";
 import { FormaComponent } from "@/components/FormaComponent";

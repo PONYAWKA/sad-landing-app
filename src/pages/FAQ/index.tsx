@@ -1,5 +1,5 @@
-import { BreadCrumbs } from "sad-components-lib";
-import { FAQComponent } from "sad-components-lib";
+import { BreadCrumbs } from "sad-landing-lib";
+import { FAQComponent } from "sad-landing-lib";
 import { v4 as uuidv4 } from "uuid";
 
 import { Help } from "@/components/Help";

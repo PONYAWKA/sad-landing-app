@@ -1,4 +1,4 @@
-import { TagButton } from "sad-components-lib";
+import { TagButton } from "sad-landing-lib";
 
 import authorIcon from "@/assets/icons/blog/author.svg";
 import date from "@/assets/icons/blog/date.svg";

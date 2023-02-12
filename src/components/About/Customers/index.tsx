@@ -1,4 +1,4 @@
-import { CarouselTeam } from "sad-components-lib";
+import { CarouselTeam } from "sad-landing-lib";
 
 import { IconsMapper } from "@/components/IconMapper";
 import { Icons } from "@/constants/icons";

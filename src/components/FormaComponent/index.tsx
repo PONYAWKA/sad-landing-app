@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import { Button } from "sad-components-lib";
+import { Button } from "sad-landing-lib";
 
 import { IContactUs } from "@/api/interfaces";
 import { Contact } from "@/api/mailAPI";
