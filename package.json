@@ -41,7 +41,8 @@
   "scripts": {
     "start": "craco start",
     "start:wp": "webpack serve --mode development",
-    "build": "craco build",
+    "build": "webpack --mode production",
+    "build:cr": "craco build",
     "eject": "craco eject",
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint:fix": "npx eslint ./src --ext .ts,.tsx --fix"
