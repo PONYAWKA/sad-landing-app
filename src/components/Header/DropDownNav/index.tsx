@@ -21,11 +21,18 @@ export const DropDownNav = ({ name, routs, setIsOpen }: IProps) => {
   };
 
   return (
-    <MoreLinksBody key={name}>
-      <MoreLinks onClick={handleClick}>{name}</MoreLinks>
+    <MoreLinksBody key={name} name-link="morePages">
+      <MoreLinks onClick={handleClick} id="morePages">
+        {name}
+      </MoreLinks>
       <ChildrenLinkContainer visible={isVisible}>
         {routs.map(({ name, to }) => (
-          <ChildrenStyledLink to={to} key={name} onClick={handleVisible}>
+          <ChildrenStyledLink
+            to={to}
+            key={name}
+            onClick={handleVisible}
+            name-link={to}
+          >
             {name}
           </ChildrenStyledLink>
         ))}

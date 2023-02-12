@@ -4,6 +4,7 @@ import { BlogInfo } from "@/pages/BlogInfo";
 import { Contacts } from "@/pages/Contacts";
 import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
+import { NotFound } from "@/pages/NotFound";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { OurTeamInfo } from "@/pages/OurTeamInfo";
 import { Services } from "@/pages/Services";
@@ -60,6 +61,10 @@ export const ROUTES = [
     path: "Solutions/Info",
     element: <SolutionInfo />,
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ];
 
 export const NAV_ROUTES = [
@@ -81,11 +86,6 @@ export const NAV_ROUTES = [
       { name: "Services", to: "Services" },
       { name: "About", to: "About" },
     ],
-  },
-  {
-    to: "Elements",
-    name: "Elements",
-    children: null,
   },
   {
     to: "Blog",

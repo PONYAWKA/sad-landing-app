@@ -37,7 +37,7 @@ export const OurTeamInfo = () => {
         <Container>
           <Section>
             <ImageContainer>
-              <Image src={photo} />
+              <Image src={photo} loading="lazy" />
             </ImageContainer>
           </Section>
           <Section>

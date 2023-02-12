@@ -30,17 +30,17 @@ export const CurrentBlog = ({
 }: ICurrentBlog) => {
   return (
     <Body>
-      <Image src={icon} />
+      <Image src={icon} loading="lazy" />
       <InfoContainer>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={date} />
+            <InfoIcon src={date} loading="lazy" />
             {info}
           </InfoText>
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={authorIcon} />
+            <InfoIcon src={authorIcon} loading="lazy" />
             {author}
           </InfoText>
         </InfoElement>
@@ -52,20 +52,20 @@ export const CurrentBlog = ({
       <InfoContainer>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={viewsIcon} />
+            <InfoIcon src={viewsIcon} loading="lazy" />
             {views}
           </InfoText>
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={shareIcon} />
+            <InfoIcon src={shareIcon} loading="lazy" />
             Share:
           </InfoText>
           <IconsMapper Icons={Icons} />
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={tagIcon} />
+            <InfoIcon src={tagIcon} loading="lazy" />
             Tags:
             {tags?.map((e) => (
               <TagButton key={e} text={e} />

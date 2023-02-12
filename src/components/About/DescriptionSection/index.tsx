@@ -15,7 +15,7 @@ export const Description = ({
         <Text>{textOne}</Text>
         <Text>{textTwo}</Text>
       </TextContent>
-      <Image src={image} />
+      <Image src={image} loading="lazy" />
     </Body>
   );
 };

@@ -14,7 +14,7 @@ export const SolutionsElement = ({
       {description && (
         <Body>
           <Content>
-            <Icon src={img} />
+            <Icon src={img} loading="lazy" />
             <Title>{heading}</Title>
             <SubTitle>{description}</SubTitle>
             {!hide && <StyledLick to={"Info"}>Read More</StyledLick>}

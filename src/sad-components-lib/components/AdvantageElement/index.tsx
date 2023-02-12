@@ -10,7 +10,7 @@ export const AdvantageElement = ({
   return (
     <Body>
       <TitleContainer>
-        <Image src={Ok} />
+        <Image src={Ok} loading="lazy" />
         <Title>{heading}</Title>
       </TitleContainer>
       <Text>{description}</Text>

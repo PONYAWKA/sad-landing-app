@@ -9,7 +9,7 @@ export const IconsMapper = ({ Icons, urls }: IIconsMapper) => {
       <IconsContainer>
         {urls.map((e, index) => (
           <Link href={e} key={v4()}>
-            <Icon src={Icons[index]} />
+            <Icon src={Icons[index]} loading="lazy" />
           </Link>
         ))}
       </IconsContainer>

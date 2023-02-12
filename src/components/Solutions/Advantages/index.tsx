@@ -7,7 +7,7 @@ import { AdvantagesContainer, Body, Image, TextContent, Title } from "./styled";
 export const Advantages = ({ title, items }: IAdvantages) => {
   return (
     <Body>
-      <Image src={image} />
+      <Image src={image} loading="lazy" />
       <TextContent>
         <Title>{title}</Title>
         <AdvantagesContainer>

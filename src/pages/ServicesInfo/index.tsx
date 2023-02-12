@@ -46,7 +46,7 @@ export const ServicesInfo = () => {
           <ArticleContainer>
             <Title>{customer.title}</Title>
             <Text>{customer.text}</Text>
-            <Image src={customer.image} />
+            <Image src={customer.image} loading="lazy" />
           </ArticleContainer>
           <ArticleContainer>
             <Title>{challenge.title}</Title>
@@ -55,7 +55,7 @@ export const ServicesInfo = () => {
           <ArticleContainer>
             <Title>{solution.title}</Title>
             <ListContainer>
-              <LittleImage src={solution.image} />
+              <LittleImage src={solution.image} loading="lazy" />
               <List>
                 {solution.items.map((e) => (
                   <ListElement key={e}>{e}</ListElement>

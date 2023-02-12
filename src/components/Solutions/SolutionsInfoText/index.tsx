@@ -20,7 +20,7 @@ export const SolutionsInfoText = () => {
       </ContentContainer>
       <ContentContainer id="typeOf">
         <Title>{TypesOf.title}</Title>
-        <Image src={TypesOf.img} />
+        <Image src={TypesOf.img} loading="lazy" />
         <Text>{TypesOf.text}</Text>
         <Container>
           {TypesOf.elements.map(({ title, text }) => (
@@ -34,7 +34,7 @@ export const SolutionsInfoText = () => {
       </ContentContainer>
       <ContentContainer>
         <Title>{practiceConfig.title}</Title>
-        <Image src={practiceConfig.img} />
+        <Image src={practiceConfig.img} loading="lazy" />
         <Text>{practiceConfig.text}</Text>
         <ContentContainer id="inEnsome" />
       </ContentContainer>

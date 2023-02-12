@@ -23,7 +23,12 @@ export const LinkElement = ({ isOpen, setIsOpen }: ILinks) => {
       {NAV_ROUTES.map(({ name, to, children }) => {
         if (!children) {
           return (
-            <StyledLink to={to} key={name} onClick={handleClick}>
+            <StyledLink
+              to={to}
+              key={name}
+              onClick={handleClick}
+              name-link={name}
+            >
               {name}
             </StyledLink>
           );

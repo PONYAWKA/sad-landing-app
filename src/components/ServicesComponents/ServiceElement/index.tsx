@@ -12,7 +12,7 @@ export const ServiceElement = ({
 }: IProps) => {
   return (
     <Body>
-      <Icon src={img} />
+      <Icon src={img} loading="lazy" />
       <Title>{heading}</Title>
       <SubTitle>{description}</SubTitle>
       {!hide && <StyledLick to={`Info?service=${id}`}>Read More</StyledLick>}

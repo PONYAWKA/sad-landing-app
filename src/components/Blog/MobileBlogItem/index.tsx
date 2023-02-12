@@ -20,7 +20,7 @@ export const MobileBlogItem = ({
 
   return (
     <Body onClick={onClickHandler}>
-      <Image src={icon} />
+      <Image src={icon} loading="lazy" />
       <Content>
         <Info>{info}</Info>
         <Title>{heading}</Title>

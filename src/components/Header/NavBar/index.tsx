@@ -43,7 +43,7 @@ export const NavBar = () => {
             <ButtonTitle>Watch the demo</ButtonTitle>
           </Button>
         </ButtonContainer>
-        <BurgerContainer>
+        <BurgerContainer id="burger">
           <Burger onClick={BurgerClickHandler} />
         </BurgerContainer>
       </Content>
