@@ -5,7 +5,6 @@ import { BasicLayout } from "@/components/BasicLayout";
 import { ROUTES } from "@/constants/routs";
 import { GlobalStyle } from "@/globalStyle";
 import { theme } from "@/theme";
-
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>

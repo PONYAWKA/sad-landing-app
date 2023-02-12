@@ -40,6 +40,16 @@ export const TitleButtonContainer = styled.div``;
 export const ElementContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  animation: slidIn 1s forwards;
+  @keyframes slidIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Element = styled.div<IStyledNav>`

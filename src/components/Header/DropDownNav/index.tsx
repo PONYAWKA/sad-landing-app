@@ -15,7 +15,10 @@ export const DropDownNav = ({ name, routs, setIsOpen }: IProps) => {
     setIsVisible((prev) => !prev);
   };
 
-  const handleVisible = () => setIsOpen((prev) => !prev);
+  const handleVisible = () => {
+    setIsOpen((prev) => !prev);
+    handleClick();
+  };
 
   return (
     <MoreLinksBody key={name}>

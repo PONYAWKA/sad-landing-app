@@ -7,6 +7,7 @@ import { LinkElement } from "@/components/Header/Links";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Burger } from "@/sad-components-lib/components/Burger";
 import { Button } from "@/sad-components-lib/components/Button";
+import { useShowBlocks } from "@/utils/showBlocks";
 
 import { videoId, youtubeOptions } from "./mock";
 import {
@@ -22,7 +23,6 @@ import {
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isYouOpen, setIsYouOpen] = useState(false);
-
   const youTubeHandler = () => setIsYouOpen((prev) => !prev);
 
   const BurgerClickHandler = () => {
@@ -30,6 +30,7 @@ export const NavBar = () => {
   };
 
   useScrollToTop();
+  useShowBlocks();
 
   return (
     <Container>

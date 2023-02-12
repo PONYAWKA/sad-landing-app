@@ -20,7 +20,7 @@ export const NewestSection = () => {
 
   return (
     <NewestContent>
-      <Newest>
+      <Newest className="element-animation">
         <Title>
           The<span> newest </span>
           business analytics platform

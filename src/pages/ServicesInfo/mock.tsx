@@ -10,6 +10,7 @@ export const headerConfig = {
   crumb: {
     curPage: "Access control",
     links: [{ name: "Home", to: "/" }],
+    curPageColor: "#ffffff",
   },
 };
 

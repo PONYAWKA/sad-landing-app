@@ -46,11 +46,12 @@ export const ElementContainer = styled.div`
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   display: flex;
-  width: 95%;
+  width: 100%;
   gap: 10px;
 `;
 
 export const Window = styled.div`
+  max-width: 930px;
   overflow: hidden;
   align-self: center;
 `;

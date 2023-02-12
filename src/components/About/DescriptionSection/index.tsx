@@ -9,7 +9,7 @@ export const Description = ({
   image,
 }: IDescription) => {
   return (
-    <Body reverse={reverse}>
+    <Body reverse={reverse} className="element-animation">
       <TextContent>
         <Title>{title}</Title>
         <Text>{textOne}</Text>

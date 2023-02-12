@@ -1,16 +1,19 @@
 import { DropDownNav } from "@/components/Header/DropDownNav";
 import { NAV_ROUTES } from "@/constants/routs";
+import { useIsMobile } from "@/hooks/useMobile";
 import { Media } from "@/sad-components-lib/components/Media";
 
 import { ILinks } from "./interfaces";
 import { LinkContainer, MediaContainer, StyledLink } from "./styled";
 
 export const LinkElement = ({ isOpen, setIsOpen }: ILinks) => {
+  const { isMobile } = useIsMobile();
+
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };
 
-  if (isOpen) document.body.style.overflow = "hidden";
+  if (isOpen && isMobile) document.body.style.overflow = "hidden";
   else {
     document.body.style.overflowY = "scroll";
     document.body.style.overflowX = "hidden";

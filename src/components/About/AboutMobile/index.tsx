@@ -23,7 +23,7 @@ export const AboutMobile = () => {
         <BreadCrumbs {...breadCrumb} />
       </CrumbsContainer>
       <SecondPageHeader {...topConfig} />
-      <SuccessContainer>
+      <SuccessContainer className="element-animation">
         <Success {...successConfig} />
       </SuccessContainer>
       <Benefits {...benefitConfig} />

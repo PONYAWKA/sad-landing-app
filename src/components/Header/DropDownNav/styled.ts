@@ -12,7 +12,7 @@ export const MoreLinks = styled.div`
     position: absolute;
     content: " ";
     width: ${({ theme }) => theme.spaces.ss}px;
-    margin-top: ${({ theme }) => theme.spaces.s}px;
+    margin-top: ${({ theme }) => theme.spaces.ss}px;
     margin-left: ${({ theme }) => theme.spaces.s}px;
     height: ${({ theme }) => theme.spaces.so}px;
     background-image: url(${downArrow});

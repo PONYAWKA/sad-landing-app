@@ -12,7 +12,7 @@ import {
 export const Forma = () => {
   return (
     <Body>
-      <Content>
+      <Content className="element-animation">
         <Container>
           <Title>
             Left questions? Contacts us now for a free consultation and free

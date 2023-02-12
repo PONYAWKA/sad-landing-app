@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { libTheme } from "@/sad-components-lib/theme";
 
 export const Body = styled.button`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;

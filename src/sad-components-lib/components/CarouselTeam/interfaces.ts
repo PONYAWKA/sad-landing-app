@@ -15,4 +15,5 @@ export interface IStyledProps {
 }
 export interface IStyledNav {
   to?: string;
+  anim?: boolean;
 }

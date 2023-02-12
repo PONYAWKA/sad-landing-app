@@ -4,7 +4,7 @@ import { Body, ButtonContent, Container, Text, Title } from "./styled";
 
 export const Help = () => (
   <Container>
-    <Body>
+    <Body className="element-animation">
       <Title>Do you need help?</Title>
       <Text>
         Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis

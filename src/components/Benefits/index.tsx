@@ -13,7 +13,7 @@ import {
 } from "./styled";
 
 export const Benefits = ({ title, text, cards }: BenefitsInterface) => (
-  <Container>
+  <Container className="element-animation">
     <Content>
       <TextContainer>
         <Text>

@@ -39,7 +39,7 @@ export const Home = () => {
           }
         />
       </CarouselContainer>
-      <PriceContainer>
+      <PriceContainer className="element-animation">
         <PriceCards {...priceCardsConfig} />
       </PriceContainer>
       <CarouselContainer>

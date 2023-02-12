@@ -13,7 +13,7 @@ import {
   SuccessTitle,
 } from "./styled";
 export const Success = ({ text, title, hide, center, items }: ISuccess) => (
-  <SuccessContent>
+  <SuccessContent className="element-animation">
     <SuccessTitle>{title}</SuccessTitle>
     <SuccessBody center={center}>
       <SuccessMetric>

@@ -43,7 +43,7 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
   const isLeftActive = itemsLits - 1 >= 0;
   const isRightActive = itemsLits + 1 <= items?.length - itemsToShow;
   return (
-    <Body>
+    <Body className="element-animation">
       <TitleContainer>
         <Title>{title}</Title>
         <TitleButtonContainer>
@@ -59,7 +59,7 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
           />
         </TitleButtonContainer>
       </TitleContainer>
-      <ElementContainer>
+      <ElementContainer key={String(itemsLits)}>
         {items
           ?.slice(itemsLits, itemsLits + itemsToShow)
           .map(({ text, pos, title, icon }) => (

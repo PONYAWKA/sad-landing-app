@@ -11,7 +11,7 @@ import {
 
 export const Numbers = ({ title, metrics }: IEnsomeInNumbers) => {
   return (
-    <Body>
+    <Body className="element-animation">
       <Content>
         <Title>{title}</Title>
         <SuccessMetric>

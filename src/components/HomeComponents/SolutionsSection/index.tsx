@@ -26,7 +26,7 @@ export const SolutionsSection = () => {
     <SolutionsContent>
       <SolutionsImage loading="lazy" src={newestImage} />
       <SolutionsTextContainer>
-        <SolutionsText>
+        <SolutionsText className="element-animation">
           <SolutionsTextTitle>
             Radically new solutions for data
           </SolutionsTextTitle>
