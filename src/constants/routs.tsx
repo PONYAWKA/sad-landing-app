@@ -1,10 +1,11 @@
+import { NotFound } from "sad-components-lib";
+
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
 import { BlogInfo } from "@/pages/BlogInfo";
 import { Contacts } from "@/pages/Contacts";
 import { FAQ } from "@/pages/FAQ";
 import { Home } from "@/pages/Home/index";
-import { NotFound } from "@/pages/NotFound";
 import { OurTeamPage } from "@/pages/OurTeam";
 import { OurTeamInfo } from "@/pages/OurTeamInfo";
 import { Services } from "@/pages/Services";

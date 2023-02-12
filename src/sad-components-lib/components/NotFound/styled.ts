@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { libTheme } from "@/sad-components-lib/theme";
+
 export const Body = styled.div`
   width: 100%;
   display: flex;
@@ -14,17 +16,17 @@ export const Content = styled.div``;
 export const Title = styled.h1`
   width: 100%;
   text-align: center;
-  font-size: ${({ theme }) => theme.spaces.xx}px;
-  color: ${({ theme }) => theme.colors.primary};
-  font-weight: ${({ theme }) => theme.fonts.weightX};
-  @media (max-width: ${({ theme }) => theme.endPoints.phone}px) {
-    font-size: ${({ theme }) => theme.spaces.x}px;
+  font-size: ${libTheme.spaces.xx}px;
+  color: ${libTheme.colors.blue};
+  font-weight: ${libTheme.fonts.weightX};
+  @media (max-width: ${libTheme.endPoints.phone}px) {
+    font-size: ${libTheme.spaces.x}px;
   }
 `;
 
 export const Text = styled.h2`
   width: 100%;
   text-align: center;
-  color: ${({ theme }) => theme.colors.gray};
-  padding: 0 0 ${({ theme }) => theme.spaces.m}px 0;
+  color: ${libTheme.colors.gray};
+  padding: 0 0 ${libTheme.spaces.m}px 0;
 `;

@@ -1,6 +1,9 @@
 import { ErrorInfo, PureComponent } from "react";
+import { NotFound } from "sad-landing-lib";
 
 import { Props, State } from "@/components/ErrorBoundary/interfaces";
+
+import { config } from "./mock";
 
 class ErrorBoundary extends PureComponent<Props, State> {
   public state: State = {
@@ -17,7 +20,7 @@ class ErrorBoundary extends PureComponent<Props, State> {
 
   public render() {
     if (this.state.hasError) {
-      return <h1>Sorry.. there was an error</h1>;
+      return <NotFound {...config} />;
     }
 
     return this.props.children;

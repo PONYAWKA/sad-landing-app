@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { CategoriesElement } from "sad-landing-lib";
-import { Search } from "sad-landing-lib";
-import { TagButton } from "sad-landing-lib";
+import { NotFound, Search, TagButton } from "sad-landing-lib";
 import { v4 } from "uuid";
 
 import { CurrentBlog } from "@/components/Blog/CurrentBlog";
@@ -9,7 +8,6 @@ import { RelatedPost } from "@/components/Blog/RelatedPost";
 import { PageHeader } from "@/components/PageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
-import { NotFound } from "@/pages/NotFound";
 import { sortByPopular } from "@/utils/popular";
 
 import { IEvent } from "./interfaces";

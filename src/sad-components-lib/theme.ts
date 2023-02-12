@@ -38,6 +38,7 @@ const endPoints = {
   tablet: "767px",
   tabletM: "1000px",
   fold: "400px",
+  phone: "495px",
 };
 
 const shadows = {

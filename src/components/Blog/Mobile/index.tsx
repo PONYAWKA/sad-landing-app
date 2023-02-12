@@ -1,10 +1,8 @@
-import { BreadCrumbs } from "sad-landing-lib";
-import { Button } from "sad-landing-lib";
+import { BreadCrumbs, Button, NotFound } from "sad-landing-lib";
 
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
-import { NotFound } from "@/pages/NotFound";
 
 import { CurrentBlog } from "../CurrentBlog";
 import { MobileBlogItem } from "../MobileBlogItem";
