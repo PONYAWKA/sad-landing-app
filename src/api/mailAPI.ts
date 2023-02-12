@@ -10,7 +10,7 @@ const subscribeParams = (email: string) => ({
   subject: "You have subscribed to Anekdot.com",
   message: "You have subscribed to Anekdot.com",
 });
-const ContactParams = ({ email, theme, message, name }: IContactUs) => ({
+const ContactParams = ({ email, theme, message }: IContactUs) => ({
   to_name: "Dev",
   to_email: "firstbloodcyclehasbegan@gmail.com",
   from_name: email,

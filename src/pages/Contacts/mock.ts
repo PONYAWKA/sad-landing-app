@@ -1,4 +1,4 @@
-import L, { icon, LatLng } from "leaflet";
+import L, { icon } from "leaflet";
 
 import location from "@/assets/icons/contacts/location.svg";
 import mail from "@/assets/icons/contacts/mail.svg";

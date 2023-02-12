@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { libTheme } from "@/sad-components-lib/theme";
-
 export const Body = styled.div`
   display: flex;
   flex-direction: column;
