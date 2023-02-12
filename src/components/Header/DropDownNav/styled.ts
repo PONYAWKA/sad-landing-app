@@ -4,6 +4,8 @@ import styled from "styled-components";
 import downArrow from "@/assets/icons/header/downArrow.png";
 import rightArrow from "@/assets/icons/header/rightArrow.png";
 
+import { IStyledProps } from "./interfaces";
+
 export const MoreLinks = styled.div`
   cursor: pointer;
   padding: 0 ${({ theme }) => theme.spaces.m}px;
@@ -22,9 +24,6 @@ export const MoreLinks = styled.div`
     font-weight: bold;
   }
 `;
-interface IProps {
-  visible: boolean;
-}
 export const MoreLinksBody = styled.div`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     padding: ${({ theme }) => theme.spaces.m}px 0;
@@ -34,7 +33,7 @@ export const MoreLinksBody = styled.div`
     border-bottom-width: 2px;
   }
 `;
-export const ChildrenLinkContainer = styled.div<IProps>`
+export const ChildrenLinkContainer = styled.div<IStyledProps>`
   display: ${({ visible }) => (!visible ? "none" : "flex")} !important;
   position: absolute;
   flex-direction: column;

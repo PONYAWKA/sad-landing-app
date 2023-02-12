@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { IProps } from "./interfaces";
+import { IDropDownNav } from "./interfaces";
 import {
   ChildrenLinkContainer,
   ChildrenStyledLink,
@@ -8,7 +8,7 @@ import {
   MoreLinksBody,
 } from "./styled";
 
-export const DropDownNav = ({ name, routs, setIsOpen }: IProps) => {
+export const DropDownNav = ({ name, routs, setIsOpen }: IDropDownNav) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClick = () => {

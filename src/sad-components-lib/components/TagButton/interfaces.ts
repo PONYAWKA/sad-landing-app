@@ -6,3 +6,7 @@ export interface ITagButton {
   selected?: string;
   [index: string]: unknown;
 }
+
+export interface IStyledProps {
+  checks: boolean;
+}

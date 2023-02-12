@@ -138,23 +138,23 @@ export const FOOTER_ROUTES = [
 
 export const SERVICE_ROUTS = [
   {
-    to: "",
+    to: "Nowhere",
     title: "Pages",
   },
   {
-    to: "",
+    to: "Nowhere",
     title: "Elements",
   },
   {
-    to: "",
+    to: "Nowhere",
     title: "Pricing",
   },
   {
-    to: "",
+    to: "Nowhere",
     title: "FAQ",
   },
   {
-    to: "",
+    to: "Nowhere",
     title: "Site map",
   },
 ];

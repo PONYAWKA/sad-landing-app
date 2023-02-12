@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { IStyledProps } from "./interfaces";
+
 export const SuccessContent = styled.section`
   margin: ${({ theme }) => theme.spaces.x}px ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
@@ -8,7 +10,7 @@ export const SuccessContent = styled.section`
   flex-direction: column;
 `;
 
-export const SuccessBody = styled.div<{ center?: boolean }>`
+export const SuccessBody = styled.div<IStyledProps>`
   display: flex;
   flex-direction: row;
   justify-content: ${({ center }) => (center ? "center" : "")};

@@ -8,3 +8,7 @@ export interface ISuccess {
     sub: string;
   }[];
 }
+
+export interface IStyledProps {
+  center?: boolean;
+}

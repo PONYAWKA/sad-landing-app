@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
-export const STagButton = styled.button<{ checks: boolean }>`
+import { IStyledProps } from "./interfaces";
+
+export const STagButton = styled.button<IStyledProps>`
   outline: none;
   border: 1px solid
     ${({ checks }) => (checks ? libTheme.colors.gray : libTheme.colors.white)};
