@@ -1,7 +1,8 @@
+import { Media } from "sad-components-lib";
+
 import { DropDownNav } from "@/components/Header/DropDownNav";
 import { NAV_ROUTES } from "@/constants/routs";
 import { useIsMobile } from "@/hooks/useMobile";
-import { Media } from "@/sad-components-lib/components/Media";
 
 import { ILinks } from "./interfaces";
 import { LinkContainer, MediaContainer, StyledLink } from "./styled";

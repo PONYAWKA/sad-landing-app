@@ -54,7 +54,7 @@ export const ElementContainer = styled.div`
 
 export const Element = styled.div<IStyledNav>`
   ${({ to }) => (to ? "cursor: pointer;" : "")};
-  box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+  box-shadow: ${libTheme.shadows.s};
   padding: ${libTheme.spaces.m}px;
   margin: 0 ${libTheme.spaces.sss}px;
 `;

@@ -1,4 +1,4 @@
-import { LinkedBlogItem } from "@/sad-components-lib/components/LinkedBlogItem";
+import { LinkedBlogItem } from "sad-components-lib";
 
 import { IRelatedPost } from "./interfaces";
 import { Body, PostTitle } from "./styled";

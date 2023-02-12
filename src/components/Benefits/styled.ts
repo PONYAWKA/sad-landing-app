@@ -34,7 +34,7 @@ export const Text = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   margin-bottom: ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.xxx}px;
 `;

@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import { CategoriesElement } from "sad-components-lib";
+import { Search } from "sad-components-lib";
+import { TagButton } from "sad-components-lib";
+import { IEvent } from "sad-components-lib/components/Search/interfaces";
 
 import { CurrentBlog } from "@/components/Blog/CurrentBlog";
 import { RelatedPost } from "@/components/Blog/RelatedPost";
@@ -6,10 +10,6 @@ import { PageHeader } from "@/components/PageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
 import { NotFound } from "@/pages/NotFound";
-import { CategoriesElement } from "@/sad-components-lib/components/CategoriesElement";
-import { Search } from "@/sad-components-lib/components/Search";
-import { IEvent } from "@/sad-components-lib/components/Search/interfaces";
-import { TagButton } from "@/sad-components-lib/components/TagButton";
 import { sortByPopular } from "@/utils/popular";
 
 import { categories, pageHeadConfig, tags } from "./mock";

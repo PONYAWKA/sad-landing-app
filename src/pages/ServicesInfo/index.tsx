@@ -1,7 +1,8 @@
+import { CategoriesElement } from "sad-components-lib";
+import { Search } from "sad-components-lib";
+
 import { DarkHeader } from "@/components/DarkHeader";
 import { FormaComponent } from "@/components/FormaComponent";
-import { CategoriesElement } from "@/sad-components-lib/components/CategoriesElement";
-import { Search } from "@/sad-components-lib/components/Search";
 
 import {
   challenge,

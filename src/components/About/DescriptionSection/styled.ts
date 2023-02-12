@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Body = styled.section<{ reverse?: boolean }>`
+import { IStyled } from "./interfaces";
+
+export const Body = styled.section<IStyled>`
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   margin: ${({ theme }) => theme.spaces.mm}px 0;

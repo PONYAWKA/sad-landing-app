@@ -24,15 +24,15 @@ export const OurTeamInfo = () => {
   const query = useQuery();
   const id = query.get("id");
   if (id) {
-    const localPage = pageHeadConfig;
-    console.log(id);
     const { photo, name, profession, social } = profiles[parseInt(id)];
-    localPage.title = name;
-    localPage.crumb.curPage = name;
     return (
       <Body>
         <PageHeaderContainer>
-          <PageHeader {...localPage} />
+          <PageHeader
+            {...pageHeadConfig}
+            title={name}
+            crumb={{ curPage: name }}
+          />
         </PageHeaderContainer>
         <Container>
           <Section>

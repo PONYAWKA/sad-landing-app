@@ -1,9 +1,10 @@
+import { BreadCrumbs } from "sad-components-lib";
+import { Button } from "sad-components-lib";
+
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
 import { NotFound } from "@/pages/NotFound";
-import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
-import { Button } from "@/sad-components-lib/components/Button";
 
 import { CurrentBlog } from "../CurrentBlog";
 import { MobileBlogItem } from "../MobileBlogItem";

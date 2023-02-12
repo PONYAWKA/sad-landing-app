@@ -19,7 +19,7 @@ export const SuccessBody = styled.div<{ center?: boolean }>`
 `;
 export const SuccessTitle = styled.h2`
   text-align: center;
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   margin-bottom: ${({ theme }) => theme.spaces.m}px;
 `;
 export const SuccessMetric = styled.div`
@@ -38,7 +38,7 @@ export const SuccessMetricElement = styled.div`
 export const SuccessMetricTitle = styled.div`
   font-size: ${({ theme }) => theme.fonts.x}px;
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   @media (max-width: ${({ theme }) => theme.endPoints.phone}px) {
     font-size: ${({ theme }) => theme.fonts.m}px;
   }

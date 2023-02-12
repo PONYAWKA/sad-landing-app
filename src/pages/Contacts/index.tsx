@@ -1,6 +1,7 @@
+import { BreadCrumbs } from "sad-components-lib";
+
 import { MapComponent } from "@/components/ContactPage/MapComponent";
 import { FormaComponent } from "@/components/FormaComponent";
-import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
 
 import { breadCrumb, contacts, mapConfig } from "./mock";
 import {

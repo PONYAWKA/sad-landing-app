@@ -1,4 +1,4 @@
-import { StyledLick } from "@/sad-components-lib/components/Link";
+import { StyledLick } from "sad-components-lib";
 
 import { IProps } from "./interfaces";
 import { Body, Icon, SubTitle, Title } from "./styled";

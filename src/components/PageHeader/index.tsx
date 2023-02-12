@@ -1,4 +1,5 @@
-import { BreadCrumbs } from "../../sad-components-lib/components/BreadCrumbs";
+import { BreadCrumbs } from "sad-components-lib";
+
 import { PageHeaderProps } from "./interfaces";
 import { Body, Content, Title } from "./styled";
 

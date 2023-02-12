@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
+import { IError } from "./interfaces";
+
 export const Body = styled.div`
   display: flex;
   flex-direction: row;
@@ -20,7 +22,7 @@ export const Body = styled.div`
   @media (max-width: ${libTheme.endPoints.fold}) {
   }
 `;
-export const Field = styled.input`
+export const Field = styled.input<IError>`
   font-weight: bold;
   background-color: transparent;
   border-radius: ${libTheme.spaces.s}px 0 0 ${libTheme.spaces.s}px;
@@ -35,6 +37,7 @@ export const Field = styled.input`
   @media (max-width: ${libTheme.endPoints.fold}) {
     max-width: ${libTheme.spaces.x}px;
   }
+  ${({ error }) => (error ? `color: ${libTheme.colors.red}` : "")}
 `;
 export const Send = styled.button`
   font-weight: bolder;

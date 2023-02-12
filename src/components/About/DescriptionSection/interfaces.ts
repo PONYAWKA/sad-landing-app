@@ -5,3 +5,7 @@ export interface IDescription {
   textOne: string;
   textTwo: string;
 }
+
+export interface IStyled {
+  reverse?: boolean;
+}

@@ -32,6 +32,7 @@
     "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
     "react-youtube": "^10.1.0",
+    "sad-landing-lib": "^1.0.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.9.4",
     "uuid": "^9.0.0",
@@ -45,7 +46,8 @@
     "build:cr": "craco build",
     "eject": "craco eject",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "lint:fix": "npx eslint ./src --ext .ts,.tsx --fix"
+    "lint:fix": "npx eslint ./src --ext .ts,.tsx --fix",
+    "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +69,12 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
+    "@rollup/plugin-alias": "^4.0.3",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/leaflet": "^1.9.0",
     "@types/node": "^18.13.0",
     "@types/styled-components": "^5.1.26",
@@ -75,6 +83,7 @@
     "cypress": "^12.5.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",
     "webpack-cli": "^5.0.1"

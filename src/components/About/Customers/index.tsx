@@ -1,6 +1,7 @@
+import { CarouselTeam } from "sad-components-lib";
+
 import { IconsMapper } from "@/components/IconMapper";
 import { Icons } from "@/constants/icons";
-import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 
 import { ICustomers } from "./interfaces";
 import { Body, IconsContainer, Text, TextContainer, Title } from "./styled";

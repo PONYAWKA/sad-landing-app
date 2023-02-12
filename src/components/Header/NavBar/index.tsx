@@ -1,12 +1,12 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
+import { Burger } from "sad-components-lib";
+import { Button } from "sad-components-lib";
 
 import play from "@/assets/icons/header/play.png";
 import logo from "@/assets/images/header/logo_blue.png";
 import { LinkElement } from "@/components/Header/Links";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-import { Burger } from "@/sad-components-lib/components/Burger";
-import { Button } from "@/sad-components-lib/components/Button";
 import { useShowBlocks } from "@/utils/showBlocks";
 
 import { videoId, youtubeOptions } from "./mock";

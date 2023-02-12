@@ -7,7 +7,7 @@ export const Body = styled.div`
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.l}px;
   margin-bottom: ${({ theme }) => theme.spaces.mm}px;
-  box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+  box-shadow: ${({ theme }) => theme.shadows.s};
   border-radius: ${({ theme }) => theme.spaces.s}px;
 `;
 

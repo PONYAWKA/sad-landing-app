@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Media } from "sad-components-lib";
+import { SendMail } from "sad-components-lib";
 
 import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/header/logo_white.png";
-import { FooterLinks } from "@/components/Footer/FooterLinks";
-import { Media } from "@/sad-components-lib/components/Media";
-import { SendMail } from "@/sad-components-lib/components/SendMail";
+import { FooterLinks } from "@/components/FooterComponents/FooterLinks";
+import { validateEmail } from "@/utils/mailValidator";
 
 import { IEvent } from "./interfaces";
 import {
@@ -31,13 +32,14 @@ import {
 
 export const Footer = () => {
   const [mail, setMail] = useState("");
-
+  const [valid, setValid] = useState(false);
   const Subscribe = () => {
-    SubEmail(mail);
+    setValid(validateEmail(mail));
+    if (valid) SubEmail(mail);
   };
 
-  const onChangeHandler = (e: IEvent) => {
-    setMail(e.target.value);
+  const onChangeHandler = ({ target: { value } }: IEvent) => {
+    setMail(value);
   };
   return (
     <Body>
@@ -55,6 +57,7 @@ export const Footer = () => {
               value={mail}
               onChange={onChangeHandler}
               onClick={Subscribe}
+              error={valid}
             />
           </MailContainer>
         </SubscribeContainer>

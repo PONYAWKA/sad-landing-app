@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
-import { TagButton } from "@/sad-components-lib/components/TagButton";
+import { TagButton } from "sad-components-lib";
 
 import { IMobileBlogItem } from "./interfaces";
 import { Body, Content, Image, Info, TagsContainer, Title } from "./styled";

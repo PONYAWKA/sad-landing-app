@@ -1,10 +1,11 @@
+import { TagButton } from "sad-components-lib";
+
 import authorIcon from "@/assets/icons/blog/author.svg";
 import date from "@/assets/icons/blog/date.svg";
 import shareIcon from "@/assets/icons/blog/share.svg";
 import tagIcon from "@/assets/icons/blog/tag.svg";
 import viewsIcon from "@/assets/icons/blog/views.svg";
 import { IconsMapper } from "@/components/IconMapper";
-import { TagButton } from "@/sad-components-lib/components/TagButton/index";
 
 import { ICurrentBlog } from "./interfaces";
 import { Icons } from "./mock";

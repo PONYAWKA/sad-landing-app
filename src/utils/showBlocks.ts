@@ -2,8 +2,6 @@ import { useEffect } from "react";
 
 export const useShowBlocks = () => {
   function onEntry(entry: IntersectionObserverEntry[]) {
-    console.log("11");
-
     entry.forEach((change) => {
       if (change.isIntersecting) {
         change.target.classList.add("element-show");

@@ -16,7 +16,7 @@ export const Title = styled.h1`
   text-align: center;
   font-size: ${({ theme }) => theme.spaces.xx}px;
   color: ${({ theme }) => theme.colors.primary};
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   @media (max-width: ${({ theme }) => theme.endPoints.phone}px) {
     font-size: ${({ theme }) => theme.spaces.x}px;
   }

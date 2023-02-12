@@ -11,7 +11,7 @@ export const Text = styled.h3`
   font-weight: normal;
 `;
 export const Title = styled.h1`
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   margin-bottom: ${({ theme }) => theme.spaces.m}px;
 `;
 

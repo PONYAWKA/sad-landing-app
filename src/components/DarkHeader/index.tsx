@@ -1,4 +1,4 @@
-import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
+import { BreadCrumbs } from "sad-components-lib";
 
 import { IOurTeamHeader } from "./interfaces";
 import {

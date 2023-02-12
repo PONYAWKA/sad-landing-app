@@ -1,5 +1,6 @@
+import { AdvantageElement } from "sad-components-lib";
+
 import image from "@/assets/images/solutions/why-choose-us.png";
-import { AdvantageElement } from "@/sad-components-lib/components/AdvantageElement";
 
 import { IAdvantages } from "./interfaces";
 import { AdvantagesContainer, Body, Image, TextContent, Title } from "./styled";

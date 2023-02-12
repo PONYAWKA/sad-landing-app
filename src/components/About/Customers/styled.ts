@@ -11,7 +11,7 @@ export const TextContainer = styled.div`
 `;
 export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fonts.x}px;
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
 `;
 export const Text = styled.h3`
   color: ${({ theme }) => theme.colors.gray};

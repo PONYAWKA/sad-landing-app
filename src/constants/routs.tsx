@@ -85,6 +85,7 @@ export const NAV_ROUTES = [
       { name: "FAQ", to: "FAQ" },
       { name: "Services", to: "Services" },
       { name: "About", to: "About" },
+      { name: "OurTeam", to: "OurTeam" },
     ],
   },
   {

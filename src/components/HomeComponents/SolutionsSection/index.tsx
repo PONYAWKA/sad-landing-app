@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { Button } from "sad-components-lib";
 
 import solutionsImage from "@/assets/images/home/home-image-1.png";
 import newestImage from "@/assets/images/home/home-image-2.png";
-import { Button } from "@/sad-components-lib/components/Button";
 
 import {
   ButtonText,

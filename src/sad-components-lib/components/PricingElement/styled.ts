@@ -5,7 +5,7 @@ import { libTheme } from "@/sad-components-lib/theme";
 import { IStyledProps } from "./interface";
 
 export const Body = styled.div`
-  box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+  box-shadow: ${libTheme.shadows.s};
   padding: ${libTheme.spaces.m}px;
   background-color: ${({ theme }) => theme.se};
   border-radius: ${libTheme.spaces.s}px;
@@ -36,7 +36,7 @@ export const Price = styled.div`
     theme.pr == libTheme.colors.blue
       ? libTheme.colors.black
       : libTheme.colors.white};
-  font-weight: 800;
+  font-weight: ${libTheme.fonts.weightX};
   font-size: ${libTheme.spaces.m}px;
 `;
 

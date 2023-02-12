@@ -11,7 +11,7 @@ export const STagButton = styled.button<{ checks: boolean }>`
   border-radius: ${libTheme.spaces.s}px;
   color: ${({ checks }) =>
     checks ? libTheme.colors.blue : libTheme.colors.white};
-  font-weight: 800;
+  font-weight: ${libTheme.fonts.weightX};
   margin: 0 ${libTheme.spaces.s}px;
   margin-bottom: ${libTheme.spaces.s}px;
   cursor: pointer;

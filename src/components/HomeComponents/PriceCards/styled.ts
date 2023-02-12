@@ -22,6 +22,6 @@ export const Content = styled.section`
 
 export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fonts.x}px;
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   margin-left: ${({ theme }) => theme.spaces.m}px;
 `;

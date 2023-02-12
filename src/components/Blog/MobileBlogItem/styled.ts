@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Body = styled.div`
   max-width: 95vw;
   width: 100%;
-  box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
+  box-shadow: ${({ theme }) => theme.shadows.s};
   border-radius: ${({ theme }) => theme.spaces.s}px;
   margin-top: ${({ theme }) => theme.spaces.m}px;
 `;

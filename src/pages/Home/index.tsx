@@ -1,3 +1,6 @@
+import { CarouselBlog } from "sad-components-lib";
+import { CarouselTeam } from "sad-components-lib";
+
 import powerImage from "@/assets/images/home/home-image-3.png";
 import { Benefits } from "@/components/Benefits";
 import { Help } from "@/components/Help";
@@ -9,8 +12,6 @@ import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
 import { Testimonials } from "@/constants/Testimonials";
 import { useIsMobile } from "@/hooks/useMobile";
-import { CarouselBlog } from "@/sad-components-lib/components/CarouselBlog";
-import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 
 import {
   BenefitConfig,

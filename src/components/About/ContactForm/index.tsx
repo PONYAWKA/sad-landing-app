@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
+import { Button } from "sad-components-lib";
 
 import { IContactUs } from "@/api/interfaces";
 import { Contact } from "@/api/mailAPI";
-import { Button } from "@/sad-components-lib/components/Button";
 
 import { initialValue, validScheme } from "./mock";
 import {

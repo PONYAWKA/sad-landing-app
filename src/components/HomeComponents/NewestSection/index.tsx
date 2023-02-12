@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
-import { Button } from "@/sad-components-lib/components/Button";
+import { Button } from "sad-components-lib";
 
 import {
   ButtonText,

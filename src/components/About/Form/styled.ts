@@ -22,7 +22,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 export const Title = styled.h1`
-  font-weight: 800;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
 `;
 
 export const SubTitle = styled.h4`

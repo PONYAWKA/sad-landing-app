@@ -1,6 +1,5 @@
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-
-import { PricingElement } from "@/sad-components-lib/components/PricingElement";
+import { PricingElement } from "sad-components-lib";
 
 import { IPriceCards } from "./interfaces";
 import { Body, Content, Title } from "./styled";

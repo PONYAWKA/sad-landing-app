@@ -1,11 +1,12 @@
+import { BreadCrumbs } from "sad-components-lib";
+import { CarouselTeam } from "sad-components-lib";
+
 import { Help } from "@/components/Help";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { Advantages } from "@/components/Solutions/Advantages";
 import { SolutionsList } from "@/components/Solutions/SolutionsList";
 import { Testimonials } from "@/constants/Testimonials";
 import { useIsMobile } from "@/hooks/useMobile";
-import { BreadCrumbs } from "@/sad-components-lib/components/BreadCrumbs";
-import { CarouselTeam } from "@/sad-components-lib/components/CarouselTeam";
 
 import {
   advantagesConfig,

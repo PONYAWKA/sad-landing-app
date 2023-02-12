@@ -18,14 +18,13 @@ import {
 export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
   const [offSet, setOffSet] = useState(5);
 
-  const handleLeftArrowClick = () =>
-    setTimeout(() => {
-      setOffSet((currentOffset) => {
-        const newOffset = currentOffset + itemsSize[1];
+  const handleLeftArrowClick = () => {
+    setOffSet((currentOffset) => {
+      const newOffset = currentOffset + itemsSize[1];
 
-        return Math.min(newOffset, 5);
-      });
-    }, 1000);
+      return Math.min(newOffset, 5);
+    });
+  };
   const handleRightArrowClick = () => {
     setOffSet((currentOffset) => {
       const newOffset = currentOffset - itemsSize[1];
@@ -38,7 +37,6 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
       return Math.max(newOffset, maxOffset);
     });
   };
-  console.log(offSet);
   const isLeftActive = offSet < 0;
   const isRightActive = offSet > -(itemsSize[1] * (items.length - itemsToShow));
   return (

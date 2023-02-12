@@ -1,22 +1,20 @@
 import styled from "styled-components";
 
-import { libTheme } from "@/sad-components-lib/theme";
-
 export const Body = styled.section`
   display: flex;
   justify-content: center;
-  max-width: ${libTheme.spaces.maxContentWidth}px;
+  max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
 `;
 
 export const Content = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: ${libTheme.spaces.mmm}px;
+  margin-bottom: ${({ theme }) => theme.spaces.mmm}px;
 `;
 
 export const Title = styled.h1`
-  font-size: ${libTheme.fonts.x}px;
-  font-weight: 800;
+  font-size: ${({ theme }) => theme.fonts.x}px;
+  font-weight: ${({ theme }) => theme.fonts.weightX};
   margin: 0;
 `;

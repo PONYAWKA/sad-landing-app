@@ -7,6 +7,7 @@ const colors = {
   white: "#FFFFFF",
   tertiary: "#F0F9FF",
   black: "#292D33",
+  red: "#C14040",
 };
 
 const spaces = {
@@ -31,6 +32,7 @@ const fonts = {
   x: 46,
   m: 24,
   s: 16,
+  weightX: 800,
 };
 const endPoints = {
   tablet: "767px",
@@ -38,4 +40,8 @@ const endPoints = {
   fold: "400px",
 };
 
-export const libTheme = { colors, spaces, endPoints, fonts };
+const shadows = {
+  s: " 0px 4px 12px rgba(12, 68, 204, 0.1)",
+};
+
+export const libTheme = { colors, spaces, endPoints, fonts, shadows };

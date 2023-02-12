@@ -1,4 +1,4 @@
-import { Card } from "@/sad-components-lib/components/Card";
+import { Card } from "sad-components-lib";
 
 import { BenefitsInterface } from "./interfaces";
 import {

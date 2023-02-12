@@ -36,6 +36,7 @@ const fonts = {
   x: 40,
   xx: 60,
   xxx: 80,
+  weightX: 800,
 };
 
 const tops = { s: 210, m: 250, x: 300, xx: 340 };
@@ -47,4 +48,8 @@ const endPoints = {
   fold: 300,
 };
 
-export const theme = { colors, spaces, endPoints, fonts, tops };
+const shadows = {
+  s: `0px 4px 12px rgba(12, 68, 204, 0.1)`,
+};
+
+export const theme = { colors, spaces, endPoints, fonts, tops, shadows };
