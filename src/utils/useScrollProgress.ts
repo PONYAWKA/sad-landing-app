@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 
-export const useScrollProgress = (nameObserve?: string) => {
+export const useScrollProgress = (nameObserve: string, element: string) => {
   const [progress, setProgress] = useState(1);
 
   useEffect(() => {
     const onObserve = (e: IntersectionObserverEntry[]) => {
-        const {target} = e[0]
-     if(value.target.getAttribute("data-content") && value.isIntersecting)
+      const value = e[0].target.getAttribute(nameObserve);
+      if (value && e[0].isIntersecting) {
+        setProgress(Number(value));
+      }
     };
-    const observer = new IntersectionObserver(onObserve, { threshold: 1 });
-    const elements = document.querySelectorAll("h1[data-content]");
+
+    const observer = new IntersectionObserver(onObserve);
+    const elements = document.querySelectorAll(`${element}[${nameObserve}]`);
     elements.forEach((e) => observer.observe(e));
+
     return () => observer.disconnect();
   }, []);
 
-  return progress;
+  return { progress: progress - 1, setProgress };
 };

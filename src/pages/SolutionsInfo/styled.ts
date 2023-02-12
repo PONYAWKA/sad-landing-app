@@ -38,3 +38,8 @@ export const TextContent = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const HederLine = styled.div`
+  position: absolute;
+  top: 0;
+`;

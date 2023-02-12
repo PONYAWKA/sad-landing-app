@@ -18,7 +18,7 @@ export const SolutionsInfoText = () => {
         <Text>{WhatIs.text}</Text>
         <LinkMarker id="typeOf" />
       </ContentContainer>
-      <ContentContainer id="typeOf">
+      <ContentContainer>
         <Title data-content="2">{TypesOf.title}</Title>
         <Image src={TypesOf.img} loading="lazy" />
         <Text>{TypesOf.text}</Text>
