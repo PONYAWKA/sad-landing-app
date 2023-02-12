@@ -4,6 +4,7 @@ export interface IProps {
   placeholder?: string;
   onClick?: () => void;
   error?: boolean;
+  isMobile?: boolean;
 }
 interface IEvent {
   target: {

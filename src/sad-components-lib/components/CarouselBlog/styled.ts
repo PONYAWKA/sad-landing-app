@@ -38,7 +38,9 @@ export const TitleButton = styled.img<IStyledProps>`
   }
 `;
 
-export const TitleButtonContainer = styled.div``;
+export const TitleButtonContainer = styled.div`
+  display: flex;
+`;
 
 export const ElementContainer = styled.div`
   transition: "translate";

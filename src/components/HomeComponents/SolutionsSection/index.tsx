@@ -5,6 +5,7 @@ import solutionsImage from "@/assets/images/home/home-image-1.png";
 import newestImage from "@/assets/images/home/home-image-2.png";
 
 import {
+  ButtonContainer,
   ButtonText,
   SolutionsContent,
   SolutionsImage,
@@ -37,9 +38,11 @@ export const SolutionsSection = () => {
             quae ab illo inventore veritatis et quasi architecto beatae vitae
             dicta sunt explicabo.
           </SolutionsTextText>
-          <Button onClick={HandleClick}>
-            <ButtonText>Learn more</ButtonText>
-          </Button>
+          <ButtonContainer>
+            <Button onClick={HandleClick}>
+              <ButtonText>Learn more</ButtonText>
+            </Button>
+          </ButtonContainer>
         </SolutionsText>
       </SolutionsTextContainer>
     </SolutionsContent>

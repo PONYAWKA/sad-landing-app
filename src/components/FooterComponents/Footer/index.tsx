@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Media } from "sad-landing-lib";
-import { SendMail } from "sad-landing-lib";
 
 import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/header/logo_white.png";
 import { FooterLinks } from "@/components/FooterComponents/FooterLinks";
+import { useIsMobile } from "@/hooks/useMobile";
+import { SendMail } from "@/sad-components-lib";
 import { validateEmail } from "@/utils/mailValidator";
 
 import { IEvent } from "./interfaces";
@@ -33,6 +34,7 @@ import {
 export const Footer = () => {
   const [mail, setMail] = useState("");
   const [valid, setValid] = useState(false);
+  const { isMobile } = useIsMobile();
   const Subscribe = () => {
     setValid(validateEmail(mail));
     if (valid) SubEmail(mail);
@@ -58,6 +60,7 @@ export const Footer = () => {
               onChange={onChangeHandler}
               onClick={Subscribe}
               error={valid}
+              isMobile={isMobile}
             />
           </MailContainer>
         </SubscribeContainer>

@@ -14,7 +14,7 @@ export const Body = styled.div`
   max-width: ${libTheme.spaces.l}px;
   width: 100%;
   justify-content: space-between;
-  @media (max-width: ${libTheme.endPoints.tablet}px) {
+  @media (max-width: ${libTheme.endPoints.tablet}) {
     flex-direction: column;
     background-color: transparent;
     margin: ${libTheme.spaces.sss}px;
@@ -29,13 +29,13 @@ export const Field = styled.input<IError>`
   border: 0px;
   outline: none;
   padding: ${libTheme.spaces.sss}px;
-  @media (max-width: ${libTheme.endPoints.tablet}px) {
+  @media (max-width: ${libTheme.endPoints.tablet}) {
     border: 2px solid ${libTheme.colors.helperB2};
+    border-radius: ${libTheme.spaces.s}px;
     color: ${libTheme.colors.helperB2};
     margin-bottom: ${libTheme.spaces.m}px;
   }
   @media (max-width: ${libTheme.endPoints.fold}) {
-    max-width: ${libTheme.spaces.x}px;
   }
   ${({ error }) => (error ? `color: ${libTheme.colors.red}` : "")}
 `;
@@ -44,7 +44,7 @@ export const Send = styled.button`
   padding: 0 ${libTheme.spaces.m}px;
   border: 0px;
   border-radius: ${libTheme.spaces.s}px;
-  @media (max-width: ${libTheme.endPoints.tablet}px) {
+  @media (max-width: ${libTheme.endPoints.tablet}) {
     height: ${libTheme.spaces.mmm}px;
   }
 `;

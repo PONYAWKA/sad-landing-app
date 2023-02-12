@@ -7,9 +7,9 @@ export const SendMail = ({
   placeholder = "You Email",
   onClick,
   error,
+  isMobile,
 }: IProps) => {
-  const screenWidth = window.screen.width;
-  const sendText = screenWidth < 767 ? "Subscribe" : "Send";
+  const sendText = isMobile ? "Subscribe" : "Send";
   return (
     <Body>
       <Field placeholder={placeholder} onChange={onChange} error={error} />

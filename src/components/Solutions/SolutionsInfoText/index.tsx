@@ -14,12 +14,12 @@ export const SolutionsInfoText = () => {
   return (
     <Body>
       <ContentContainer>
-        <Title>{WhatIs.title}</Title>
+        <Title data-content="1">{WhatIs.title}</Title>
         <Text>{WhatIs.text}</Text>
         <LinkMarker id="typeOf" />
       </ContentContainer>
       <ContentContainer id="typeOf">
-        <Title>{TypesOf.title}</Title>
+        <Title data-content="2">{TypesOf.title}</Title>
         <Image src={TypesOf.img} loading="lazy" />
         <Text>{TypesOf.text}</Text>
         <Container>
@@ -33,13 +33,13 @@ export const SolutionsInfoText = () => {
         <ContentContainer id="practice" />
       </ContentContainer>
       <ContentContainer>
-        <Title>{practiceConfig.title}</Title>
+        <Title data-content="3">{practiceConfig.title}</Title>
         <Image src={practiceConfig.img} loading="lazy" />
         <Text>{practiceConfig.text}</Text>
         <ContentContainer id="inEnsome" />
       </ContentContainer>
       <ContentContainer>
-        <Title>{inEnsome.title}</Title>
+        <Title data-content="4">{inEnsome.title}</Title>
         <Text>{inEnsome.text}</Text>
       </ContentContainer>
     </Body>

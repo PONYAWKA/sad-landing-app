@@ -112,14 +112,13 @@ export const Image = styled.img``;
 export const EndPageContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 0 0 ${({ theme }) => theme.spaces.ss}px 0;
 `;
 
 export const EndPageTitle = styled.h3`
   color: ${({ theme }) => theme.colors.helperB2};
   font-size: ${({ theme }) => theme.fonts.s}px;
-  @media (min-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    margin-left: ${({ theme }) => theme.spaces.m}px;
-  }
+  margin: 0 0 0 ${({ theme }) => theme.spaces.ss}px;
 `;
 
 export const EndPageLink = styled(Link)`
@@ -129,4 +128,6 @@ export const EndPageLink = styled(Link)`
   margin: 0 ${({ theme }) => theme.spaces.ss}px;
 `;
 
-export const LinkContainer = styled.div``;
+export const LinkContainer = styled.div`
+  display: flex;
+`;

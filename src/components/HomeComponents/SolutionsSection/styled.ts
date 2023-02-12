@@ -24,8 +24,11 @@ export const SolutionsImageMobile = styled.img`
 export const SolutionsTextContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 0 ${({ theme }) => theme.spaces.m}px;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    justify-content: center;
+    margin: ${({ theme }) => theme.spaces.mm}px
+      ${({ theme }) => theme.spaces.m}px;
+  }
 `;
 
 export const SolutionsText = styled.div`
@@ -39,15 +42,26 @@ export const SolutionsText = styled.div`
   }
 `;
 
-export const SolutionsTextTitle = styled.h2`
+export const SolutionsTextTitle = styled.h1`
   color: ${({ theme }) => theme.colors.black};
 `;
 
 export const SolutionsTextText = styled.h4`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.gray};
+  margin: ${({ theme }) => theme.spaces.m}px 0;
 `;
 
 export const ButtonText = styled.div`
   margin: 0 ${({ theme }) => theme.spaces.sss}px;
+`;
+
+export const ButtonContainer = styled.div`
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    display: flex;
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
 `;
