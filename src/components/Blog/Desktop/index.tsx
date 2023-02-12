@@ -12,6 +12,7 @@ import { useQuery } from "@/hooks/useQuery";
 import { NotFound } from "@/pages/NotFound";
 import { sortByPopular } from "@/utils/popular";
 
+import { IEvent } from "./interfaces";
 import { categories, pageHeadConfig, tags } from "./mock";
 import {
   BlogContainer,
@@ -27,25 +28,24 @@ import {
 export const BlogDesktop = () => {
   const query = useQuery();
   const blog = query.get("id");
+  const [check, setCheck] = useState("All topics");
+  const [related, setRelated] = useState(blogArticles);
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    setRelated(
+      blogArticles
+        .filter(({ tags }) => tags.includes(check) || check === "All topics")
+        .filter(({ heading }) =>
+          search ? heading.toLocaleLowerCase().includes(search) : true
+        )
+    );
+  }, [check, search]);
 
   if (blog) {
-    const [check, setCheck] = useState("All topics");
-    const [related, setRelated] = useState(blogArticles);
-    const [search, setSearch] = useState("");
     const popular = blogArticles.sort(sortByPopular);
     const currentBlogInfo = blogArticles[Number(blog)];
 
-    useEffect(() => {
-      setRelated(
-        blogArticles
-          .filter(({ tags }) => tags.includes(check) || check === "All topics")
-          .filter(({ heading }) =>
-            search ? heading.toLocaleLowerCase().includes(search) : true
-          )
-      );
-    }, [check, search]);
-
-    const onChangeHandler = ({ target: { value } }: any) => {
+    const onChangeHandler = ({ target: { value } }: IEvent) => {
       setSearch(value);
     };
 
@@ -89,5 +89,6 @@ export const BlogDesktop = () => {
         </Body>
       );
   }
+
   return <NotFound />;
 };

@@ -4,6 +4,7 @@ import { useIsMobile } from "@/hooks/useMobile";
 
 export const BlogInfo = () => {
   const { isMobile } = useIsMobile();
+
   if (isMobile) return <BlogMobile />;
   return <BlogDesktop />;
 };

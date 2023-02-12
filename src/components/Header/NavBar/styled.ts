@@ -21,7 +21,9 @@ export const Content = styled.div`
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  cursor: pointer;
+`;
 
 export const ButtonTitle = styled.div`
   margin-left: ${({ theme }) => theme.spaces.s}px;

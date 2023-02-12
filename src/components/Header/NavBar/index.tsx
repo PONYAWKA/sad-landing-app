@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { Burger } from "sad-landing-lib";
 import { Button } from "sad-landing-lib";
@@ -22,10 +23,15 @@ import {
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isYouOpen, setIsYouOpen] = useState(false);
-  const youTubeHandler = () => setIsYouOpen((prev) => !prev);
+  const [isYoutubeOpen, setIsYoutubeOpen] = useState(false);
 
-  const BurgerClickHandler = () => {
+  const navigation = useNavigate();
+
+  const handleYouTube = () => setIsYoutubeOpen((prev) => !prev);
+
+  const handleLogoClick = () => navigation("/");
+
+  const handleBurgerClick = () => {
     setIsOpen((prev) => !prev);
   };
 
@@ -35,20 +41,20 @@ export const NavBar = () => {
   return (
     <Container>
       <Content>
-        <Image loading="lazy" src={logo} />
+        <Image loading="lazy" src={logo} onClick={handleLogoClick} />
         <LinkElement isOpen={isOpen} setIsOpen={setIsOpen} />
         <ButtonContainer>
-          <Button onClick={youTubeHandler}>
+          <Button onClick={handleYouTube}>
             <Image loading="lazy" src={play} />
             <ButtonTitle>Watch the demo</ButtonTitle>
           </Button>
         </ButtonContainer>
         <BurgerContainer id="burger">
-          <Burger onClick={BurgerClickHandler} />
+          <Burger onClick={handleBurgerClick} />
         </BurgerContainer>
       </Content>
-      {isYouOpen && (
-        <YouTubeContainer onClick={youTubeHandler}>
+      {isYoutubeOpen && (
+        <YouTubeContainer onClick={handleYouTube}>
           <YouTube videoId={videoId} opts={youtubeOptions} />
         </YouTubeContainer>
       )}

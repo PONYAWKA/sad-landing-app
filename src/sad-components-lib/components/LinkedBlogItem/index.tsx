@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 import { IBlogItem } from "./interfaces";
 import { Container, Element, Icon, StyledLink, Text, Title } from "./styled";

@@ -1,4 +1,10 @@
 export interface PageHeaderProps {
   title?: string;
-  crumb?: any;
+  crumb?: BreadCrumbProps;
+}
+
+interface BreadCrumbProps {
+  curPage?: string;
+  links?: { name: string; to: string }[];
+  curPageColor?: string;
 }
