@@ -1,4 +1,4 @@
-import { NotFound } from "sad-components-lib";
+import { NotFound } from "sad-landing-lib";
 
 import { About } from "@/pages/About";
 import { Blog } from "@/pages/Blog";
