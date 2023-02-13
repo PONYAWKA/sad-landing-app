@@ -45,7 +45,7 @@ export const NavBar = () => {
         <LinkElement isOpen={isOpen} setIsOpen={setIsOpen} />
         <ButtonContainer>
           <Button onClick={handleYouTube}>
-            <Image loading="lazy" src={play} />
+            <Image loading="lazy" src={play} alt="Loading..." title="play" />
             <ButtonTitle>Watch the demo</ButtonTitle>
           </Button>
         </ButtonContainer>

@@ -9,7 +9,7 @@ import {
 export const BlogItem = ({ text, icon, info, heading, id }: IBlogItem) => {
   return (
     <Element>
-      <ElementIcon src={icon} />
+      <ElementIcon src={icon} alt="Loading..." />
       <ElementText>{info}</ElementText>
       <ElementTitle>{heading}</ElementTitle>
       <ElementText>{text}</ElementText>

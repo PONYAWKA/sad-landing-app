@@ -6,7 +6,7 @@ import { Body, Line } from "./styled";
 export const Burger = ({ onClick }: IProps) => {
   return (
     <Body onClick={onClick}>
-      <Line src={burger} />
+      <Line src={burger} alt="Loading..." title="burger" />
     </Body>
   );
 };

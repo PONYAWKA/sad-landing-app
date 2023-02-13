@@ -48,11 +48,13 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
           <Title>{title}</Title>
           <TitleButtonContainer>
             <TitleButton
+              alt="Loading..."
               src={cLeft}
               onClick={handleLeftArrowClick}
               disabled={!isLeftActive}
             />
             <TitleButton
+              alt="Loading..."
               src={cRight}
               onClick={handleRightArrowClick}
               disabled={!isRightActive}

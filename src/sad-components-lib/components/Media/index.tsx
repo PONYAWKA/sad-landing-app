@@ -19,12 +19,12 @@ export const Media = ({ children, black }: IProps) => {
     <Body>
       {children && <ChildrenContainer>{children}</ChildrenContainer>}
       <MediaContainer>
-        <MediaItem src={black ? facebook : facebookW} />
-        <MediaItem src={black ? google : googleW} />
-        <MediaItem src={black ? linkedIn : linkedInW} />
-        <MediaItem src={black ? smth : smthW} />
-        <MediaItem src={black ? twitter : twitterW} />
-        <MediaItem src={black ? youTube : youTubeW} />
+        <MediaItem alt="Loading..." src={black ? facebook : facebookW} />
+        <MediaItem alt="Loading..." src={black ? google : googleW} />
+        <MediaItem alt="Loading..." src={black ? linkedIn : linkedInW} />
+        <MediaItem alt="Loading..." src={black ? smth : smthW} />
+        <MediaItem alt="Loading..." src={black ? twitter : twitterW} />
+        <MediaItem alt="Loading..." src={black ? youTube : youTubeW} />
       </MediaContainer>
     </Body>
   );

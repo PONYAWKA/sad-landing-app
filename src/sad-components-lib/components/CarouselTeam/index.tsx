@@ -50,11 +50,13 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
         <Title>{title}</Title>
         <TitleButtonContainer>
           <TitleButton
+            alt="Loading..."
             src={cLeft}
             onClick={prevHandler}
             disabled={!isLeftActive}
           />
           <TitleButton
+            alt="Loading..."
             src={cRight}
             onClick={nextHandler}
             disabled={!isRightActive}
@@ -67,7 +69,7 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
           .map(({ text, pos, title, icon }) => (
             <Element key={title} onClick={onClickHandler}>
               <ElementHeader>
-                <ElementIcon src={icon} />
+                <ElementIcon src={icon} alt="Loading..." />
                 <ElementHeaderContainer>
                   <ElementTitle>{title}</ElementTitle>
                   <ElementPosition>{pos}</ElementPosition>

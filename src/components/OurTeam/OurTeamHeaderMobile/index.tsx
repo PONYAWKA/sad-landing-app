@@ -11,7 +11,12 @@ export const OurTeamHeaderMobile = ({
   return (
     <Body>
       <SecondPageHeader {...pageHeaderConfig} />
-      <Image src={teamPhoto} loading="lazy" />
+      <Image
+        src={teamPhoto}
+        loading="lazy"
+        alt="Loading..."
+        title="team photo"
+      />
       <Text>{text}</Text>
     </Body>
   );

@@ -31,17 +31,22 @@ export const CurrentBlog = ({
 }: ICurrentBlog) => {
   return (
     <Body>
-      <Image src={icon} loading="lazy" />
+      <Image src={icon} loading="lazy" alt="Loading..." title="blog" />
       <InfoContainer>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={date} loading="lazy" />
+            <InfoIcon src={date} loading="lazy" alt="Loading..." title="date" />
             {info}
           </InfoText>
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={authorIcon} loading="lazy" />
+            <InfoIcon
+              src={authorIcon}
+              loading="lazy"
+              alt="Loading..."
+              title="author"
+            />
             {author}
           </InfoText>
         </InfoElement>
@@ -53,20 +58,35 @@ export const CurrentBlog = ({
       <InfoContainer>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={viewsIcon} loading="lazy" />
+            <InfoIcon
+              src={viewsIcon}
+              loading="lazy"
+              alt="Loading..."
+              title="views"
+            />
             {views}
           </InfoText>
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={shareIcon} loading="lazy" />
+            <InfoIcon
+              src={shareIcon}
+              loading="lazy"
+              alt="Loading..."
+              title="share"
+            />
             Share:
           </InfoText>
           <IconsMapper Icons={Icons} />
         </InfoElement>
         <InfoElement>
           <InfoText>
-            <InfoIcon src={tagIcon} loading="lazy" />
+            <InfoIcon
+              src={tagIcon}
+              loading="lazy"
+              alt="Loading..."
+              title="tag"
+            />
             Tags:
             {tags?.map((e) => (
               <TagButton key={e} text={e} />

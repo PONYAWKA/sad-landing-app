@@ -69,7 +69,7 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
           <PlusContainer>
             {plus.map((e) => (
               <PlusElement key={e}>
-                <Image loading="lazy" src={Icon} />
+                <Image loading="lazy" src={Icon} alt="Loading..." />
                 <PlusText>{e}</PlusText>
               </PlusElement>
             ))}

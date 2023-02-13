@@ -68,7 +68,7 @@ export const Footer = () => {
       <Content>
         <DescriptionContainer>
           <Description>
-            <Image src={logo} loading="lazy" />
+            <Image src={logo} loading="lazy" alt="Loading..." title="logo" />
             <DescriptionText>
               Ut enim ad minima veniam, quis nostrum exercitationem ullam
               corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.

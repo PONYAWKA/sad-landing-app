@@ -24,7 +24,7 @@ export const LinkedBlogItem = ({
       hideId={vertical || hideId}
       onClick={onclickHandler}
     >
-      <Icon src={icon} vertical={vertical} loading="lazy" />
+      <Icon src={icon} vertical={vertical} loading="lazy" alt="Loading..." />
       <Container>
         <Text>{info}</Text>
         <Title>{heading}</Title>

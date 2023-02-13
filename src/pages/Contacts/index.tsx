@@ -32,7 +32,7 @@ export const Contacts = () => {
           {contacts.map(({ icon, title, description }) => (
             <ContactsCard key={title}>
               <Container>
-                <Icon src={icon} loading="lazy" />
+                <Icon src={icon} loading="lazy" alt="Loading..." />
                 <ImageTitle>{title}</ImageTitle>
               </Container>
               <Description>{description}</Description>

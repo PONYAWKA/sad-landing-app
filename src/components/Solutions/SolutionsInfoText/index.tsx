@@ -20,7 +20,12 @@ export const SolutionsInfoText = () => {
       </ContentContainer>
       <ContentContainer>
         <Title data-content="2">{TypesOf.title}</Title>
-        <Image src={TypesOf.img} loading="lazy" />
+        <Image
+          src={TypesOf.img}
+          loading="lazy"
+          alt="Loading..."
+          title="typeOf"
+        />
         <Text>{TypesOf.text}</Text>
         <Container>
           {TypesOf.elements.map(({ title, text }) => (
@@ -34,7 +39,12 @@ export const SolutionsInfoText = () => {
       </ContentContainer>
       <ContentContainer>
         <Title data-content="3">{practiceConfig.title}</Title>
-        <Image src={practiceConfig.img} loading="lazy" />
+        <Image
+          src={practiceConfig.img}
+          loading="lazy"
+          alt="Loading..."
+          title="best practice"
+        />
         <Text>{practiceConfig.text}</Text>
         <ContentContainer id="inEnsome" />
       </ContentContainer>

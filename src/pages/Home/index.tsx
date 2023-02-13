@@ -25,7 +25,7 @@ export const Home = () => {
   return (
     <Body>
       <PowerSection />
-      <Image loading="lazy" src={powerImage} />
+      <Image loading="lazy" src={powerImage} alt="Loading..." title="power" />
       <NewestSection />
       <SolutionsSection />
       <Success {...SuccessConfig} />

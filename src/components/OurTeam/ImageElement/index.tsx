@@ -23,7 +23,7 @@ export const ImageElement = ({
   return (
     <Body onClick={onClickHandler}>
       <ImagWrapper>
-        <Image src={photo} loading="lazy" />
+        <Image src={photo} loading="lazy" alt="Loading..." title="picture" />
       </ImagWrapper>
       <TextContainer>
         <Name>{name}</Name>
