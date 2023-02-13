@@ -4,13 +4,13 @@ import { PricingElement } from "sad-landing-lib";
 import { IPriceCards } from "./interfaces";
 import { Body, Content, Title } from "./styled";
 
-export const PriceCards = ({ clientId, cards, title }: IPriceCards) => {
+export const PriceCards = ({ cards, title }: IPriceCards) => {
   return (
     <Content>
       <Title>{title}</Title>
       <PayPalScriptProvider
         options={{
-          "client-id": clientId,
+          "client-id": process.env.REACT_APP_PAYPA as string,
         }}
       >
         <Body>
