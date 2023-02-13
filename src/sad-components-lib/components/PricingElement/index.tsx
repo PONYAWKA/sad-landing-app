@@ -3,10 +3,10 @@ import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { createPaypalOrder } from "@/api/paypalAPI";
+import bOk from "@/sad-components-lib/assets/images/bOk.svg";
+import wOk from "@/sad-components-lib/assets/images/wOk.svg";
 import { libTheme } from "@/sad-components-lib/theme";
 
-import bOk from "../../assets/images/bOk.svg";
-import wOk from "../../assets/images/wOk.svg";
 import { IProps } from "./interface";
 import {
   Body,

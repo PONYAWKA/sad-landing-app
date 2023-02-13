@@ -53,6 +53,11 @@ module.exports = {
     },
     extensions: [".tsx", ".ts", ".js"],
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "./public", "index.html"),

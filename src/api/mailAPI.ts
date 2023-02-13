@@ -22,10 +22,10 @@ const ContactParams = ({ email, theme, message }: IContactUs) => ({
 export const SubEmail = (email: string) => {
   emailjs
     .send(
-      "service_8hrgw1c",
-      "template_o6j3iyr",
+      process.env.REACT_APP_MAIL_KEY as string,
+      process.env.REACT_APP_MAIL_TEMPLATE_SEND as string,
       subscribeParams(email),
-      "qh9yLJ-kCj1NJaBB8"
+      process.env.REACT_APP_MAIL_SECRET
     )
     .then(() => alert("The letter was sent"))
     .catch(() => alert("The letter was not sent"));
@@ -33,10 +33,10 @@ export const SubEmail = (email: string) => {
 export const Contact = (params: IContactUs) => {
   emailjs
     .send(
-      "service_8hrgw1c",
-      "template_sfl0gpu",
+      process.env.REACT_APP_MAIL_KEY as string,
+      process.env.REACT_APP_MAIL_TEMPLATE as string,
       ContactParams(params),
-      "qh9yLJ-kCj1NJaBB8"
+      process.env.REACT_APP_MAIL_SECRET
     )
     .then(() => alert("The letter was sent"))
     .catch(() => alert("The letter was not sent"));

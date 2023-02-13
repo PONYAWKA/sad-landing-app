@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-import { LeftSideArrow } from "../../assets/icons/LeftSideArrow";
+import { LeftSideArrow } from "@/sad-components-lib/assets/icons/LeftSideArrow";
+
 import { ICategoriesElement } from "./interfaces";
 import { Body, Text } from "./styled";
 

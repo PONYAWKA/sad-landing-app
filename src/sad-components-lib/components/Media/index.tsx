@@ -1,15 +1,16 @@
-import facebook from "../../assets/images/facebook.png";
-import facebookW from "../../assets/images/facebookW.png";
-import google from "../../assets/images/google.png";
-import googleW from "../../assets/images/googleW.png";
-import linkedIn from "../../assets/images/linkedIn.png";
-import linkedInW from "../../assets/images/linkedInW.png";
-import smth from "../../assets/images/smth.png";
-import smthW from "../../assets/images/smthW.png";
-import twitter from "../../assets/images/twitter.png";
-import twitterW from "../../assets/images/twitterW.png";
-import youTube from "../../assets/images/youTube.png";
-import youTubeW from "../../assets/images/youTubeW.png";
+import facebook from "@/sad-components-lib/assets/images/facebook.png";
+import facebookW from "@/sad-components-lib/assets/images/facebookW.png";
+import google from "@/sad-components-lib/assets/images/google.png";
+import googleW from "@/sad-components-lib/assets/images/googleW.png";
+import linkedIn from "@/sad-components-lib/assets/images/linkedIn.png";
+import linkedInW from "@/sad-components-lib/assets/images/linkedInW.png";
+import smth from "@/sad-components-lib/assets/images/smth.png";
+import smthW from "@/sad-components-lib/assets/images/smthW.png";
+import twitter from "@/sad-components-lib/assets/images/twitter.png";
+import twitterW from "@/sad-components-lib/assets/images/twitterW.png";
+import youTube from "@/sad-components-lib/assets/images/youTube.png";
+import youTubeW from "@/sad-components-lib/assets/images/youTubeW.png";
+
 import { IProps } from "./interfaces";
 import { Body, ChildrenContainer, MediaContainer, MediaItem } from "./styled";
 

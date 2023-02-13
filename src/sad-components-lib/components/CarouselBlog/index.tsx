@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useState } from "react";
 
-import cLeft from "../../assets/images/cLeft.png";
-import cRight from "../../assets/images/cRight.png";
+import cLeft from "@/sad-components-lib/assets/images/cLeft.png";
+import cRight from "@/sad-components-lib/assets/images/cRight.png";
+
 import { BlogItem } from "../BlogItem";
 import { IProps } from "./interfaces";
 import { initialPos, itemsSize } from "./mock";
@@ -15,6 +16,7 @@ import {
   TitleContainer,
   Window,
 } from "./styled";
+
 export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
   const [offSet, setOffSet] = useState(5);
 

@@ -22,8 +22,7 @@ export const BenefitConfig = {
 
 export const priceCardsConfig = {
   title: "Our pricing",
-  clientId:
-    "AQDwMTzIWXOvJVPxCjfShNnJQSTUBthostkKH4BACDj8KHHwIgjkfQ9RmHNkKKVwT6cRsUyzCeNQxa6_",
+  clientId: process.env.REACT_APP_PAYPAL,
   cards: [
     {
       name: "Free trial",

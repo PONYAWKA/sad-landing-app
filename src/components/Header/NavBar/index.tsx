@@ -10,7 +10,7 @@ import { LinkElement } from "@/components/Header/Links";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { useShowBlocks } from "@/utils/showBlocks";
 
-import { videoId, youtubeOptions } from "./mock";
+import { youtubeOptions } from "./mock";
 import {
   BurgerContainer,
   ButtonContainer,
@@ -55,7 +55,10 @@ export const NavBar = () => {
       </Content>
       {isYoutubeOpen && (
         <YouTubeContainer onClick={handleYouTube}>
-          <YouTube videoId={videoId} opts={youtubeOptions} />
+          <YouTube
+            videoId={process.env.REACT_APP_YOUTUBE}
+            opts={youtubeOptions}
+          />
         </YouTubeContainer>
       )}
     </Container>
