@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
+export const Body = styled.section`
   width: 100%;
   .leaflet-container {
     height: ${({ theme }) => theme.spaces.xxxx}px;

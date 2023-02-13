@@ -8,7 +8,7 @@ export const Body = styled.main`
   margin: 0 ${({ theme }) => theme.spaces.m}px;
 `;
 
-export const CrumbContainer = styled.div`
+export const CrumbContainer = styled.section`
   width: 100%;
   margin-top: ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;

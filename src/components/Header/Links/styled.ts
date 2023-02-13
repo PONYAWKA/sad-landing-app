@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { styledProps } from "./interfaces";
 
-export const Body = styled.div``;
+export const Body = styled.nav``;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;

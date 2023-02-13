@@ -8,7 +8,7 @@ export const Body = styled.main`
   margin-bottom: ${({ theme }) => theme.spaces.x}px;
 `;
 
-export const PageHeaderContainer = styled.div`
+export const PageHeaderContainer = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ export const PageHeaderContainer = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   display: grid;

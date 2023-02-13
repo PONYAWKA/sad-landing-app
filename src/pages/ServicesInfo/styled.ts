@@ -4,14 +4,14 @@ import blueOk from "@/assets/icons/servicesInfo/bOk.svg";
 
 import { IText } from "./interfaces";
 
-export const Body = styled.div`
+export const Body = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   margin-top: ${({ theme }) => theme.spaces.x}px;
   gap: ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
@@ -94,7 +94,7 @@ export const FootContainer = styled.div`
   }
 `;
 
-export const Contact = styled.div`
+export const Contact = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;

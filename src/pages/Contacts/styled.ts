@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
+export const Body = styled.main`
   width: 100%;
   margin: ${({ theme }) => theme.spaces.m}px 0 0 0;
   display: flex;
@@ -8,7 +8,7 @@ export const Body = styled.div`
   align-items: center;
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: flex;
   flex-direction: column;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;

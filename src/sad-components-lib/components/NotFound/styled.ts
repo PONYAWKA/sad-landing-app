@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
-export const Body = styled.div`
+export const Body = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;

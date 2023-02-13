@@ -4,7 +4,7 @@ import { libTheme } from "@/sad-components-lib/theme";
 
 import { IStyledProps } from "./interfaces";
 
-export const Body = styled.div`
+export const Body = styled.section`
   max-width: ${libTheme.spaces.maxContentWidth}px;
   width: 100%;
   display: flex;

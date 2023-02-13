@@ -24,14 +24,14 @@ export const Image = styled.img`
     height: ${({ theme }) => theme.spaces.xx}px;
   }
 `;
-export const CarouselContainer = styled.div`
+export const CarouselContainer = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
   margin: ${({ theme }) => theme.spaces.mmm}px 0;
 `;
 
-export const PriceContainer = styled.div`
+export const PriceContainer = styled.section`
   width: 100vw;
   display: flex;
   justify-content: center;

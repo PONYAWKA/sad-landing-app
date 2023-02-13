@@ -34,7 +34,7 @@ export const Newest = styled.section`
     max-width: ${({ theme }) => theme.spaces.l}px;
   }
 `;
-export const NewestContent = styled.div`
+export const NewestContent = styled.section`
   display: flex;
   justify-content: center;
 `;

@@ -7,7 +7,7 @@ export const Body = styled.main`
   align-items: center;
 `;
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ export const HeaderContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.helperB3};
 `;
 
-export const BlogContainer = styled.div`
+export const BlogContainer = styled.section`
   margin-top: ${({ theme }) => theme.spaces.x}px;
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;

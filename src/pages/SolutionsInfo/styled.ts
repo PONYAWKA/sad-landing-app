@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Body = styled.section`
+export const Body = styled.main`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -8,7 +8,7 @@ export const Body = styled.section`
   justify-content: center;
 `;
 
-export const HeaderContent = styled.div`
+export const HeaderContent = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ export const HeaderContent = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   width: 100%;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   display: grid;

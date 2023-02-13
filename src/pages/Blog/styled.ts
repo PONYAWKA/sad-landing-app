@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Body = styled.div`
+export const Body = styled.main`
   display: flex;
   flex-direction: column;
 `;
 
-export const BlogContainer = styled.div`
+export const BlogContainer = styled.section`
   display: grid;
   align-self: center;
   margin: 0 ${({ theme }) => theme.spaces.m}px;

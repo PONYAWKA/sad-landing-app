@@ -1,5 +1,4 @@
-import { CarouselBlog } from "sad-landing-lib";
-import { CarouselTeam } from "sad-landing-lib";
+import { CarouselBlog, CarouselTeam } from "sad-landing-lib";
 
 import powerImage from "@/assets/images/home/home-image-3.png";
 import { Benefits } from "@/components/Benefits";

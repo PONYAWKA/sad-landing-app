@@ -2,7 +2,14 @@ import styled from "styled-components";
 
 export const SolutionsContent = styled.section`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
+`;
+
+export const Container = styled.div`
+  display: flex;
 `;
 
 export const SolutionsImage = styled.img`
