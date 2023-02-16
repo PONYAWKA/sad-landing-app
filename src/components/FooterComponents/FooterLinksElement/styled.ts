@@ -42,3 +42,11 @@ export const LinkTitle = styled.h2`
     }
   }
 `;
+
+export const AltLink = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.gray};
+  padding: 0;
+  margin: 0;
+  margin: ${({ theme }) => theme.spaces.sss}px 0 0 0;
+`;

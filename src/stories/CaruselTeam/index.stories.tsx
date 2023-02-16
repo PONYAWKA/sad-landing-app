@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { CarouselTeam } from "sad-landing-lib";
 
-import { Testimonials } from "@/components/About/AboutMobile/mock";
+import { config } from "@/components/About/AboutMobile/mock";
 
 export default {
   title: "CarouselTeam",
@@ -10,7 +10,7 @@ export default {
 
 const Template = () => (
   <BrowserRouter>
-    <CarouselTeam {...Testimonials} />
+    <CarouselTeam {...config.en.Testimonials} />
   </BrowserRouter>
 );
 

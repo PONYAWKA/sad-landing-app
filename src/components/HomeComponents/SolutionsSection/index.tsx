@@ -4,6 +4,7 @@ import { Button } from "sad-landing-lib";
 import solutionsImage from "@/assets/images/home/home-image-1.png";
 import newestImage from "@/assets/images/home/home-image-2.png";
 
+import { ISolutionsSection } from "./interfaces";
 import {
   ButtonContainer,
   ButtonText,
@@ -17,7 +18,11 @@ import {
   SolutionsTextTitle,
 } from "./styled";
 
-export const SolutionsSection = () => {
+export const SolutionsSection = ({
+  text,
+  title,
+  buttonText,
+}: ISolutionsSection) => {
   const navigator = useNavigate();
 
   const HandleClick = () => {
@@ -30,19 +35,12 @@ export const SolutionsSection = () => {
         <SolutionsImage loading="lazy" src={newestImage} />
         <SolutionsTextContainer>
           <SolutionsText className="element-animation">
-            <SolutionsTextTitle>
-              Radically new solutions for data
-            </SolutionsTextTitle>
+            <SolutionsTextTitle>{title}</SolutionsTextTitle>
             <SolutionsImageMobile loading="lazy" src={solutionsImage} />
-            <SolutionsTextText>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </SolutionsTextText>
+            <SolutionsTextText>{text}</SolutionsTextText>
             <ButtonContainer>
               <Button onClick={HandleClick}>
-                <ButtonText>Learn more</ButtonText>
+                <ButtonText>{buttonText}</ButtonText>
               </Button>
             </ButtonContainer>
           </SolutionsText>

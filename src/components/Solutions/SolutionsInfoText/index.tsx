@@ -1,4 +1,6 @@
-import { inEnsome, practiceConfig, TypesOf, WhatIs } from "./mock";
+import { useTranslate } from "@/hooks/useTranslate";
+
+import { options } from "./mock";
 import {
   Body,
   Container,
@@ -11,6 +13,8 @@ import {
 } from "./styled";
 
 export const SolutionsInfoText = () => {
+  const { value } = useTranslate();
+  const { inEnsome, practiceConfig, TypesOf, WhatIs } = options[value];
   return (
     <Body>
       <ContentContainer>

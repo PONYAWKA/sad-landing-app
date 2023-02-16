@@ -4,6 +4,7 @@ export interface IProps {
     to: string;
     title: string;
   }[];
+  alt?: boolean;
 }
 
 export interface IStyledProps {

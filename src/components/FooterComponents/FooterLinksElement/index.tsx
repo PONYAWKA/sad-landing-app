@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "styled-components";
 
 import { IProps } from "./interface";
-import { LinkContainer, LinkTitle, List, StyledLink } from "./styled";
+import { AltLink, LinkContainer, LinkTitle, List, StyledLink } from "./styled";
 
-export const FooterLinkElement = ({ elements, title }: IProps) => {
+export const FooterLinkElement = ({ elements, title, alt }: IProps) => {
   const theme = useContext(ThemeContext);
 
   const isPhone = window.screen.width < theme.endPoints.tablet;
@@ -19,11 +19,19 @@ export const FooterLinkElement = ({ elements, title }: IProps) => {
     <List>
       <LinkTitle onClick={isOpenHandler}>{title}</LinkTitle>
       <LinkContainer isOpen={isPhone ? isOpen : true}>
-        {elements.map(({ title, to }) => (
-          <StyledLink to={to} key={title}>
-            {title}
-          </StyledLink>
-        ))}
+        {elements.map(({ title, to }) => {
+          if (alt)
+            return (
+              <AltLink href={to} key={title}>
+                {title}
+              </AltLink>
+            );
+          return (
+            <StyledLink to={to} key={title}>
+              {title}
+            </StyledLink>
+          );
+        })}
       </LinkContainer>
     </List>
   );

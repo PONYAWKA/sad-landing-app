@@ -7,16 +7,17 @@ import { Advantages } from "@/components/Solutions/Advantages";
 import { SolutionsList } from "@/components/Solutions/SolutionsList";
 import { Testimonials } from "@/constants/Testimonials";
 import { useIsMobile } from "@/hooks/useMobile";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import {
-  advantagesConfig,
-  breadCrumb,
-  pageHeaderConfig,
-  solutionsItems,
-} from "./mock";
+import { options } from "./mock";
 import { Body, Content, TestimonialsContainer } from "./styled";
 
 export const Solutions = () => {
+  const { value } = useTranslate();
+
+  const { advantagesConfig, breadCrumb, pageHeaderConfig, solutionsItems } =
+    options[value];
+
   const { isMobile } = useIsMobile();
   return (
     <Body>

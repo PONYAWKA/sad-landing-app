@@ -4,8 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 
 import { Help } from "@/components/Help";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import { breadCrumb, FAQItems, pageHeaderConfig } from "./mock";
+import { breadCrumb, options } from "./mock";
 import {
   Body,
   CrumbContainer,
@@ -14,6 +15,8 @@ import {
 } from "./styled";
 
 export const FAQ = () => {
+  const { value } = useTranslate();
+  const { FAQItems, pageHeaderConfig } = options[value];
   return (
     <Body>
       <CrumbContainer>

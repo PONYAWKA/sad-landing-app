@@ -3,10 +3,11 @@ import { BreadCrumbs, Button, NotFound } from "sad-landing-lib";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
+import { useTranslate } from "@/hooks/useTranslate";
 
 import { CurrentBlog } from "../CurrentBlog";
 import { MobileBlogItem } from "../MobileBlogItem";
-import { breadCrumb, headerConfig } from "./mock";
+import { config } from "./mock";
 import {
   BlogsContainer,
   Body,
@@ -15,6 +16,8 @@ import {
 } from "./styles";
 
 export const BlogMobile = () => {
+  const { value } = useTranslate();
+  const { breadCrumb, headerConfig } = config[value];
   const query = useQuery();
   const blog = query.get("id");
   if (blog) {

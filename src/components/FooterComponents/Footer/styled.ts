@@ -131,3 +131,13 @@ export const EndPageLink = styled(Link)`
 export const LinkContainer = styled.div`
   display: flex;
 `;
+
+export const LanguageButton = styled.button`
+  border: 0;
+  outline: 0;
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
+  margin: ${({ theme }) => theme.spaces.ss}px;
+`;
+
+export const ButtonContainer = styled.div``;

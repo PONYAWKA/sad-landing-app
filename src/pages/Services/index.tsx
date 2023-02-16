@@ -4,11 +4,14 @@ import { Help } from "@/components/Help";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { ServiceList } from "@/components/ServicesComponents/ServiceList";
 import { Success } from "@/components/Success";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import { crumbs, serviceConfig, successItems, topConfig } from "./mock";
+import { options } from "./mock";
 import { Body, CrumbContainer } from "./styled";
 
 export const Services = () => {
+  const { value } = useTranslate();
+  const { crumbs, serviceConfig, successItems, topConfig } = options[value];
   return (
     <Body>
       <CrumbContainer>

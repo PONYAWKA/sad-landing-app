@@ -8,9 +8,10 @@ import play from "@/assets/icons/header/play.png";
 import logo from "@/assets/images/header/logo_blue.png";
 import { LinkElement } from "@/components/Header/Links";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
+import { useTranslate } from "@/hooks/useTranslate";
 import { useShowBlocks } from "@/utils/showBlocks";
 
-import { youtubeOptions } from "./mock";
+import { options, youtubeOptions } from "./mock";
 import {
   BurgerContainer,
   ButtonContainer,
@@ -38,6 +39,10 @@ export const NavBar = () => {
   useScrollToTop();
   useShowBlocks();
 
+  const { value } = useTranslate();
+
+  const { demo } = options[value];
+
   return (
     <Container>
       <Content>
@@ -46,7 +51,7 @@ export const NavBar = () => {
         <ButtonContainer>
           <Button onClick={handleYouTube}>
             <Image loading="lazy" src={play} alt="Loading..." title="play" />
-            <ButtonTitle>Watch the demo</ButtonTitle>
+            <ButtonTitle>{demo}</ButtonTitle>
           </Button>
         </ButtonContainer>
         <BurgerContainer id="burger">

@@ -1,22 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "sad-landing-lib";
 
+import { useTranslate } from "@/hooks/useTranslate";
+
+import { options } from "./mock";
 import { Body, ButtonContent, Container, Text, Title } from "./styled";
 
 export const Help = () => {
   const navigator = useNavigate();
 
   const handleClick = () => navigator("/Contacts");
+  const { value } = useTranslate();
+
+  const { buttonText, text, title } = options[value];
   return (
     <Container>
       <Body className="element-animation">
-        <Title>Do you need help?</Title>
-        <Text>
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi.
-        </Text>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
         <Button>
-          <ButtonContent onClick={handleClick}>Contact Us</ButtonContent>
+          <ButtonContent onClick={handleClick}>{buttonText}</ButtonContent>
         </Button>
       </Body>
     </Container>

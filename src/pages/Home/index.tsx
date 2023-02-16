@@ -11,24 +11,31 @@ import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
 import { Testimonials } from "@/constants/Testimonials";
 import { useIsMobile } from "@/hooks/useMobile";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import {
-  BenefitConfig,
-  ElementsToShow,
-  priceCardsConfig,
-  SuccessConfig,
-} from "./mock";
+import { homeConfig } from "./mock";
 import { Body, CarouselContainer, Image, PriceContainer } from "./styled";
 
 export const Home = () => {
   const { isMobile } = useIsMobile();
+  const { value } = useTranslate();
+  const {
+    BenefitConfig,
+    ElementsToShow,
+    newestConfig,
+    powerConfig,
+    priceCardsConfig,
+    solutionsConfig,
+    successConfig,
+  } = homeConfig[value];
+
   return (
     <Body>
-      <PowerSection />
+      <PowerSection {...powerConfig} />
       <Image loading="lazy" src={powerImage} alt="Loading..." title="power" />
-      <NewestSection />
-      <SolutionsSection />
-      <Success {...SuccessConfig} />
+      <NewestSection {...newestConfig} />
+      <SolutionsSection {...solutionsConfig} />
+      <Success {...successConfig} />
       <Benefits {...BenefitConfig} />
       <CarouselContainer>
         <CarouselTeam

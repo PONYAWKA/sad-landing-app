@@ -8,10 +8,11 @@ import { RelatedPost } from "@/components/Blog/RelatedPost";
 import { PageHeader } from "@/components/PageHeader";
 import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
+import { useTranslate } from "@/hooks/useTranslate";
 import { sortByPopular } from "@/utils/popular";
 
 import { IEvent } from "./interfaces";
-import { categories, pageHeadConfig, tags } from "./mock";
+import { options } from "./mock";
 import {
   BlogContainer,
   Body,
@@ -29,6 +30,10 @@ export const BlogDesktop = () => {
   const [check, setCheck] = useState("All topics");
   const [related, setRelated] = useState(blogArticles);
   const [search, setSearch] = useState("");
+
+  const { value } = useTranslate();
+  const { categories, pageHeadConfig, tags, popularPosts, relatedPosts } =
+    options[value];
   useEffect(() => {
     setRelated(
       blogArticles
@@ -56,7 +61,7 @@ export const BlogDesktop = () => {
           <BlogContainer>
             <LeftSection>
               <CurrentBlog {...currentBlogInfo} />
-              <RelatedPost items={related} title="Related Post" hideId />
+              <RelatedPost items={related} title={relatedPosts} hideId />
             </LeftSection>
             <RightSection>
               <Search
@@ -64,7 +69,7 @@ export const BlogDesktop = () => {
                 value={search}
                 onChange={onChangeHandler}
               />
-              <RelatedPost items={popular} title="Popular posts" hiedText />
+              <RelatedPost items={popular} title={popularPosts} hiedText />
               <CategoriesContainer>
                 <Title>Categories</Title>
                 {categories.map((e) => (

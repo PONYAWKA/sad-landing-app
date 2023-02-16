@@ -68,104 +68,200 @@ export const ROUTES = [
   },
 ];
 
-export const NAV_ROUTES = [
-  {
-    to: "/",
-    name: "Home",
-    children: null,
-  },
-  {
-    to: "Solutions",
-    name: "Solutions",
-    children: null,
-  },
-  {
-    to: "/",
-    name: "Pages",
-    children: [
-      { name: "FAQ", to: "FAQ" },
-      { name: "Services", to: "Services" },
-      { name: "About", to: "About" },
-      { name: "OurTeam", to: "OurTeam" },
+export const options = {
+  en: {
+    NAV_ROUTES: [
+      {
+        to: "/",
+        name: "Home",
+        children: null,
+      },
+      {
+        to: "Solutions",
+        name: "Solutions",
+        children: null,
+      },
+      {
+        to: "/",
+        name: "Pages",
+        children: [
+          { name: "FAQ", to: "FAQ" },
+          { name: "Services", to: "Services" },
+          { name: "About", to: "About" },
+          { name: "OurTeam", to: "OurTeam" },
+        ],
+      },
+      {
+        to: "Blog",
+        name: "Blog",
+        children: null,
+      },
+      {
+        to: "Contacts",
+        name: "Contacts",
+        children: null,
+      },
+    ],
+
+    FOOTER_ROUTES: [
+      {
+        to: "",
+        title: "Home",
+      },
+      {
+        to: "Solutions",
+        title: "Solutions",
+      },
+      {
+        to: "Blog",
+        title: "Blog",
+      },
+      {
+        to: "Contacts",
+        title: "Contacts",
+      },
+      {
+        to: "OurTeam",
+        title: "Our team",
+      },
+      {
+        to: "About",
+        title: "About Us",
+      },
+      {
+        to: "Services",
+        title: "Services",
+      },
+      {
+        to: "FAQ",
+        title: "FAQ",
+      },
+    ],
+
+    SERVICE_ROUTS: [
+      {
+        to: "Nowhere",
+        title: "Pages",
+      },
+      {
+        to: "Nowhere",
+        title: "Elements",
+      },
+      {
+        to: "Nowhere",
+        title: "Pricing",
+      },
+      {
+        to: "Nowhere",
+        title: "FAQ",
+      },
+      {
+        to: "Nowhere",
+        title: "Site map",
+      },
     ],
   },
-  {
-    to: "Blog",
-    name: "Blog",
-    children: null,
-  },
-  {
-    to: "Contacts",
-    name: "Contacts",
-    children: null,
-  },
-];
+  ru: {
+    NAV_ROUTES: [
+      {
+        to: "/",
+        name: "Главная",
+        children: null,
+      },
+      {
+        to: "Solutions",
+        name: "Решения",
+        children: null,
+      },
+      {
+        to: "/",
+        name: "Страницы",
+        children: [
+          { name: "FAQ", to: "FAQ" },
+          { name: "Сервисы", to: "Services" },
+          { name: "О нас", to: "About" },
+          { name: "Наша комманда", to: "OurTeam" },
+        ],
+      },
+      {
+        to: "Blog",
+        name: "Блог",
+        children: null,
+      },
+      {
+        to: "Contacts",
+        name: "Контакты",
+        children: null,
+      },
+    ],
 
-export const FOOTER_ROUTES = [
-  {
-    to: "",
-    title: "Home",
-  },
-  {
-    to: "Solutions",
-    title: "Solutions",
-  },
-  {
-    to: "Blog",
-    title: "Blog",
-  },
-  {
-    to: "Contacts",
-    title: "Contacts",
-  },
-  {
-    to: "OurTeam",
-    title: "Our team",
-  },
-  {
-    to: "About",
-    title: "About Us",
-  },
-  {
-    to: "Services",
-    title: "Services",
-  },
-  {
-    to: "FAQ",
-    title: "FAQ",
-  },
-];
+    FOOTER_ROUTES: [
+      {
+        to: "",
+        title: "Главныя",
+      },
+      {
+        to: "Solutions",
+        title: "Решения",
+      },
+      {
+        to: "Blog",
+        title: "Блог",
+      },
+      {
+        to: "Contacts",
+        title: "Контакты",
+      },
+      {
+        to: "OurTeam",
+        title: "Наша комманда",
+      },
+      {
+        to: "About",
+        title: "О нас",
+      },
+      {
+        to: "Services",
+        title: "Сервисы",
+      },
+      {
+        to: "FAQ",
+        title: "FAQ",
+      },
+    ],
 
-export const SERVICE_ROUTS = [
-  {
-    to: "Nowhere",
-    title: "Pages",
+    SERVICE_ROUTS: [
+      {
+        to: "Nowhere",
+        title: "Страницы",
+      },
+      {
+        to: "Nowhere",
+        title: "Элементы",
+      },
+      {
+        to: "Nowhere",
+        title: "Цены",
+      },
+      {
+        to: "Nowhere",
+        title: "FAQ",
+      },
+      {
+        to: "Nowhere",
+        title: "Карта сайта",
+      },
+    ],
   },
-  {
-    to: "Nowhere",
-    title: "Elements",
-  },
-  {
-    to: "Nowhere",
-    title: "Pricing",
-  },
-  {
-    to: "Nowhere",
-    title: "FAQ",
-  },
-  {
-    to: "Nowhere",
-    title: "Site map",
-  },
-];
+};
 
 export const CONTACT_INFO = [
   {
-    to: "",
+    to: "mailto:ensome@info.co.us",
     title: "ensome@info.co.us",
   },
   {
-    to: "",
+    to: "tel:16012015580",
     title: "+1 601-201-5580",
   },
   {

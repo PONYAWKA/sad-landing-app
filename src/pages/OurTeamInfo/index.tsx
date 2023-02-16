@@ -3,8 +3,9 @@ import { IconsMapper } from "@/components/IconMapper";
 import { PageHeader } from "@/components/PageHeader";
 import { profiles } from "@/constants/profiles";
 import { useQuery } from "@/hooks/useQuery";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import { description, Icons, pageHeadConfig, ShareTitle } from "./mock";
+import { Icons, options } from "./mock";
 import {
   Body,
   Container,
@@ -23,8 +24,18 @@ import {
 export const OurTeamInfo = () => {
   const query = useQuery();
   const id = query.get("id");
+  const { value } = useTranslate();
+  const {
+    description,
+    pageHeadConfig,
+    ShareTitle,
+    nameTitle,
+    professionTitle,
+    descriptionTitle,
+    socialNetworks,
+  } = options[value];
   if (id) {
-    const { photo, name, profession, social } = profiles[parseInt(id)];
+    const { photo, name, profession, social, sex } = profiles[parseInt(id)];
     return (
       <Body>
         <PageHeaderContainer>
@@ -47,19 +58,19 @@ export const OurTeamInfo = () => {
           </Section>
           <Section>
             <TextContainer>
-              <Title>Name</Title>
+              <Title>{nameTitle}</Title>
               <Info>{name}</Info>
             </TextContainer>
             <TextContainer>
-              <Title>Position</Title>
+              <Title>{professionTitle}</Title>
               <Info>{profession}</Info>
             </TextContainer>
             <TextContainer>
-              <Title>Description</Title>
+              <Title>{descriptionTitle}</Title>
               <Info>{description}</Info>
             </TextContainer>
             <TextContainer>
-              <Title>Social networks</Title>
+              <Title>{socialNetworks}</Title>
               <IconContainer>
                 <IconsMapper urls={social} Icons={Icons} />
               </IconContainer>
@@ -69,7 +80,7 @@ export const OurTeamInfo = () => {
         <Container>
           <Section>
             <FormaTitleContainer>
-              <FormaTitle>{ShareTitle(name)}</FormaTitle>
+              <FormaTitle>{ShareTitle(name, sex)}</FormaTitle>
             </FormaTitleContainer>
           </Section>
           <Section>

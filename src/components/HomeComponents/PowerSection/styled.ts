@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { IStyled } from "./interfaces";
+
 export const Content = styled.div`
   width: 100%;
   align-self: center;
@@ -25,8 +27,8 @@ export const PowerContent = styled.div`
   }
 `;
 
-export const PowerTitle = styled.h1`
-  font-size: ${({ theme }) => theme.fonts.x}px;
+export const PowerTitle = styled.h1<IStyled>`
+  font-size: ${({ theme, isRu }) => (isRu ? theme.fonts.m : theme.fonts.x)}px;
   max-width: ${({ theme }) => theme.spaces.l}px;
   span {
     color: ${({ theme }) => theme.colors.primary};

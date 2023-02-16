@@ -12,6 +12,7 @@ export const profiles = [
     id: 0,
     name: "Sargis Grigor",
     profession: "Data analyst",
+    sex: "m",
     photo: sargisGrigor,
     social: [
       "https://www.facebook.com",
@@ -23,6 +24,7 @@ export const profiles = [
     id: 1,
     name: "Bagrat Leo",
     profession: "Data engineer",
+    sex: "m",
     photo: bagratLeo,
     social: [
       "https://www.facebook.com",
@@ -34,6 +36,7 @@ export const profiles = [
     id: 2,
     name: "Gor Sargis",
     profession: "Data analyst",
+    sex: "m",
     photo: gorSargis,
     social: [
       "https://www.facebook.com",
@@ -45,6 +48,7 @@ export const profiles = [
     id: 3,
     name: "Maral Mari",
     profession: "Data analyst",
+    sex: "w",
     photo: maralMari,
     social: [
       "https://www.facebook.com",
@@ -56,6 +60,7 @@ export const profiles = [
     id: 4,
     name: "Hakob Jirair",
     profession: "Data engineer",
+    sex: "m",
     photo: hakobJirair,
     social: [
       "https://www.facebook.com",
@@ -66,6 +71,7 @@ export const profiles = [
   {
     id: 5,
     name: "Eva Vosgi",
+    sex: "w",
     profession: "Data scientist",
     photo: evaVosgi,
     social: [
@@ -78,6 +84,7 @@ export const profiles = [
     id: 6,
     name: "Kohar Marine",
     profession: "Data scientist",
+    sex: "m",
     photo: koharMarine,
     social: [
       "https://www.facebook.com",
@@ -88,6 +95,7 @@ export const profiles = [
   {
     id: 7,
     name: "Ararat Ohannes",
+    sex: "m",
     profession: "Data analyst",
     photo: araratOhannes,
     social: [
@@ -99,6 +107,7 @@ export const profiles = [
   {
     id: 8,
     name: "Eduard Vosgi",
+    sex: "m",
     profession: "Data scientist",
     photo: eduardVosgi,
     social: [

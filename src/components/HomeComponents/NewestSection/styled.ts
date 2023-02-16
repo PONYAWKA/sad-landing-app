@@ -45,6 +45,9 @@ export const Title = styled.h1`
   span {
     color: ${({ theme }) => theme.colors.primary};
   }
+  &:nth-child(2) {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     font-size: ${({ theme }) => theme.fonts.m}px;

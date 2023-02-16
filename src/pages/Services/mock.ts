@@ -5,67 +5,137 @@ import service4 from "@/assets/icons/services/service4.svg";
 import service5 from "@/assets/icons/services/service5.svg";
 import service6 from "@/assets/icons/services/service6.svg";
 
-export const topConfig = {
-  title: "Data Analytics Services",
-  text: "Services",
-  subtext:
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.",
-};
+export const options = {
+  en: {
+    topConfig: {
+      title: "Data Analytics Services",
+      text: "Services",
+      subtext:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.",
+    },
 
-export const crumbs = {
-  curPage: "Services",
-  links: [{ name: "Home", to: "/" }],
-};
+    crumbs: {
+      curPage: "Services",
+      links: [{ name: "Home", to: "/" }],
+    },
 
-export const serviceConfig = {
-  items: [
-    {
-      id: 0,
-      img: service1,
-      heading: "Machine learning",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+    serviceConfig: {
+      items: [
+        {
+          id: 0,
+          img: service1,
+          heading: "Machine learning",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 1,
+          img: service2,
+          heading: "Embed analytics",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 2,
+          img: service3,
+          heading: "Access control",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 3,
+          img: service4,
+          heading: "Data analytics",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 4,
+          img: service5,
+          heading: "Big data consulting",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 5,
+          img: service6,
+          heading: "Artificial intelligence",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+      ],
     },
-    {
-      id: 1,
-      img: service2,
-      heading: "Embed analytics",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
-    },
-    {
-      id: 2,
-      img: service3,
-      heading: "Access control",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
-    },
-    {
-      id: 3,
-      img: service4,
-      heading: "Data analytics",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
-    },
-    {
-      id: 4,
-      img: service5,
-      heading: "Big data consulting",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
-    },
-    {
-      id: 5,
-      img: service6,
-      heading: "Artificial intelligence",
-      description:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
-    },
-  ],
-};
 
-export const successItems = [
-  { title: "1830+", sub: "Project executed" },
-  { title: "834+", sub: "Satisfied customers" },
-  { title: "390", sub: "Data management" },
-];
+    successItems: [
+      { title: "1830+", sub: "Project executed" },
+      { title: "834+", sub: "Satisfied customers" },
+      { title: "390", sub: "Data management" },
+    ],
+  },
+  ru: {
+    topConfig: {
+      title: "Услуги по анализу данных",
+      text: "Услуги",
+      subtext:
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaeab illo inventore.",
+    },
+
+    crumbs: {
+      curPage: "Services",
+      links: [{ name: "Home", to: "/" }],
+    },
+
+    serviceConfig: {
+      items: [
+        {
+          id: 0,
+          img: service1,
+          heading: "Машинное обучение",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 1,
+          img: service2,
+          heading: "Встроить аналитику",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 2,
+          img: service3,
+          heading: "Контроль доступа",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 3,
+          img: service4,
+          heading: "Аналитика данных",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 4,
+          img: service5,
+          heading: "Консультации по работе с большими данными",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+        {
+          id: 5,
+          img: service6,
+          heading: "Искусственный интеллект",
+          description:
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure.",
+        },
+      ],
+    },
+
+    successItems: [
+      { title: "1830+", sub: "Проект выполнен" },
+      { title: "834+", sub: "Довольные клиенты" },
+      { title: "390", sub: "Управление данными" },
+    ],
+  },
+};

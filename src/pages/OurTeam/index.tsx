@@ -7,8 +7,9 @@ import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
 import { profiles } from "@/constants/profiles";
 import { useIsMobile } from "@/hooks/useMobile";
 import { usePagination } from "@/hooks/usePagination";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import { headerConfig, headerConfigMobile } from "./mock";
+import { options } from "./mock";
 import { Body, Content, ImageContainer } from "./styled";
 
 export const OurTeamPage = () => {
@@ -17,7 +18,8 @@ export const OurTeamPage = () => {
   const { isMobile } = useIsMobile();
 
   const onPagination = () => setPosts((prev) => [...prev, ...profiles]);
-
+  const { value } = useTranslate();
+  const { headerConfig, headerConfigMobile } = options[value];
   usePagination(onPagination);
 
   return (

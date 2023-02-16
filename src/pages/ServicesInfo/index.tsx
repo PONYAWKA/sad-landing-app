@@ -3,17 +3,9 @@ import { Search } from "sad-landing-lib";
 
 import { DarkHeader } from "@/components/DarkHeader";
 import { FormaComponent } from "@/components/FormaComponent";
+import { useTranslate } from "@/hooks/useTranslate";
 
-import {
-  challenge,
-  customer,
-  footerConfig,
-  headerConfig,
-  result,
-  services,
-  solution,
-  technologies,
-} from "./mock";
+import { options } from "./mock";
 import {
   ArticleContainer,
   Body,
@@ -39,6 +31,18 @@ import {
 } from "./styled";
 
 export const ServicesInfo = () => {
+  const { value } = useTranslate();
+
+  const {
+    challenge,
+    customer,
+    footerConfig,
+    headerConfig,
+    result,
+    services,
+    solution,
+    technologies,
+  } = options[value];
   return (
     <Body>
       <DarkHeader {...headerConfig} />

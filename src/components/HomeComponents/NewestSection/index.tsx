@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "sad-landing-lib";
 
+import { INewestSection } from "./interfaces";
 import {
   ButtonText,
   Newest,
@@ -10,7 +11,13 @@ import {
   Title,
 } from "./styled";
 
-export const NewestSection = () => {
+export const NewestSection = ({
+  title,
+  text,
+  buttonText,
+  titleArticle,
+  titleOutline,
+}: INewestSection) => {
   const navigator = useNavigate();
 
   const HandleClick = () => {
@@ -21,18 +28,14 @@ export const NewestSection = () => {
     <NewestContent>
       <Newest className="element-animation">
         <Title>
-          The<span> newest </span>
-          business analytics platform
+          {titleArticle}
+          <span>{titleOutline}</span>
+          {title}
         </Title>
         <NewestTextContainer>
-          <NewestText>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </NewestText>
+          <NewestText>{text}</NewestText>
           <Button onClick={HandleClick}>
-            <ButtonText>Discover more</ButtonText>
+            <ButtonText>{buttonText}</ButtonText>
           </Button>
         </NewestTextContainer>
       </Newest>
