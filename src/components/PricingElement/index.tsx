@@ -30,7 +30,6 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
   };
 
   const Icon = theme.pr == libTheme.colors.blue ? bOk : wOk;
-
   const [isYear, setIsYear] = useState(false);
 
   const [PayPal, setPayPal] = useState(false);

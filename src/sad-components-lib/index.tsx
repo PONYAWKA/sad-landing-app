@@ -13,7 +13,7 @@ import { StyledLick } from "./components/Link";
 import { LinkedBlogItem } from "./components/LinkedBlogItem";
 import { Media } from "./components/Media";
 import { NotFound } from "./components/NotFound";
-import { PricingElement } from "./components/PricingElement";
+import { PricingElement } from "../components/PricingElement";
 import { Search } from "./components/Search";
 import { SendMail } from "./components/SendMail";
 import { TagButton } from "./components/TagButton";

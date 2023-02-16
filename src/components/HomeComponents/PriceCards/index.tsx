@@ -1,5 +1,6 @@
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { PricingElement } from "sad-landing-lib";
+
+import { PricingElement } from "@/components/PricingElement";
 
 import { IPriceCards } from "./interfaces";
 import { Body, Content, Title } from "./styled";
@@ -10,7 +11,7 @@ export const PriceCards = ({ cards, title }: IPriceCards) => {
       <Title>{title}</Title>
       <PayPalScriptProvider
         options={{
-          "client-id": process.env.REACT_APP_PAYPA as string,
+          "client-id": process.env.REACT_APP_PAYPAL as string,
         }}
       >
         <Body>
