@@ -1,5 +1,5 @@
 import { useTranslate } from "@/hooks/useTranslate";
-import { useScrollProgress } from "@/utils/useScrollProgress";
+import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 import { options } from "./mock";
 import { Body, Container, Element } from "./styled";

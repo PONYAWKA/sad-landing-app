@@ -15,7 +15,7 @@ export const options = {
     accusantium doloremque laudantium.`,
     descriptionText: `Ut enim ad minima veniam, quis nostrum exercitationem ullam
     corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.`,
-    policy: `Политика конфиденциальности`,
+    policy: `Политика конфид.`,
     terms: `Наши условия`,
     follow: "Подписывайтесь на нас",
   },
