@@ -1,8 +1,4 @@
 [[redirects]]
   from = "/*/*"
   to = "/"
-  status = 200
-  [[redirects]]
-  from = "/Blog/*"
-  to = "/"
-  status = 200
+  force = true
