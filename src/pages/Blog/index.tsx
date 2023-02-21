@@ -1,4 +1,4 @@
-import { LinkedBlogItem } from "sad-components-lib";
+import { LinkedBlogItem } from "sad-landing-lib";
 import { v4 } from "uuid";
 
 import { DarkHeader } from "@/components/DarkHeader";
