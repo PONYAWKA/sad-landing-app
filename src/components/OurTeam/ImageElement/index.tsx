@@ -18,7 +18,7 @@ export const ImageElement = ({
 }: IImageElement) => {
   const navigate = useNavigate();
 
-  const onClickHandler = () => navigate(`Info?id=${id}`);
+  const onClickHandler = () => navigate(`/ourTeamInfo?id=${id}`);
 
   return (
     <Body onClick={onClickHandler}>

@@ -1,13 +1,12 @@
-import { useContext, useState } from "react";
-import { ThemeContext } from "styled-components";
+import { useState } from "react";
+
+import { useIsMobile } from "@/hooks/useMobile";
 
 import { IProps } from "./interface";
 import { AltLink, LinkContainer, LinkTitle, List, StyledLink } from "./styled";
 
 export const FooterLinkElement = ({ elements, title, alt }: IProps) => {
-  const theme = useContext(ThemeContext);
-
-  const isPhone = window.screen.width < theme.endPoints.tablet;
+  const { isMobile } = useIsMobile();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +17,7 @@ export const FooterLinkElement = ({ elements, title, alt }: IProps) => {
   return (
     <List>
       <LinkTitle onClick={isOpenHandler}>{title}</LinkTitle>
-      <LinkContainer isOpen={isPhone ? isOpen : true}>
+      <LinkContainer isOpen={isMobile ? isOpen : true}>
         {elements.map(({ title, to }) => {
           if (alt)
             return (

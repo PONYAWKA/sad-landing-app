@@ -15,7 +15,9 @@ export const ServiceElement = ({
       <Icon src={img} loading="lazy" />
       <Title>{heading}</Title>
       <SubTitle>{description}</SubTitle>
-      {!hide && <StyledLick to={`Info?service=${id}`}>Read More</StyledLick>}
+      {!hide && (
+        <StyledLick to={`/solutionsInfo?service=${id}`}>Read More</StyledLick>
+      )}
     </Body>
   );
 };

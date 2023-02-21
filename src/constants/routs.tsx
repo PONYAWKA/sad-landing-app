@@ -23,31 +23,31 @@ export const ROUTES = [
     element: <About />,
   },
   {
-    path: "Services",
+    path: "services",
     element: <Services />,
   },
   {
-    path: "Services/Info",
+    path: "servicesInfo",
     element: <ServicesInfo />,
   },
   {
-    path: "Blog/Info",
+    path: "blogInfo",
     element: <BlogInfo />,
   },
   {
-    path: "Blog",
+    path: "blog",
     element: <Blog />,
   },
   {
-    path: "Contacts",
+    path: "contacts",
     element: <Contacts />,
   },
   {
-    path: "OurTeam",
+    path: "ourTeam",
     element: <OurTeamPage />,
   },
   {
-    path: "OurTeam/Info",
+    path: "ourTeamInfo",
     element: <OurTeamInfo />,
   },
   {
@@ -55,11 +55,11 @@ export const ROUTES = [
     element: <FAQ />,
   },
   {
-    path: "Solutions",
+    path: "solutions",
     element: <Solutions />,
   },
   {
-    path: "Solutions/Info",
+    path: "solutionsInfo",
     element: <SolutionInfo />,
   },
   {
@@ -77,7 +77,7 @@ export const options = {
         children: null,
       },
       {
-        to: "Solutions",
+        to: "solutions",
         name: "Solutions",
         children: null,
       },
@@ -86,18 +86,18 @@ export const options = {
         name: "Pages",
         children: [
           { name: "FAQ", to: "FAQ" },
-          { name: "Services", to: "Services" },
-          { name: "About", to: "About" },
-          { name: "OurTeam", to: "OurTeam" },
+          { name: "Services", to: "services" },
+          { name: "About", to: "about" },
+          { name: "OurTeam", to: "ourTeam" },
         ],
       },
       {
-        to: "Blog",
+        to: "blog",
         name: "Blog",
         children: null,
       },
       {
-        to: "Contacts",
+        to: "contacts",
         name: "Contacts",
         children: null,
       },
@@ -109,27 +109,27 @@ export const options = {
         title: "Home",
       },
       {
-        to: "Solutions",
+        to: "solutions",
         title: "Solutions",
       },
       {
-        to: "Blog",
+        to: "blog",
         title: "Blog",
       },
       {
-        to: "Contacts",
+        to: "contacts",
         title: "Contacts",
       },
       {
-        to: "OurTeam",
+        to: "ourTeam",
         title: "Our team",
       },
       {
-        to: "About",
+        to: "about",
         title: "About Us",
       },
       {
-        to: "Services",
+        to: "services",
         title: "Services",
       },
       {
@@ -140,23 +140,23 @@ export const options = {
 
     SERVICE_ROUTS: [
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Pages",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Elements",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Pricing",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "FAQ",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Site map",
       },
     ],
@@ -169,7 +169,7 @@ export const options = {
         children: null,
       },
       {
-        to: "Solutions",
+        to: "solutions",
         name: "Решения",
         children: null,
       },
@@ -178,18 +178,18 @@ export const options = {
         name: "Страницы",
         children: [
           { name: "FAQ", to: "FAQ" },
-          { name: "Сервисы", to: "Services" },
-          { name: "О нас", to: "About" },
-          { name: "Наша комманда", to: "OurTeam" },
+          { name: "Сервисы", to: "services" },
+          { name: "О нас", to: "about" },
+          { name: "Наша комманда", to: "ourTeam" },
         ],
       },
       {
-        to: "Blog",
+        to: "blog",
         name: "Блог",
         children: null,
       },
       {
-        to: "Contacts",
+        to: "contacts",
         name: "Контакты",
         children: null,
       },
@@ -201,27 +201,27 @@ export const options = {
         title: "Главныя",
       },
       {
-        to: "Solutions",
+        to: "solutions",
         title: "Решения",
       },
       {
-        to: "Blog",
+        to: "blog",
         title: "Блог",
       },
       {
-        to: "Contacts",
+        to: "contacts",
         title: "Контакты",
       },
       {
-        to: "OurTeam",
+        to: "ourTeam",
         title: "Наша комманда",
       },
       {
-        to: "About",
+        to: "about",
         title: "О нас",
       },
       {
-        to: "Services",
+        to: "services",
         title: "Сервисы",
       },
       {
@@ -232,23 +232,23 @@ export const options = {
 
     SERVICE_ROUTS: [
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Страницы",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Элементы",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Цены",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "FAQ",
       },
       {
-        to: "Nowhere",
+        to: "nowhere",
         title: "Карта сайта",
       },
     ],

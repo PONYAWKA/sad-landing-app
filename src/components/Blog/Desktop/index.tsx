@@ -32,8 +32,15 @@ export const BlogDesktop = () => {
   const [search, setSearch] = useState("");
 
   const { value } = useTranslate();
-  const { categories, pageHeadConfig, tags, popularPosts, relatedPosts } =
-    options[value];
+  const {
+    categories,
+    pageHeadConfig,
+    tags,
+    popularPosts,
+    relatedPosts,
+    categoriesT,
+    TagT,
+  } = options[value];
   useEffect(() => {
     setRelated(
       blogArticles
@@ -71,13 +78,13 @@ export const BlogDesktop = () => {
               />
               <RelatedPost items={popular} title={popularPosts} hiedText />
               <CategoriesContainer>
-                <Title>Categories</Title>
+                <Title>{categoriesT}</Title>
                 {categories.map((e) => (
                   <CategoriesElement {...e} key={v4()} />
                 ))}
               </CategoriesContainer>
               <TagsContainer>
-                <Title>Tags</Title>
+                <Title>{TagT}</Title>
                 {tags.map((e) => (
                   <TagButton
                     key={e}

@@ -1,4 +1,4 @@
-import { AdvantageElement } from "sad-landing-lib";
+import { AdvantageElement } from "sad-components-lib";
 
 import image from "@/assets/images/solutions/why-choose-us.png";
 
