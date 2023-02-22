@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import { memo } from "react";
+import { Link } from "react-router-dom";
 import { CircleButton } from "sad-landing-lib";
 
 import { useTranslate } from "@/hooks/useTranslate";
@@ -12,26 +13,24 @@ import {
   PowerTitle,
 } from "./styled";
 
-export const PowerSection = ({ text, title, buttonText }: IPowerSection) => {
-  const navigator = useNavigate();
+export const PowerSection = memo(
+  ({ text, title, buttonText }: IPowerSection) => {
+    const { value } = useTranslate();
 
-  const HandleClick = () => {
-    navigator("Services");
-  };
-
-  const { value } = useTranslate();
-
-  return (
-    <Content>
-      <PowerContent>
-        <PowerTitle isRu={value === "ru"}>
-          {title} <span>Ensome</span>
-        </PowerTitle>
-        <PowerText>{text}</PowerText>
-      </PowerContent>
-      <CircleButtonContainer>
-        <CircleButton onClick={HandleClick}>{buttonText}</CircleButton>
-      </CircleButtonContainer>
-    </Content>
-  );
-};
+    return (
+      <Content>
+        <PowerContent>
+          <PowerTitle isRu={value === "ru"}>
+            {title} <span>Ensome</span>
+          </PowerTitle>
+          <PowerText>{text}</PowerText>
+        </PowerContent>
+        <CircleButtonContainer>
+          <Link to="services">
+            <CircleButton>{buttonText}</CircleButton>
+          </Link>
+        </CircleButtonContainer>
+      </Content>
+    );
+  }
+);

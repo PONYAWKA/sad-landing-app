@@ -1,12 +1,12 @@
 import { cardEn, cardRu } from "@/constants/benefidsCard";
 
 export const homeConfig = {
+  ElementsToShow: {
+    mobile: 1,
+    phone: 2,
+    desktop: 3,
+  },
   en: {
-    ElementsToShow: {
-      mobile: 1,
-      desktop: 3,
-    },
-
     powerConfig: {
       title: `Find true power in your data with`,
       text: ` Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -82,9 +82,9 @@ export const homeConfig = {
           priority: true,
         },
         {
-          name: "f",
-          mo: "Custom",
-          yr: "Custom",
+          name: "Super",
+          mo: 3000,
+          yr: 90000,
           plus: [
             "Unlimited team members",
             "Individual support",
@@ -99,11 +99,6 @@ export const homeConfig = {
     },
   },
   ru: {
-    ElementsToShow: {
-      mobile: 1,
-      desktop: 3,
-    },
-
     powerConfig: {
       title: `Откройте для себя истинную силу ваших данных с помощью`,
       text: ` Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -182,9 +177,9 @@ export const homeConfig = {
           priority: true,
         },
         {
-          name: "f",
-          mo: "Договор",
-          yr: "Договор",
+          name: "Super",
+          mo: 3000,
+          yr: 90000,
           plus: [
             "Неограниченное количество членов команды",
             "Индивидуальное сопровождение",

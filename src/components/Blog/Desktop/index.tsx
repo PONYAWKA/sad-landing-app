@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { CategoriesElement } from "sad-landing-lib";
-import { NotFound, Search, TagButton } from "sad-landing-lib";
+import { CategoriesElement } from "sad-components-lib";
+import { NotFound, Search, TagButton } from "sad-components-lib";
 import { v4 } from "uuid";
 
 import { CurrentBlog } from "@/components/Blog/CurrentBlog";
@@ -10,6 +10,7 @@ import { blogArticles } from "@/constants/blogs";
 import { useQuery } from "@/hooks/useQuery";
 import { useTranslate } from "@/hooks/useTranslate";
 import { sortByPopular } from "@/utils/popular";
+import { searchElem } from "@/utils/searchElements";
 
 import { IEvent } from "./interfaces";
 import { options } from "./mock";
@@ -27,9 +28,10 @@ import {
 export const BlogDesktop = () => {
   const query = useQuery();
   const blog = query.get("id");
-  const [check, setCheck] = useState("All topics");
+  const [check, setCheck] = useState(["All topics"]);
   const [related, setRelated] = useState(blogArticles);
   const [search, setSearch] = useState("");
+  const [searchButton, setSarahButton] = useState(false);
 
   const { value } = useTranslate();
   const {
@@ -39,17 +41,29 @@ export const BlogDesktop = () => {
     popularPosts,
     relatedPosts,
     categoriesT,
-    TagT,
+    tagT,
   } = options[value];
   useEffect(() => {
     setRelated(
       blogArticles
-        .filter(({ tags }) => tags.includes(check) || check === "All topics")
+        .filter(
+          ({ tags }) => searchElem(tags, check) || check.includes("All topics")
+        )
         .filter(({ heading }) =>
           search ? heading.toLocaleLowerCase().includes(search) : true
         )
     );
-  }, [check, search]);
+  }, [check, searchButton]);
+
+  const handleSearch = () => setSarahButton((prev) => !prev);
+
+  const handleTag = (tag: string) => {
+    if (check.includes(tag)) {
+      setCheck((prev) => prev.filter((e) => e !== tag));
+    } else {
+      setCheck((prev) => [...prev, tag]);
+    }
+  };
 
   if (blog) {
     const popular = blogArticles.sort(sortByPopular);
@@ -75,6 +89,7 @@ export const BlogDesktop = () => {
                 buttonText="Search"
                 value={search}
                 onChange={onChangeHandler}
+                onClick={handleSearch}
               />
               <RelatedPost items={popular} title={popularPosts} hiedText />
               <CategoriesContainer>
@@ -84,12 +99,12 @@ export const BlogDesktop = () => {
                 ))}
               </CategoriesContainer>
               <TagsContainer>
-                <Title>{TagT}</Title>
+                <Title>{tagT}</Title>
                 {tags.map((e) => (
                   <TagButton
                     key={e}
-                    selected={check}
-                    setSelected={setCheck}
+                    selected={!check.includes(e)}
+                    setSelected={handleTag}
                     text={e}
                   />
                 ))}

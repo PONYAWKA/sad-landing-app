@@ -6,6 +6,7 @@ import { IStyled } from "./interfaces";
 
 export const Body = styled.div`
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   border: ${libTheme.spaces.i}px solid ${libTheme.colors.gray};
   border-radius: ${libTheme.spaces.s}px;

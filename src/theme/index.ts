@@ -14,6 +14,7 @@ const spaces = {
   ii: 2,
   s: 5,
   so: 6,
+  soo: 8,
   ss: 10,
   sss: 15,
   m: 20,
@@ -28,6 +29,7 @@ const spaces = {
   l: 500,
   z: 700,
   maxContentWidth: 1110,
+  hd: 1920,
 };
 
 const fonts = {

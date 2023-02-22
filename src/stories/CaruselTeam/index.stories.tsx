@@ -10,7 +10,7 @@ export default {
 
 const Template = () => (
   <BrowserRouter>
-    <CarouselTeam {...config.en.Testimonials} />
+    <CarouselTeam {...config.en.testimonials} />
   </BrowserRouter>
 );
 

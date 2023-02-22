@@ -7,7 +7,7 @@ import { Body, Container, Element } from "./styled";
 export const SolutionsInfoNav = () => {
   const { value } = useTranslate();
   const { titles } = options[value];
-  const { progress, setProgress } = useScrollProgress("data-content", "h1");
+  const { progress, setProgress } = useScrollProgress("data-content", "div");
   const handleClick = (e: number) => () => {
     setProgress(e + 1);
   };

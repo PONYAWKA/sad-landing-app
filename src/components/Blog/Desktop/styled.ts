@@ -32,7 +32,9 @@ export const Title = styled.h2`
 `;
 export const TagsContainer = styled.div``;
 
-export const LeftSection = styled.div``;
+export const LeftSection = styled.div`
+  margin: 0 ${({ theme }) => theme.spaces.m}px;
+`;
 export const RightSection = styled.div``;
 
 export const CurrentBlogContainer = styled.div``;

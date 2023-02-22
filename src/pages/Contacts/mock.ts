@@ -15,16 +15,19 @@ export const contacts = [
     icon: mail,
     title: "Email",
     description: "ensome@info.co.us",
+    to: "mailto:ensome@info.co.us",
   },
   {
     icon: phone,
     title: "Phone",
     description: "+1 601-201-5580",
+    to: "tel:1231231234",
   },
   {
     icon: location,
     title: "Address",
     description: "1642 Washington Ave, Jackson, MS",
+    to: null,
   },
 ];
 
@@ -39,7 +42,7 @@ export const mapConfig = {
     }),
     url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     center: L.latLng(47, 39),
-    zoom: 4,
+    zoom: 3,
   },
 
   markers: [

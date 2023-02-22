@@ -25,7 +25,7 @@ export const config = {
       text: "Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       cards: cardEn,
     },
-    Testimonials: {
+    testimonials: {
       title: "Testimonials",
       itemsToShow: 1,
       items: [
@@ -71,7 +71,7 @@ export const config = {
       text: "Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       cards: cardRu,
     },
-    Testimonials: {
+    testimonials: {
       title: "Testimonials",
       itemsToShow: 1,
       items: [

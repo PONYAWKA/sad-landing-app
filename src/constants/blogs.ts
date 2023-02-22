@@ -12,6 +12,13 @@ export const blogArticles = [
     tags: ["App", "Media"],
     views: 483,
     author: "smb",
+    urls: [
+      "https://twitter.com",
+      "https://www.youtube.com/1",
+      "https://www.linkedin.com/in/артём-ильинчик-9b5584221/",
+      "https://dribbble.com/shots/20466236-Apres-Use-Cases-pages",
+      "https://www.google.ru/",
+    ],
   },
   {
     id: "1",
@@ -22,6 +29,13 @@ export const blogArticles = [
     tags: ["Management", "CMR"],
     views: 482,
     author: "smb",
+    urls: [
+      "https://twitter.com",
+      "https://www.youtube.com/1",
+      "https://www.linkedin.com/in/артём-ильинчик-9b5584221/",
+      "https://dribbble.com/shots/20466236-Apres-Use-Cases-pages",
+      "https://www.google.ru/",
+    ],
   },
   {
     id: "2",
@@ -32,6 +46,13 @@ export const blogArticles = [
     tags: ["Future", "CIO"],
     views: 481,
     author: "smb",
+    urls: [
+      "https://twitter.com",
+      "https://www.youtube.com/1",
+      "https://www.linkedin.com/in/артём-ильинчик-9b5584221/",
+      "https://dribbble.com/shots/20466236-Apres-Use-Cases-pages",
+      "https://www.google.ru/",
+    ],
   },
   {
     id: "3",
@@ -42,6 +63,13 @@ export const blogArticles = [
     tags: ["Big data", "Startup"],
     views: 479,
     author: "smb",
+    urls: [
+      "https://twitter.com",
+      "https://www.youtube.com/1",
+      "https://www.linkedin.com/in/артём-ильинчик-9b5584221/",
+      "https://dribbble.com/shots/20466236-Apres-Use-Cases-pages",
+      "https://www.google.ru/",
+    ],
   },
   {
     id: "4",
@@ -62,5 +90,12 @@ export const blogArticles = [
     tags: ["Data analytics", "Information security"],
     views: 474,
     author: "smb",
+    urls: [
+      "https://twitter.com",
+      "https://www.youtube.com/1",
+      "https://www.linkedin.com/in/артём-ильинчик-9b5584221/",
+      "https://dribbble.com/shots/20466236-Apres-Use-Cases-pages",
+      "https://www.google.ru/",
+    ],
   },
 ];

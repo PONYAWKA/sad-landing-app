@@ -28,6 +28,7 @@ export const CurrentBlog = ({
   text,
   views,
   tags,
+  urls,
 }: ICurrentBlog) => {
   return (
     <Body>
@@ -77,7 +78,7 @@ export const CurrentBlog = ({
             />
             Share:
           </InfoText>
-          <IconsMapper Icons={Icons} />
+          <IconsMapper Icons={Icons} urls={urls} />
         </InfoElement>
         <InfoElement>
           <InfoText>

@@ -1,5 +1,10 @@
-import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
-import { LanguageContext } from "@/utils/languageContext";
+import { Languages } from "@/interfaces/language";
 
-export const useTranslate = () => useContext(LanguageContext);
+export const useTranslate = () => {
+  const {
+    i18n: { language, changeLanguage },
+  } = useTranslation();
+  return { value: language as Languages, setLanguage: changeLanguage };
+};

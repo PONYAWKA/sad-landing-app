@@ -18,6 +18,7 @@ export const BreadCrumbContainer = styled.div`
 
 export const TextContainer = styled.div`
   display: grid;
+  padding: 0 ${({ theme }) => theme.spaces.m}px;
   grid-template-columns: 1fr 1fr;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {

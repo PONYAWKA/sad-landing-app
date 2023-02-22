@@ -53,7 +53,7 @@ export const ElementContainer = styled.div`
 `;
 
 export const Element = styled.div<IStyledNav>`
-  ${({ to }) => (to ? "cursor: pointer;" : "")};
+  cursor: ${({ to }) => (to ? "pointer" : "default")};
   box-shadow: ${libTheme.shadows.s};
   padding: ${libTheme.spaces.m}px;
   margin: 0 ${libTheme.spaces.sss}px;

@@ -15,7 +15,7 @@ import { SolutionInfo } from "@/pages/SolutionsInfo";
 
 export const ROUTES = [
   {
-    path: "",
+    path: "/",
     element: <Home />,
   },
   {
@@ -105,7 +105,7 @@ export const options = {
 
     FOOTER_ROUTES: [
       {
-        to: "",
+        to: "/",
         title: "Home",
       },
       {

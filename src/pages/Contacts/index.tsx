@@ -29,9 +29,9 @@ export const Contacts = () => {
           <FormaComponent />
         </FormaContainer>
         <ContactsContainer>
-          {contacts.map(({ icon, title, description }) => (
+          {contacts.map(({ icon, title, description, to }) => (
             <ContactsCard key={title}>
-              <Container>
+              <Container href={to ?? ""}>
                 <Icon src={icon} loading="lazy" alt="Loading..." />
                 <ImageTitle>{title}</ImageTitle>
               </Container>

@@ -30,3 +30,7 @@ export const ImageContainer = styled.div`
     margin-top: 0;
   }
 `;
+
+export const DarkHeaderContainer = styled.div`
+  width: 100%;
+`;

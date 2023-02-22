@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { libTheme } from "@/sad-components-lib/theme";
 
-import { IStyledProps } from "./interfaces";
+import { IStyledProps, IWindow } from "./interfaces";
 
 export const Body = styled.section`
   max-width: ${libTheme.spaces.maxContentWidth}px;
@@ -42,7 +42,7 @@ export const TitleButtonContainer = styled.div`
   display: flex;
 `;
 
-export const ElementContainer = styled.div`
+export const ElementContainer = styled.div<IWindow>`
   transition: "translate";
   transition-property: "transform";
   transition-duration: 300ms;
@@ -52,8 +52,9 @@ export const ElementContainer = styled.div`
   gap: 10px;
 `;
 
-export const Window = styled.div`
-  max-width: 930px;
+export const Window = styled.div<IWindow>`
+  transform: translateX(${({ maxWidth }) => maxWidth}px);
+  max-width: ${({ maxWidth }) => maxWidth}px;
   overflow: hidden;
   align-self: center;
 `;

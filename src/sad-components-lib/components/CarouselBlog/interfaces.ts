@@ -9,3 +9,7 @@ export interface IProps {
 export interface IStyledProps {
   disabled?: boolean;
 }
+
+export interface IWindow {
+  maxWidth: number;
+}

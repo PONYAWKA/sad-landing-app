@@ -1,3 +1,5 @@
+import "@/utils/i18n";
+
 import ReactDOM from "react-dom/client";
 
 import { App } from "@/components/Application/App";

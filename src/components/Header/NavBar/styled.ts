@@ -19,6 +19,9 @@ export const Content = styled.div`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     margin: 0 ${({ theme }) => theme.spaces.m}px;
   }
+  @media (max-width: ${({ theme }) => theme.endPoints.fold}px) {
+    margin: 0 ${({ theme }) => theme.spaces.s}px;
+  }
 `;
 
 export const Image = styled.img`

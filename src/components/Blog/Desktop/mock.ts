@@ -62,7 +62,7 @@ export const options = {
     relatedPosts: "Related Post",
     popularPosts: "Popular posts",
     categoriesT: "Categories",
-    TagT: "Tag",
+    tagT: "Tag",
   },
   ru: {
     pageHeadConfig: (blog?: string) => ({
@@ -97,6 +97,6 @@ export const options = {
     relatedPosts: "Похожие посты",
     popularPosts: "Популярные",
     categoriesT: "Категории",
-    TagT: "Метки",
+    tagT: "Метки",
   },
 };

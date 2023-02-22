@@ -22,6 +22,7 @@ export const LinkElement = ({ isOpen, setIsOpen }: ILinks) => {
     document.body.style.overflowY = "scroll";
     document.body.style.overflowX = "hidden";
   }
+
   return (
     <LinkContainer isOpen={isOpen}>
       {NAV_ROUTES.map(({ name, to, children }) => {

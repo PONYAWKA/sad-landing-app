@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import cLeft from "@/sad-components-lib/assets/images/cLeft.png";
@@ -41,6 +41,10 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
   const onClickHandler = () => {
     if (to) navigate(to);
   };
+  const slicedArray = useMemo(
+    () => items?.slice(itemsLits, itemsLits + itemsToShow),
+    [itemsLits]
+  );
 
   const isLeftActive = itemsLits - 1 >= 0;
   const isRightActive = itemsLits + 1 <= items?.length - itemsToShow;
@@ -64,20 +68,18 @@ export const CarouselTeam = ({ title, itemsToShow = 1, items, to }: IProps) => {
         </TitleButtonContainer>
       </TitleContainer>
       <ElementContainer key={String(itemsLits)}>
-        {items
-          ?.slice(itemsLits, itemsLits + itemsToShow)
-          .map(({ text, pos, title, icon }) => (
-            <Element key={title} onClick={onClickHandler}>
-              <ElementHeader>
-                <ElementIcon src={icon} alt="Loading..." />
-                <ElementHeaderContainer>
-                  <ElementTitle>{title}</ElementTitle>
-                  <ElementPosition>{pos}</ElementPosition>
-                </ElementHeaderContainer>
-              </ElementHeader>
-              <ElementText>{text}</ElementText>
-            </Element>
-          ))}
+        {slicedArray.map(({ text, pos, title, icon }) => (
+          <Element key={title} onClick={onClickHandler}>
+            <ElementHeader>
+              <ElementIcon src={icon} alt="Loading..." />
+              <ElementHeaderContainer>
+                <ElementTitle>{title}</ElementTitle>
+                <ElementPosition>{pos}</ElementPosition>
+              </ElementHeaderContainer>
+            </ElementHeader>
+            <ElementText>{text}</ElementText>
+          </Element>
+        ))}
       </ElementContainer>
     </Body>
   );

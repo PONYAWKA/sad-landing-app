@@ -43,7 +43,7 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
   const isRightActive = offSet > -(itemsSize[1] * (items.length - itemsToShow));
   return (
     <Body className="element-animation">
-      <Window style={{ maxWidth: itemsSize[itemsToShow] }}>
+      <Window maxWidth={itemsSize[itemsToShow]}>
         <TitleContainer>
           <Title>{title}</Title>
           <TitleButtonContainer>
@@ -61,7 +61,7 @@ export const CarouselBlog = ({ title, itemsToShow = 1, items }: IProps) => {
             />
           </TitleButtonContainer>
         </TitleContainer>
-        <ElementContainer style={{ transform: `translateX(${offSet}px)` }}>
+        <ElementContainer maxWidth={offSet}>
           {items?.map((e) => (
             <BlogItem key={e.id} {...e} />
           ))}

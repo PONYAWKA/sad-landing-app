@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Body = styled.section`
-  margin: 0 ${({ theme }) => theme.spaces.m}px;
-`;
+export const Body = styled.section``;
 export const Image = styled.img`
   width: 100%;
 `;

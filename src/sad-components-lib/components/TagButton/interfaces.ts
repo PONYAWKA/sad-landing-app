@@ -1,12 +1,10 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface ITagButton {
   text: string;
-  setSelected?: Dispatch<SetStateAction<string>>;
-  selected?: string;
+  setSelected?: (element: string) => void;
+  selected?: boolean;
   [index: string]: unknown;
 }
 
 export interface IStyledProps {
-  checks: boolean;
+  checks?: boolean;
 }

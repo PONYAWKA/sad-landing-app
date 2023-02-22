@@ -9,11 +9,7 @@ export const TagButton = (element: ITagButton) => {
   };
 
   return (
-    <STagButton
-      checks={text !== selected}
-      {...element}
-      onClick={onClickHandler}
-    >
+    <STagButton checks={selected} {...element} onClick={onClickHandler}>
       {text}
     </STagButton>
   );

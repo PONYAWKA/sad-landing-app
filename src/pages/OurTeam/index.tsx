@@ -17,7 +17,11 @@ export const OurTeamPage = () => {
 
   const { isMobile } = useIsMobile();
 
-  const onPagination = () => setPosts((prev) => [...prev, ...profiles]);
+  const onPagination = () =>
+    setPosts((prev) => {
+      if (prev.length < 30) return [...prev, ...profiles];
+      return prev;
+    });
   const { value } = useTranslate();
   const { headerConfig, headerConfigMobile } = options[value];
   usePagination(onPagination);

@@ -14,14 +14,19 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { homeConfig } from "./mock";
-import { Body, CarouselContainer, Image, PriceContainer } from "./styled";
+import {
+  Body,
+  CarouselContainer,
+  Image,
+  ImageContainer,
+  PriceContainer,
+} from "./styled";
 
 export const Home = () => {
-  const { isMobile } = useIsMobile();
+  const { isMobile, isFold } = useIsMobile();
   const { value } = useTranslate();
   const {
     BenefitConfig,
-    ElementsToShow,
     newestConfig,
     powerConfig,
     priceCardsConfig,
@@ -29,10 +34,20 @@ export const Home = () => {
     successConfig,
   } = homeConfig[value];
 
+  const itemsToShow = () =>
+    isFold
+      ? ElementsToShow.phone
+      : isMobile
+      ? ElementsToShow.mobile
+      : ElementsToShow.desktop;
+
+  const { ElementsToShow } = homeConfig;
   return (
     <Body>
       <PowerSection {...powerConfig} />
-      <Image loading="lazy" src={powerImage} alt="Loading..." title="power" />
+      <ImageContainer>
+        <Image loading="lazy" src={powerImage} alt="Loading..." title="power" />
+      </ImageContainer>
       <NewestSection {...newestConfig} />
       <SolutionsSection {...solutionsConfig} />
       <Success {...successConfig} />
@@ -41,9 +56,7 @@ export const Home = () => {
         <CarouselTeam
           items={Testimonials.items}
           title={Testimonials.title}
-          itemsToShow={
-            isMobile ? ElementsToShow.mobile : ElementsToShow.desktop
-          }
+          itemsToShow={itemsToShow()}
         />
       </CarouselContainer>
       <PriceContainer className="element-animation">
@@ -53,9 +66,7 @@ export const Home = () => {
         <CarouselBlog
           items={blogArticles}
           title={"Our blog"}
-          itemsToShow={
-            isMobile ? ElementsToShow.mobile : ElementsToShow.desktop
-          }
+          itemsToShow={itemsToShow()}
         />
       </CarouselContainer>
       <Help />

@@ -1,4 +1,4 @@
 export interface IEnsomeInNumbers {
   title: string;
-  metrics: { title: string; sub: string }[];
+  metrics?: { title: string; sub: string }[];
 }

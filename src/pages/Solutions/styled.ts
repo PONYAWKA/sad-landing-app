@@ -16,3 +16,8 @@ export const Content = styled.section`
 export const TestimonialsContainer = styled.section`
   margin: ${({ theme }) => theme.spaces.x}px 0;
 `;
+
+export const BreadCrumbContainer = styled.div`
+  max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
+  width: 100%;
+`;

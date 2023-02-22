@@ -20,12 +20,14 @@ export const Content = styled.section`
 
 export const FormaContainer = styled.div`
   display: flex;
+  margin: ${({ theme }) => theme.spaces.mm}px 0 0 0;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     flex-direction: column;
   }
 `;
 
 export const Title = styled.h1`
+  margin: 0 ${({ theme }) => theme.spaces.mm}px 0 0;
   font-size: ${({ theme }) => theme.fonts.xxx}px;
   span {
     color: ${({ theme }) => theme.colors.primary};
@@ -53,8 +55,11 @@ export const Icon = styled.img`
   margin-right: ${({ theme }) => theme.spaces.sss}px;
 `;
 
-export const Container = styled.div`
+export const Container = styled.a`
+  text-decoration: none;
   display: flex;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const ImageTitle = styled.h5``;

@@ -7,4 +7,5 @@ export interface ICurrentBlog {
   tags?: string[];
   views: number;
   author?: string;
+  urls?: string[];
 }

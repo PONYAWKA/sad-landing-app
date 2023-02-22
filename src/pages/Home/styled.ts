@@ -18,11 +18,19 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  min-width: ${({ theme }) => theme.spaces.l}px;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     height: ${({ theme }) => theme.spaces.xx}px;
   }
+`;
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  align-self: center;
+  max-width: ${({ theme }) => theme.spaces.hd}px;
 `;
 export const CarouselContainer = styled.section`
   display: flex;

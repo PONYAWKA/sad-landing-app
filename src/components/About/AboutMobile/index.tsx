@@ -15,7 +15,7 @@ import { Body, CrumbsContainer, SuccessContainer } from "./styled";
 export const AboutMobile = () => {
   const { value } = useTranslate();
 
-  const { benefitConfig, breadCrumb, successConfig, Testimonials, topConfig } =
+  const { benefitConfig, breadCrumb, successConfig, testimonials, topConfig } =
     config[value];
   return (
     <Body>
@@ -27,7 +27,7 @@ export const AboutMobile = () => {
         <Success {...successConfig} />
       </SuccessContainer>
       <Benefits {...benefitConfig} />
-      <CarouselTeam {...Testimonials} />
+      <CarouselTeam {...testimonials} />
       <IconsMapper Icons={Icons} />
       <Help />
     </Body>

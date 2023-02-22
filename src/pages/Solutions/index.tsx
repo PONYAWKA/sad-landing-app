@@ -10,7 +10,12 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { options } from "./mock";
-import { Body, Content, TestimonialsContainer } from "./styled";
+import {
+  Body,
+  BreadCrumbContainer,
+  Content,
+  TestimonialsContainer,
+} from "./styled";
 
 export const Solutions = () => {
   const { value } = useTranslate();
@@ -21,8 +26,10 @@ export const Solutions = () => {
   const { isMobile } = useIsMobile();
   return (
     <Body>
-      <Content>
+      <BreadCrumbContainer>
         <BreadCrumbs {...breadCrumb} />
+      </BreadCrumbContainer>
+      <Content>
         <SecondPageHeader {...pageHeaderConfig} />
         <SolutionsList items={solutionsItems} />
       </Content>

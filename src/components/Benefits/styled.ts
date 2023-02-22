@@ -76,7 +76,7 @@ export const CardElement = styled.div`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     & > div {
       width: ${({ theme }) => theme.spaces.xx}px;
-      height: ${({ theme }) => theme.spaces.xxx}px;
+      height: ${({ theme }) => theme.spaces.xx}px;
     }
   }
 `;

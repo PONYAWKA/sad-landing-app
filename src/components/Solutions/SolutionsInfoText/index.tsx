@@ -14,25 +14,25 @@ import {
 
 export const SolutionsInfoText = () => {
   const { value } = useTranslate();
-  const { inEnsome, practiceConfig, TypesOf, WhatIs } = options[value];
+  const { inEnsome, practiceConfig, typesOf, WhatIs } = options[value];
   return (
     <Body>
-      <ContentContainer>
-        <Title data-content="1">{WhatIs.title}</Title>
+      <ContentContainer data-content="1">
+        <Title>{WhatIs.title}</Title>
         <Text>{WhatIs.text}</Text>
         <LinkMarker id="typeOf" />
       </ContentContainer>
-      <ContentContainer>
-        <Title data-content="2">{TypesOf.title}</Title>
+      <ContentContainer data-content="2">
+        <Title>{typesOf.title}</Title>
         <Image
-          src={TypesOf.img}
+          src={typesOf.img}
           loading="lazy"
           alt="Loading..."
           title="typeOf"
         />
-        <Text>{TypesOf.text}</Text>
+        <Text>{typesOf.text}</Text>
         <Container>
-          {TypesOf.elements.map(({ title, text }) => (
+          {typesOf.elements.map(({ title, text }) => (
             <Element key={title}>
               <span>{title}</span>
               {text}
@@ -41,8 +41,8 @@ export const SolutionsInfoText = () => {
         </Container>
         <ContentContainer id="practice" />
       </ContentContainer>
-      <ContentContainer>
-        <Title data-content="3">{practiceConfig.title}</Title>
+      <ContentContainer data-content="3">
+        <Title>{practiceConfig.title}</Title>
         <Image
           src={practiceConfig.img}
           loading="lazy"
@@ -52,8 +52,8 @@ export const SolutionsInfoText = () => {
         <Text>{practiceConfig.text}</Text>
         <ContentContainer id="inEnsome" />
       </ContentContainer>
-      <ContentContainer>
-        <Title data-content="4">{inEnsome.title}</Title>
+      <ContentContainer data-content="4">
+        <Title>{inEnsome.title}</Title>
         <Text>{inEnsome.text}</Text>
       </ContentContainer>
     </Body>

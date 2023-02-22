@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { theme } from "@/theme";
 
 export const useIsMobile = (breakpoint = theme.endPoints.tablet) => {
-  const checkForDevice = () =>
-    document.documentElement.clientWidth < breakpoint;
-
-  const [isMobile, setIsMobile] = useState(checkForDevice());
-
+  const checkForDevice = () => {
+    return {
+      tablet: document.documentElement.clientWidth < breakpoint,
+      fold: document.documentElement.clientWidth < theme.endPoints.phone,
+    };
+  };
+  const [{ tablet, fold }, setIsMobile] = useState(checkForDevice());
   useEffect(() => {
     const handlePageResized = () => {
       setIsMobile(checkForDevice());
@@ -31,6 +33,7 @@ export const useIsMobile = (breakpoint = theme.endPoints.tablet) => {
   }, []);
 
   return {
-    isMobile,
+    isMobile: tablet,
+    isFold: tablet && !fold,
   };
 };

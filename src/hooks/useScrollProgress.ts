@@ -11,7 +11,7 @@ export const useScrollProgress = (nameObserve: string, element: string) => {
       }
     };
 
-    const observer = new IntersectionObserver(onObserve);
+    const observer = new IntersectionObserver(onObserve, { threshold: 0.5 });
     const elements = document.querySelectorAll(`${element}[${nameObserve}]`);
     elements.forEach((e) => observer.observe(e));
 

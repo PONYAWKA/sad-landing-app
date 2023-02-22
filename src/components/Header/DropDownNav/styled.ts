@@ -59,7 +59,7 @@ export const ChildrenStyledLink = styled(Link)`
     background-repeat: no-repeat;
     width: ${({ theme }) => theme.spaces.m}px;
     height: ${({ theme }) => theme.spaces.ss}px;
-    margin-top: ${({ theme }) => theme.spaces.s}px;
+    margin-top: ${({ theme }) => theme.spaces.soo}px;
     margin-left: ${({ theme }) => theme.spaces.s}px;
     opacity: 0;
   }

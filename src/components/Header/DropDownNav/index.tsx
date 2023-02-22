@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+
+import { useClickOutContainer } from "@/hooks/useClickOutContainer";
 
 import { IDropDownNav } from "./interfaces";
 import {
@@ -10,6 +12,11 @@ import {
 
 export const DropDownNav = ({ name, routs, setIsOpen }: IDropDownNav) => {
   const [isVisible, setIsVisible] = useState(false);
+  const rootEl = useRef<HTMLDivElement>(null);
+
+  const handleHide = () => setIsVisible(false);
+
+  useClickOutContainer(rootEl, handleHide);
 
   const handleClick = () => {
     setIsVisible((prev) => !prev);
@@ -21,7 +28,7 @@ export const DropDownNav = ({ name, routs, setIsOpen }: IDropDownNav) => {
   };
 
   return (
-    <MoreLinksBody key={name} name-link="morePages">
+    <MoreLinksBody key={name} name-link="morePages" ref={rootEl}>
       <MoreLinks onClick={handleClick} id="morePages">
         {name}
       </MoreLinks>
