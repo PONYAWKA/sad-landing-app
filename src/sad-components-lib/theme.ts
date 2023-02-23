@@ -14,6 +14,7 @@ const spaces = {
   i: 1,
   ii: 2,
   s: 5,
+  soo: 8,
   ss: 10,
   sss: 15,
   m: 20,

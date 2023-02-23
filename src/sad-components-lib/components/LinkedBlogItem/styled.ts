@@ -29,7 +29,7 @@ export const StyledLink = styled(Link)`
     background-repeat: no-repeat;
     width: ${libTheme.spaces.m}px;
     height: ${libTheme.spaces.ss}px;
-    margin-top: ${libTheme.spaces.s}px;
+    margin-top: ${libTheme.spaces.soo}px;
     margin-left: ${libTheme.spaces.ss}px;
   }
 `;
