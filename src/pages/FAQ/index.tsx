@@ -1,5 +1,5 @@
-import { BreadCrumbs } from "sad-landing-lib";
-import { FAQComponent } from "sad-landing-lib";
+import { useState } from "react";
+import { BreadCrumbs, FAQComponent } from "sad-landing-lib";
 import { v4 as uuidv4 } from "uuid";
 
 import { Help } from "@/components/Help";
@@ -17,6 +17,9 @@ import {
 export const FAQ = () => {
   const { value } = useTranslate();
   const { FAQItems, pageHeaderConfig } = options[value];
+
+  const [active, setActive] = useState("");
+
   return (
     <Body>
       <CrumbContainer>
@@ -27,7 +30,12 @@ export const FAQ = () => {
       </SecondPageHeaderContainer>
       <FAQContent>
         {FAQItems.map((e) => (
-          <FAQComponent {...e} key={uuidv4()} />
+          <FAQComponent
+            {...e}
+            key={uuidv4()}
+            setActive={setActive}
+            active={active}
+          />
         ))}
       </FAQContent>
       <Help />

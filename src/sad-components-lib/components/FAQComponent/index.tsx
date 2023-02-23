@@ -7,10 +7,15 @@ import { libTheme } from "@/sad-components-lib/theme";
 import { IFAQComponent } from "./interfaces";
 import { Body, IconContainer, Text, Title, TitleContainer } from "./styled";
 
-export const FAQComponent = ({ description, heading }: IFAQComponent) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const FAQComponent = ({
+  description,
+  heading,
+  active,
+  setActive,
+}: IFAQComponent) => {
+  const onClickHandler = () => setActive(heading);
 
-  const onClickHandler = () => setIsOpen((prev) => !prev);
+  const isOpen = heading === active;
 
   return (
     <Body onClick={onClickHandler}>
