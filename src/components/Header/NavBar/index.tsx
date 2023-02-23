@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { Burger } from "sad-landing-lib";
@@ -11,8 +11,7 @@ import { LinkElement } from "@/components/Header/Links";
 import { useIsMobile } from "@/hooks/useMobile";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { useTranslate } from "@/hooks/useTranslate";
-import { Languages } from "@/interfaces/language";
-import { useShowBlocks } from "@/utils/showBlocks";
+import { showBlocks } from "@/utils/showBlocks";
 
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { options, youtubeOptions } from "./mock";
@@ -42,7 +41,7 @@ export const NavBar = () => {
   };
 
   useScrollToTop();
-  useShowBlocks();
+  showBlocks();
 
   const { value } = useTranslate();
 
@@ -63,14 +62,17 @@ export const NavBar = () => {
           <Burger onClick={handleBurgerClick} />
         </BurgerContainer>
       </Content>
-      {isYoutubeOpen && !isMobile && (
-        <YouTubeContainer onClick={handleYouTube}>
-          <YouTube
-            videoId={process.env.REACT_APP_YOUTUBE}
-            opts={youtubeOptions}
-          />
-        </YouTubeContainer>
-      )}
+      {isYoutubeOpen &&
+        !isMobile &&
+        createPortal(
+          <YouTubeContainer onClick={handleYouTube}>
+            <YouTube
+              videoId={process.env.REACT_APP_YOUTUBE}
+              opts={youtubeOptions}
+            />
+          </YouTubeContainer>,
+          document.body
+        )}
       <LanguageSwitcher />
     </Container>
   );

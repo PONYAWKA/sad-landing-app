@@ -9,7 +9,7 @@ export const useIsMobile = (breakpoint = theme.endPoints.tablet) => {
       fold: document.documentElement.clientWidth < theme.endPoints.phone,
     };
   };
-  const [{ tablet, fold }, setIsMobile] = useState(checkForDevice());
+  const [{ tablet, fold }, setIsMobile] = useState(() => checkForDevice());
   useEffect(() => {
     const handlePageResized = () => {
       setIsMobile(checkForDevice());

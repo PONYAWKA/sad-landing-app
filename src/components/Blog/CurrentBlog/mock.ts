@@ -4,4 +4,4 @@ import linkedIn from "@/assets/icons/blog/linkedIn.svg";
 import twitter from "@/assets/icons/blog/twitter.svg";
 import youTube from "@/assets/icons/blog/youTube.svg";
 
-export const Icons = [twitter, youTube, linkedIn, google, facebook];
+export const icons = [twitter, youTube, linkedIn, google, facebook];

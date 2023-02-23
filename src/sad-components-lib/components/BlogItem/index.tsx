@@ -13,7 +13,11 @@ export const BlogItem = ({ text, icon, info, heading, id }: IBlogItem) => {
       <ElementText>{info}</ElementText>
       <ElementTitle>{heading}</ElementTitle>
       <ElementText>{text}</ElementText>
-      {id && <StyledLink to={`/BlogInfo?id=${id}`}>Read more</StyledLink>}
+      {id && (
+        <StyledLink to={`/BlogInfo?id=${heading?.replaceAll(" ", "-")}`}>
+          Read more
+        </StyledLink>
+      )}
     </Element>
   );
 };

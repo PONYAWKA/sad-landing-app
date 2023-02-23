@@ -1,11 +1,11 @@
-import { FormaComponent } from "@/components/FormaComponent";
+import { SecondFormaComponent } from "@/components/forms/SecondForm";
 import { IconsMapper } from "@/components/IconMapper";
 import { PageHeader } from "@/components/PageHeader";
 import { profiles } from "@/constants/profiles";
 import { useQuery } from "@/hooks/useQuery";
 import { useTranslate } from "@/hooks/useTranslate";
 
-import { Icons, options } from "./mock";
+import { icons, options } from "./mock";
 import {
   Body,
   Container,
@@ -72,7 +72,7 @@ export const OurTeamInfo = () => {
             <TextContainer>
               <Title>{socialNetworks}</Title>
               <IconContainer>
-                <IconsMapper urls={social} Icons={Icons} />
+                <IconsMapper urls={social} icons={icons} />
               </IconContainer>
             </TextContainer>
           </Section>
@@ -84,7 +84,7 @@ export const OurTeamInfo = () => {
             </FormaTitleContainer>
           </Section>
           <Section>
-            <FormaComponent alternative />
+            <SecondFormaComponent />
           </Section>
         </Container>
       </Body>

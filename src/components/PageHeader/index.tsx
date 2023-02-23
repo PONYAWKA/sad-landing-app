@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { BreadCrumbs } from "sad-landing-lib";
 
 import { PageHeaderProps } from "./interfaces";
 import { Body, Content, Title } from "./styled";
 
-export const PageHeader = ({ title, crumb }: PageHeaderProps) => {
+export const PageHeader = memo(({ title, crumb }: PageHeaderProps) => {
   return (
     <Body>
       <Content>
@@ -12,4 +13,4 @@ export const PageHeader = ({ title, crumb }: PageHeaderProps) => {
       </Content>
     </Body>
   );
-};
+});

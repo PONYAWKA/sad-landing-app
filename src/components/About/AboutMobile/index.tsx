@@ -6,7 +6,7 @@ import { Help } from "@/components/Help";
 import { IconsMapper } from "@/components/IconMapper";
 import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { Success } from "@/components/Success";
-import { Icons } from "@/constants/icons";
+import { icons } from "@/constants/icons";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { config } from "./mock";
@@ -28,7 +28,7 @@ export const AboutMobile = () => {
       </SuccessContainer>
       <Benefits {...benefitConfig} />
       <CarouselTeam {...testimonials} />
-      <IconsMapper Icons={Icons} />
+      <IconsMapper icons={icons} />
       <Help />
     </Body>
   );

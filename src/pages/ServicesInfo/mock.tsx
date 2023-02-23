@@ -4,7 +4,7 @@ import { PhoneIcon } from "@/assets/icons/servicesInfo/phoneIcon";
 import customerImage from "@/assets/images/servicesInfo/service-info-image-1.png";
 import solutionImage from "@/assets/images/servicesInfo/service-info-image-2.png";
 
-const Icons = [
+const icons = [
   { Img: <MailIcon fill="#185CFF" />, text: "ensome@info.co.us" },
   { Img: <PhoneIcon fill="#185CFF" />, text: "+1 601-201-5580" },
   {
@@ -71,7 +71,7 @@ export const options = {
     footerConfig: {
       title: "Contact information",
       text: "Fill up the form and our Team will get back to you with 25 hours.",
-      items: Icons,
+      items: icons,
     },
   },
   ru: {
@@ -131,7 +131,7 @@ export const options = {
     footerConfig: {
       title: "Контактная информация",
       text: "Заполните форму, и наша команда свяжется с вами в течение 25 часов.",
-      items: Icons,
+      items: icons,
     },
   },
 };

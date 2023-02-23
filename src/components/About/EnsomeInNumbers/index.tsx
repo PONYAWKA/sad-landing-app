@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 import { IEnsomeInNumbers } from "./interfaces";
 import {
   Body,
@@ -9,7 +11,7 @@ import {
   Title,
 } from "./styled";
 
-export const Numbers = ({ title, metrics }: IEnsomeInNumbers) => {
+export const Numbers = memo(({ title, metrics }: IEnsomeInNumbers) => {
   return (
     <Body className="element-animation">
       <Content>
@@ -25,4 +27,4 @@ export const Numbers = ({ title, metrics }: IEnsomeInNumbers) => {
       </Content>
     </Body>
   );
-};
+});

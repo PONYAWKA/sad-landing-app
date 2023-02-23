@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 import { CONTACT_INFO, options } from "@/constants/routs";
 import { useTranslate } from "@/hooks/useTranslate";
 
@@ -5,7 +7,7 @@ import { FooterLinkElement } from "../FooterLinksElement";
 import { option } from "./mock";
 import { Body } from "./styled";
 
-export const FooterLinks = () => {
+export const FooterLinks = memo(() => {
   const { value } = useTranslate();
   const { FOOTER_ROUTES, SERVICE_ROUTS } = options[value];
   const { contactInfo, quickLink, service } = option[value];
@@ -16,4 +18,4 @@ export const FooterLinks = () => {
       <FooterLinkElement title={contactInfo} elements={CONTACT_INFO} alt />
     </Body>
   );
-};
+});

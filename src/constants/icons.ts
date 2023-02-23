@@ -5,4 +5,4 @@ import log5 from "@/assets/icons/logos/logo_5.png";
 import log6 from "@/assets/icons/logos/logo_6.png";
 import log7 from "@/assets/icons/logos/logo_7.png";
 
-export const Icons = [log1, log3, log3, log4, log5, log6, log7];
+export const icons = [log1, log3, log3, log4, log5, log6, log7];

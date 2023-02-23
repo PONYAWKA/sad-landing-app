@@ -31,7 +31,7 @@ export const SubEmail = (email: string) => {
     .catch(() => alert("The letter was not sent"));
 };
 export const Contact = (params: IContactUs) => {
-  emailjs
+  return emailjs
     .send(
       process.env.REACT_APP_MAIL_KEY as string,
       process.env.REACT_APP_MAIL_TEMPLATE as string,

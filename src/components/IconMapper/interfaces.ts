@@ -1,4 +1,4 @@
 export interface IIconsMapper {
-  Icons: string[];
+  icons: string[];
   urls?: string[];
 }

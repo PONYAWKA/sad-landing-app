@@ -18,36 +18,24 @@ export const LinkElement = ({ isOpen, setIsOpen }: ILinks) => {
   };
 
   if (isOpen && isMobile) document.body.style.overflow = "hidden";
-  else {
-    document.body.style.overflowY = "scroll";
-    document.body.style.overflowX = "hidden";
-  }
+  else document.body.style.overflowY = "scroll";
 
   return (
     <LinkContainer isOpen={isOpen}>
-      {NAV_ROUTES.map(({ name, to, children }) => {
-        if (!children) {
-          return (
-            <StyledLink
-              to={to}
-              key={name}
-              onClick={handleClick}
-              name-link={name}
-            >
-              {name}
-            </StyledLink>
-          );
-        } else {
-          return (
-            <DropDownNav
-              name={name}
-              routs={children}
-              key={name}
-              setIsOpen={setIsOpen}
-            />
-          );
-        }
-      })}
+      {NAV_ROUTES.map(({ name, to, children }) =>
+        !children ? (
+          <StyledLink to={to} key={name} onClick={handleClick} name-link={name}>
+            {name}
+          </StyledLink>
+        ) : (
+          <DropDownNav
+            name={name}
+            routs={children}
+            key={name}
+            setIsOpen={setIsOpen}
+          />
+        )
+      )}
       <MediaContainer>
         <Media black>Follow us</Media>
       </MediaContainer>

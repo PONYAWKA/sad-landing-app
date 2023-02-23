@@ -4,9 +4,9 @@ import { Media, SendMail } from "sad-landing-lib";
 import { SubEmail } from "@/api/mailAPI";
 import logo from "@/assets/images/header/logo_white.png";
 import { FooterLinks } from "@/components/FooterComponents/FooterLinks";
+import { validateEmail } from "@/components/forms/mailValidator";
 import { useIsMobile } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
-import { validateEmail } from "@/utils/mailValidator";
 
 import { IEvent } from "./interfaces";
 import { options } from "./mock";

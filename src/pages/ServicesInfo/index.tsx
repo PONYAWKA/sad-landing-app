@@ -1,8 +1,8 @@
 import { CategoriesElement } from "sad-landing-lib";
 import { Search } from "sad-landing-lib";
 
-import { DarkHeader } from "@/components/DarkHeader";
-import { FormaComponent } from "@/components/FormaComponent";
+import { DarkDescription } from "@/components/DarkDescription";
+import { SecondFormaComponent } from "@/components/forms/SecondForm";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { options } from "./mock";
@@ -45,7 +45,7 @@ export const ServicesInfo = () => {
   } = options[value];
   return (
     <Body>
-      <DarkHeader {...headerConfig} />
+      <DarkDescription {...headerConfig} />
       <Content>
         <Sections>
           <ArticleContainer>
@@ -107,7 +107,7 @@ export const ServicesInfo = () => {
             </FootContainer>
           </Sections>
           <Sections>
-            <FormaComponent alternative />
+            <SecondFormaComponent />
           </Sections>
         </Content>
       </Contact>

@@ -1,13 +1,11 @@
-import { useFormik } from "formik";
+import { Field, useFormik } from "formik";
 import { Button } from "sad-landing-lib";
 
 import { IContactUs } from "@/api/interfaces";
 import { Contact } from "@/api/mailAPI";
 
-import { IFormaComponent } from "./interfaces";
 import { initialValue, validScheme } from "./mock";
 import {
-  BigInputField,
   Body,
   ButtonContainer,
   ButtonText,
@@ -18,77 +16,63 @@ import {
   TextTitle,
 } from "./styled";
 
-export const FormaComponent = ({ alternative }: IFormaComponent) => {
+export const SecondFormaComponent = () => {
   const onSubmitHandler = (e: IContactUs) => {
-    Contact(e);
+    Contact(e).then(() => resetForm());
   };
-  const { handleSubmit, handleChange, values, errors } = useFormik({
-    initialValues: initialValue,
-    onSubmit: onSubmitHandler,
-    validationSchema: validScheme,
-  });
+
+  const { handleSubmit, handleChange, values, errors, resetForm, touched } =
+    useFormik({
+      initialValues: initialValue,
+      onSubmit: onSubmitHandler,
+      validationSchema: validScheme,
+      validateOnBlur: true,
+    });
 
   return (
-    <Body alternative={alternative}>
+    <Body>
       <StyledForma onSubmit={handleSubmit}>
         <InputContainer>
           <InputContainerText>
-            {alternative && <TextTitle>Email</TextTitle>}
+            <TextTitle>Email</TextTitle>
+
             <InputField
               name="email"
               type="email"
               onChange={handleChange}
               value={values.email}
               error={!!errors.email}
-              placeholder={!alternative ? "Your email" : ""}
-              alternative={alternative}
             />
           </InputContainerText>
           <InputContainerText>
-            {alternative && <TextTitle>Name</TextTitle>}
+            <TextTitle>Name</TextTitle>
             <InputField
               name="name"
               type="text"
               onChange={handleChange}
               value={values.name}
               error={!!errors.name}
-              placeholder={!alternative ? "Your name" : ""}
-              alternative={alternative}
             />
           </InputContainerText>
         </InputContainer>
         <InputContainerText>
-          {alternative && <TextTitle>Theme</TextTitle>}
+          <TextTitle>Theme</TextTitle>
           <InputField
             name="theme"
             type="text"
             onChange={handleChange}
             value={values.theme}
             error={!!errors.theme}
-            placeholder={!alternative ? "Theme" : ""}
-            alternative={alternative}
           />
         </InputContainerText>
         <InputContainerText>
-          {alternative && <TextTitle>Message</TextTitle>}
-          {!alternative ? (
-            <BigInputField
-              name="message"
-              onChange={handleChange}
-              value={values.message}
-              error={!!errors.message}
-              placeholder="Your message"
-              alternative={alternative}
-            />
-          ) : (
-            <InputField
-              name="message"
-              onChange={handleChange}
-              value={values.message}
-              error={!!errors.message}
-              alternative={alternative}
-            />
-          )}
+          <TextTitle>Message</TextTitle>
+          <InputField
+            name="message"
+            onChange={handleChange}
+            value={values.message}
+            error={!!errors.message}
+          />
         </InputContainerText>
         <ButtonContainer>
           <Button type="submit">

@@ -1,5 +1,5 @@
 import { PayPalButtons } from "@paypal/react-paypal-js";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { createPaypalOrder } from "@/api/paypalAPI";
@@ -23,30 +23,34 @@ import {
   Title,
 } from "./styled";
 
-export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
+export const PricingElement = memo(({ plus, yr, mo, name }: IProps) => {
+  const [priority, setPriority] = useState(false);
+
   const theme = {
-    pr: !priority ? libTheme.colors.blue : libTheme.colors.white,
-    se: priority ? libTheme.colors.blue : libTheme.colors.white,
+    primary: !priority ? libTheme.colors.blue : libTheme.colors.white,
+    secondary: priority ? libTheme.colors.blue : libTheme.colors.white,
   };
 
-  const Icon = theme.pr == libTheme.colors.blue ? bOk : wOk;
-  const [isYear, setIsYear] = useState(false);
+  const Icon = theme.primary == libTheme.colors.blue ? bOk : wOk;
 
-  const [PayPal, setPayPal] = useState(false);
+  const [isYear, setIsYear] = useState(false);
+  const [payPal, setPayPal] = useState(false);
+
+  const onMouseEnter = () => setPriority(true);
+  const onMouseLeave = () => setPriority(false);
 
   const setYrHandler = () => setIsYear(true);
   const setMoHandler = () => setIsYear(false);
 
+  console.log(priority);
+
   const money = isYear ? yr : mo;
 
-  const payPalHandler = () => {
-    setPayPal((prev) => !prev);
-    setTimeout(() => setPayPal((prev) => !prev), 3000);
-  };
+  const payPalHandler = () => setPayPal((prev) => !prev);
 
   return (
     <ThemeProvider theme={theme}>
-      <Body>
+      <Body onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         <Container>
           <Title>{name}</Title>
           <ElementContainer>
@@ -60,7 +64,7 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
               </Button>
             </ButtonContainer>
           </ElementContainer>
-          {!PayPal ? (
+          {!payPal ? (
             <PlanButton onClick={payPalHandler}>Choose plan</PlanButton>
           ) : (
             <PayPalButtons createOrder={createPaypalOrder(+money, name)} />
@@ -77,4 +81,4 @@ export const PricingElement = ({ priority, plus, yr, mo, name }: IProps) => {
       </Body>
     </ThemeProvider>
   );
-};
+});

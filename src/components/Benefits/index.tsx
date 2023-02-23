@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Card } from "sad-landing-lib";
 
 import { BenefitsInterface } from "./interfaces";
@@ -12,7 +13,7 @@ import {
   Title,
 } from "./styled";
 
-export const Benefits = ({ title, text, cards }: BenefitsInterface) => (
+export const Benefits = memo(({ title, text, cards }: BenefitsInterface) => (
   <Container className="element-animation">
     <Content>
       <TextContainer>
@@ -30,4 +31,4 @@ export const Benefits = ({ title, text, cards }: BenefitsInterface) => (
       </CardContainer>
     </Content>
   </Container>
-);
+));

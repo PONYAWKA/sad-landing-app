@@ -1,6 +1,10 @@
-import { useEffect, useState } from "react";
-import { CategoriesElement } from "sad-components-lib";
-import { NotFound, Search, TagButton } from "sad-components-lib";
+import { useMemo, useState } from "react";
+import {
+  CategoriesElement,
+  NotFound,
+  Search,
+  TagButton,
+} from "sad-landing-lib";
 import { v4 } from "uuid";
 
 import { CurrentBlog } from "@/components/Blog/CurrentBlog";
@@ -27,7 +31,7 @@ import {
 
 export const BlogDesktop = () => {
   const query = useQuery();
-  const blog = query.get("id");
+  const blogTitle = query.get("id");
   const [check, setCheck] = useState(["All topics"]);
   const [related, setRelated] = useState(blogArticles);
   const [search, setSearch] = useState("");
@@ -43,7 +47,8 @@ export const BlogDesktop = () => {
     categoriesT,
     tagT,
   } = options[value];
-  useEffect(() => {
+
+  useMemo(() => {
     setRelated(
       blogArticles
         .filter(
@@ -65,9 +70,11 @@ export const BlogDesktop = () => {
     }
   };
 
-  if (blog) {
+  if (blogTitle) {
     const popular = blogArticles.sort(sortByPopular);
-    const currentBlogInfo = blogArticles[Number(blog)];
+    const currentBlogInfo = blogArticles.filter(
+      ({ heading }) => heading.replaceAll(" ", "-") === blogTitle
+    )[0];
 
     const onChangeHandler = ({ target: { value } }: IEvent) => {
       setSearch(value);

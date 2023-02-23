@@ -44,6 +44,7 @@ export const TitleButtonContainer = styled.div`
 
 export const ElementContainer = styled.div<IWindow>`
   transition: "translate";
+  transform: translateX(${({ maxWidth }) => maxWidth}px);
   transition-property: "transform";
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
@@ -53,7 +54,6 @@ export const ElementContainer = styled.div<IWindow>`
 `;
 
 export const Window = styled.div<IWindow>`
-  transform: translateX(${({ maxWidth }) => maxWidth}px);
   max-width: ${({ maxWidth }) => maxWidth}px;
   overflow: hidden;
   align-self: center;

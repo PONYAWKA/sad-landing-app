@@ -1,7 +1,7 @@
 import { BreadCrumbs } from "sad-landing-lib";
 
 import { MapComponent } from "@/components/ContactPage/MapComponent";
-import { FormaComponent } from "@/components/FormaComponent";
+import { FormaComponent } from "@/components/forms/FormaComponent";
 
 import { breadCrumb, contacts, mapConfig } from "./mock";
 import {

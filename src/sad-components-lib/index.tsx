@@ -1,4 +1,3 @@
-import { PricingElement } from "../components/PricingElement";
 import { AdvantageElement } from "./components/AdvantageElement";
 import { BlogItem } from "./components/BlogItem";
 import { BreadCrumbs } from "./components/BreadCrumbs";
@@ -17,6 +16,7 @@ import { NotFound } from "./components/NotFound";
 import { Search } from "./components/Search";
 import { SendMail } from "./components/SendMail";
 import { TagButton } from "./components/TagButton";
+import { PricingElement } from "./PricingElement";
 export {
   AdvantageElement,
   BlogItem,

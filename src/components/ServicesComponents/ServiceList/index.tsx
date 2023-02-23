@@ -1,8 +1,10 @@
+import { memo } from "react";
+
 import { ServiceElement } from "../ServiceElement";
 import { IServiceList } from "./interfaces";
 import { Body, Grid } from "./styled";
 
-export const ServiceList = ({ items }: IServiceList) => {
+export const ServiceList = memo(({ items }: IServiceList) => {
   return (
     <Body>
       <Grid>
@@ -12,4 +14,4 @@ export const ServiceList = ({ items }: IServiceList) => {
       </Grid>
     </Body>
   );
-};
+});

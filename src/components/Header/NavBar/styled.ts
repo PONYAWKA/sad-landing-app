@@ -47,6 +47,7 @@ export const BurgerContainer = styled.div`
 
 export const YouTubeContainer = styled.div`
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   height: 100%;

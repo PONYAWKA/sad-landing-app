@@ -8,15 +8,6 @@ export const Body = styled.div<IError>`
   display: flex;
   flex-direction: column;
   margin-top: ${({ theme }) => theme.spaces.mmm}px;
-  ${({ alternative, theme, error }) =>
-    alternative &&
-    `
-  input {
-    border-radius: 0;
-    border: 0;
-    border-bottom: 1px solid
-      ${error ? theme.colors.red : theme.colors.gray};
-  }`}
 `;
 
 export const InputField = styled.input<IError>`

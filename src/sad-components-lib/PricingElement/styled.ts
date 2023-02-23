@@ -7,7 +7,7 @@ import { IStyledProps } from "./interface";
 export const Body = styled.div`
   box-shadow: ${libTheme.shadows.s};
   padding: ${libTheme.spaces.m}px;
-  background-color: ${({ theme }) => theme.se};
+  background-color: ${({ theme }) => theme.secondary};
   border-radius: ${libTheme.spaces.s}px;
   color: ${({ theme }) => theme.pr};
 `;
@@ -15,6 +15,8 @@ export const Body = styled.div`
 export const Container = styled.div`
   height: ${libTheme.spaces.l}px;
   width: ${libTheme.spaces.xx}px;
+  &:hover {
+  }
 `;
 
 export const ElementContainer = styled.div`
@@ -26,14 +28,14 @@ export const Element = styled.div``;
 export const Title = styled.h5`
   font-weight: bold;
   color: ${({ theme }) =>
-    theme.pr == libTheme.colors.blue
+    theme.primary == libTheme.colors.blue
       ? libTheme.colors.black
       : libTheme.colors.white};
 `;
 
 export const Price = styled.div`
   color: ${({ theme }) =>
-    theme.pr == libTheme.colors.blue
+    theme.primary == libTheme.colors.blue
       ? libTheme.colors.black
       : libTheme.colors.white};
   font-weight: ${libTheme.fonts.weightX};
@@ -42,9 +44,12 @@ export const Price = styled.div`
 
 export const Button = styled.button<IStyledProps>`
   margin: ${libTheme.spaces.s}px;
-  background-color: ${({ isChose, theme }) => (isChose ? theme.pr : theme.se)};
-  color: ${({ isChose, theme }) => (!isChose ? theme.pr : theme.se)};
-  border: 1px solid ${({ isChose, theme }) => (!isChose ? theme.pr : theme.se)};
+  background-color: ${({ isChose, theme }) =>
+    isChose ? theme.primary : theme.secondary};
+  color: ${({ isChose, theme }) =>
+    !isChose ? theme.primary : theme.secondary};
+  border: 1px solid
+    ${({ isChose, theme }) => (!isChose ? theme.primary : theme.secondary)};
   padding: ${libTheme.spaces.s}px ${libTheme.spaces.ss}px;
   border-radius: ${libTheme.spaces.s}px;
   cursor: pointer;
@@ -52,9 +57,9 @@ export const Button = styled.button<IStyledProps>`
 
 export const PlanButton = styled.button`
   margin: ${libTheme.spaces.s}px;
-  background-color: ${({ theme }) => theme.pr};
-  color: ${({ theme }) => theme.se};
-  border: 1px solid ${({ theme }) => theme.pr};
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
+  border: 1px solid ${({ theme }) => theme.primary};
   padding: ${libTheme.spaces.s}px ${libTheme.spaces.ss}px;
   border-radius: ${libTheme.spaces.s}px;
   width: 100%;
@@ -74,7 +79,7 @@ export const PlusElement = styled.div`
 
 export const PlusText = styled.div`
   color: ${({ theme }) =>
-    theme.pr == libTheme.colors.blue
+    theme.primary == libTheme.colors.blue
       ? libTheme.colors.black
       : libTheme.colors.white};
 `;

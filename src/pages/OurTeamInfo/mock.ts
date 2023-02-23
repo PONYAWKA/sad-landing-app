@@ -20,7 +20,7 @@ export const ShareTitle = (name: string, sex: string) =>
     sex === "m" ? "his" : "her"
   } expertise with you?`;
 
-export const Icons = [facebook, twitter, linkedIn];
+export const icons = [facebook, twitter, linkedIn];
 export const options = {
   en: {
     pageHeadConfig: {

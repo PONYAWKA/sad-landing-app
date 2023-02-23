@@ -9,11 +9,10 @@ export const MobileBlogItem = ({
   icon,
   heading,
   info,
-  id,
 }: IMobileBlogItem) => {
   const navigate = useNavigate();
   const onClickHandler = () => {
-    navigate(`?id=${id}`);
+    navigate(`?id=${heading}`);
     window.scrollTo(0, 0);
   };
 

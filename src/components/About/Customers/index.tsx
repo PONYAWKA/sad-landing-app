@@ -1,12 +1,13 @@
+import { memo } from "react";
 import { CarouselTeam } from "sad-landing-lib";
 
 import { IconsMapper } from "@/components/IconMapper";
-import { Icons } from "@/constants/icons";
+import { icons } from "@/constants/icons";
 
 import { ICustomers } from "./interfaces";
 import { Body, IconsContainer, Text, TextContainer, Title } from "./styled";
 
-export const Customers = ({ text, title, testimonials }: ICustomers) => {
+export const Customers = memo(({ text, title, testimonials }: ICustomers) => {
   return (
     <Body>
       <TextContainer>
@@ -14,9 +15,9 @@ export const Customers = ({ text, title, testimonials }: ICustomers) => {
         <Text>{text}</Text>
       </TextContainer>
       <IconsContainer>
-        <IconsMapper Icons={Icons} />
+        <IconsMapper icons={icons} />
       </IconsContainer>
       <CarouselTeam {...testimonials} />
     </Body>
   );
-};
+});

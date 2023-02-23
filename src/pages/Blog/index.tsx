@@ -1,7 +1,7 @@
 import { LinkedBlogItem } from "sad-landing-lib";
 import { v4 } from "uuid";
 
-import { DarkHeader } from "@/components/DarkHeader";
+import { DarkDescription } from "@/components/DarkDescription";
 import { blogArticles } from "@/constants/blogs";
 import { useTranslate } from "@/hooks/useTranslate";
 
@@ -13,7 +13,7 @@ export const Blog = () => {
   const { headerConfig } = options[value];
   return (
     <Body>
-      <DarkHeader {...headerConfig} />
+      <DarkDescription {...headerConfig} />
       <BlogContainer>
         {blogArticles.map((e) => (
           <LinkedBlogItem {...e} vertical key={v4()} />

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useShowBlocks = () => {
+export const showBlocks = () => {
   function onEntry(entry: IntersectionObserverEntry[]) {
     entry.forEach((change) => {
       if (change.isIntersecting) {

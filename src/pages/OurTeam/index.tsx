@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { DarkHeader } from "@/components/DarkHeader";
+import { DarkDescription } from "@/components/DarkDescription";
 import { ImageElement } from "@/components/OurTeam/ImageElement";
 import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
 import { profiles } from "@/constants/profiles";
@@ -31,7 +31,7 @@ export const OurTeamPage = () => {
       {isMobile ? (
         <OurTeamHeaderMobile {...headerConfigMobile} />
       ) : (
-        <DarkHeader {...headerConfig} />
+        <DarkDescription {...headerConfig} />
       )}
       <Content>
         <ImageContainer>

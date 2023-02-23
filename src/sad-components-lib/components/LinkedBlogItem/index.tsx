@@ -7,12 +7,13 @@ export const LinkedBlogItem = ({
   icon,
   info,
   heading,
-  id,
   hideId,
   hideText,
   vertical,
 }: IBlogItem) => {
-  const Link = vertical ? `/BlogInfo?id=${id}` : `?id=${id}`;
+  const Link = vertical
+    ? `/BlogInfo?id=${heading?.replaceAll(" ", "-")}`
+    : `?id=${heading?.replaceAll(" ", "-")}`;
 
   const navigate = useNavigate();
 
