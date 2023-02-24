@@ -1,7 +1,7 @@
 import { LinkedBlogItem } from "sad-landing-lib";
 
 import { IRelatedPost } from "./interfaces";
-import { Body, PostTitle } from "./styled";
+import { Body, NoPost, PostTitle } from "./styled";
 
 export const RelatedPost = ({
   items,
@@ -12,14 +12,20 @@ export const RelatedPost = ({
   return (
     <Body>
       <PostTitle>{title}</PostTitle>
-      {items.slice(0, 3).map((e) => (
-        <LinkedBlogItem
-          {...e}
-          key={e.heading}
-          hideId={hideId}
-          hideText={hiedText}
-        />
-      ))}
+      {items.length ? (
+        items
+          .slice(0, 3)
+          .map((e) => (
+            <LinkedBlogItem
+              {...e}
+              key={e.heading}
+              hideId={hideId}
+              hideText={hiedText}
+            />
+          ))
+      ) : (
+        <NoPost>NoPost</NoPost>
+      )}
     </Body>
   );
 };

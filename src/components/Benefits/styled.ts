@@ -24,12 +24,14 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+  }
 `;
 
 export const Text = styled.div`
   align-self: center;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    margin: 0 ${({ theme }) => theme.spaces.m}px;
+    margin: 0 ${({ theme }) => theme.spaces.sss}px;
   }
 `;
 
@@ -57,6 +59,11 @@ export const CardContainer = styled.div`
     overflow-y: hidden;
     height: fit-content;
   }
+  @media (max-width: ${({ theme }) => theme.endPoints.fold}px) {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
 `;
 
 export const CardElement = styled.div`
@@ -74,6 +81,7 @@ export const CardElement = styled.div`
     }
   }
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
+    margin: ${({ theme }) => theme.spaces.ss}px;
     & > div {
       width: ${({ theme }) => theme.spaces.xx}px;
       height: ${({ theme }) => theme.spaces.xx}px;

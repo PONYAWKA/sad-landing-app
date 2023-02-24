@@ -17,6 +17,7 @@ export const AboutMobile = () => {
 
   const { benefitConfig, breadCrumb, successConfig, testimonials, topConfig } =
     config[value];
+
   return (
     <Body>
       <CrumbsContainer>

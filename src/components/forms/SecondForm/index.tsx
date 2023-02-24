@@ -1,4 +1,4 @@
-import { Field, useFormik } from "formik";
+import { useFormik } from "formik";
 import { Button } from "sad-landing-lib";
 
 import { IContactUs } from "@/api/interfaces";
@@ -21,13 +21,12 @@ export const SecondFormaComponent = () => {
     Contact(e).then(() => resetForm());
   };
 
-  const { handleSubmit, handleChange, values, errors, resetForm, touched } =
-    useFormik({
-      initialValues: initialValue,
-      onSubmit: onSubmitHandler,
-      validationSchema: validScheme,
-      validateOnBlur: true,
-    });
+  const { handleSubmit, handleChange, values, errors, resetForm } = useFormik({
+    initialValues: initialValue,
+    onSubmit: onSubmitHandler,
+    validationSchema: validScheme,
+    validateOnBlur: true,
+  });
 
   return (
     <Body>

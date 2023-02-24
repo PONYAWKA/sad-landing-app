@@ -12,4 +12,7 @@ export const CrumbContainer = styled.section`
   width: 100%;
   margin-top: ${({ theme }) => theme.spaces.m}px;
   max-width: ${({ theme }) => theme.spaces.maxContentWidth}px;
+  & > div {
+    margin: 0;
+  }
 `;

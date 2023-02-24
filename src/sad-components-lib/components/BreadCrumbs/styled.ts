@@ -8,6 +8,9 @@ import { IStyled } from "./interfaces";
 export const Body = styled.div`
   display: flex;
   width: fit-content;
+  @media (max-width: ${libTheme.endPoints.tablet}) {
+    margin: 0 0 0 ${libTheme.spaces.ss}px;
+  }
 `;
 
 export const StyledLink = styled(Link)`

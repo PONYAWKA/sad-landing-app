@@ -33,7 +33,8 @@
     "simple-import-sort/exports": "error",
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "@typescript-eslint/no-explicit-any": 0
   },
   "settings": {
     "react": {

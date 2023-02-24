@@ -26,7 +26,7 @@ export const Home = () => {
   const { isMobile, isFold } = useIsMobile();
   const { value } = useTranslate();
   const {
-    BenefitConfig,
+    benefitConfig,
     newestConfig,
     powerConfig,
     priceCardsConfig,
@@ -36,12 +36,12 @@ export const Home = () => {
 
   const itemsToShow = () =>
     isFold
-      ? ElementsToShow.phone
+      ? elementsToShow.phone
       : isMobile
-      ? ElementsToShow.mobile
-      : ElementsToShow.desktop;
+      ? elementsToShow.mobile
+      : elementsToShow.desktop;
 
-  const { ElementsToShow } = homeConfig;
+  const { elementsToShow } = homeConfig;
   return (
     <Body>
       <PowerSection {...powerConfig} />
@@ -51,7 +51,7 @@ export const Home = () => {
       <NewestSection {...newestConfig} />
       <SolutionsSection {...solutionsConfig} />
       <Success {...successConfig} />
-      <Benefits {...BenefitConfig} />
+      <Benefits {...benefitConfig} />
       <CarouselContainer>
         <CarouselTeam
           items={Testimonials.items}

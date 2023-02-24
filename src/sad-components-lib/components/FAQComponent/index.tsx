@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { MinusIcon } from "@/sad-components-lib/assets/icons/MinusIcon";
 import { PlusIcon } from "@/sad-components-lib/assets/icons/PlusIcon";
 import { libTheme } from "@/sad-components-lib/theme";
@@ -13,7 +11,8 @@ export const FAQComponent = ({
   active,
   setActive,
 }: IFAQComponent) => {
-  const onClickHandler = () => setActive(heading);
+  const onClickHandler = () =>
+    setActive((prev) => (heading === prev ? "" : heading));
 
   const isOpen = heading === active;
 

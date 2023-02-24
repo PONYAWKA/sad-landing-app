@@ -18,6 +18,7 @@ export const HeaderContent = styled.section`
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
     padding: 0;
   }
+  text-align: center;
 `;
 
 export const Content = styled.section`

@@ -14,7 +14,7 @@ import {
 } from "./styled";
 
 export const Benefits = memo(({ title, text, cards }: BenefitsInterface) => (
-  <Container className="element-animation">
+  <Container>
     <Content>
       <TextContainer>
         <Text>

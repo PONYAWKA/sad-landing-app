@@ -14,7 +14,6 @@ import {
   InputContainerText,
   InputField,
   StyledForma,
-  TextTitle,
 } from "./styled";
 
 export const FormaComponent = () => {

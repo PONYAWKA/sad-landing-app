@@ -6,9 +6,9 @@ export const Body = styled.div`
   position: sticky;
   top: ${({ theme }) => theme.spaces.x}px;
   @media (max-width: ${({ theme }) => theme.endPoints.tablet}px) {
-    width: fit-content;
-    position: static;
-    margin-bottom: ${({ theme }) => theme.spaces.m}px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   margin: 0 auto;
 `;

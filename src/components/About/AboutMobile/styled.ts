@@ -9,6 +9,11 @@ export const Body = styled.div`
 
 export const CrumbsContainer = styled.div`
   margin: ${({ theme }) => theme.spaces.m}px;
+  width: 100%;
+
+  & > div {
+    margin: 0 0 0 ${({ theme }) => theme.spaces.m}px;
+  }
 `;
 
 export const SuccessContainer = styled.div`

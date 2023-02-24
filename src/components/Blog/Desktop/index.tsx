@@ -36,6 +36,7 @@ export const BlogDesktop = () => {
   const [related, setRelated] = useState(blogArticles);
   const [search, setSearch] = useState("");
   const [searchButton, setSarahButton] = useState(false);
+  const [popular, setPopular] = useState(blogArticles);
 
   const { value } = useTranslate();
   const {
@@ -50,15 +51,23 @@ export const BlogDesktop = () => {
 
   useMemo(() => {
     setRelated(
+      blogArticles.filter(
+        ({ tags }) => searchElem(tags, check) || check.includes("All topics")
+      )
+    );
+  }, [check]);
+
+  useMemo(() => {
+    setPopular(
       blogArticles
-        .filter(
-          ({ tags }) => searchElem(tags, check) || check.includes("All topics")
-        )
+        ?.sort(sortByPopular)
         .filter(({ heading }) =>
-          search ? heading.toLocaleLowerCase().includes(search) : true
+          search
+            ? heading.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            : true
         )
     );
-  }, [check, searchButton]);
+  }, [searchButton]);
 
   const handleSearch = () => setSarahButton((prev) => !prev);
 
@@ -71,7 +80,6 @@ export const BlogDesktop = () => {
   };
 
   if (blogTitle) {
-    const popular = blogArticles.sort(sortByPopular);
     const currentBlogInfo = blogArticles.filter(
       ({ heading }) => heading.replaceAll(" ", "-") === blogTitle
     )[0];
