@@ -1,8 +1,8 @@
 import { Media } from "sad-landing-lib";
 
 import { DropDownNav } from "@/components/Header/DropDownNav";
-import { options } from "@/constants/routs";
-import { useIsMobile } from "@/hooks/useMobile";
+import { options } from "@/constants/headerRouts";
+import { useDevice } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { ILinks } from "./interfaces";
@@ -10,7 +10,7 @@ import { LinkContainer, MediaContainer, StyledLink } from "./styled";
 
 export const LinkElement = ({ isOpen, setIsOpen }: ILinks) => {
   const { value } = useTranslate();
-  const { isMobile } = useIsMobile();
+  const { isMobile } = useDevice();
   const { NAV_ROUTES } = options[value];
 
   const handleClick = () => {

@@ -8,7 +8,7 @@ import { Button } from "sad-landing-lib";
 import play from "@/assets/icons/header/play.png";
 import logo from "@/assets/images/header/logo_blue.png";
 import { LinkElement } from "@/components/Header/Links";
-import { useIsMobile } from "@/hooks/useMobile";
+import { useDevice } from "@/hooks/useMobile";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { useTranslate } from "@/hooks/useTranslate";
 import { showBlocks } from "@/utils/showBlocks";
@@ -30,7 +30,7 @@ export const NavBar = () => {
   const [isYoutubeOpen, setIsYoutubeOpen] = useState(false);
 
   const navigation = useNavigate();
-  const { isMobile } = useIsMobile();
+  const { isMobile } = useDevice();
 
   const handleYouTube = () => setIsYoutubeOpen((prev) => !prev);
 

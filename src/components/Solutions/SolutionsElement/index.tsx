@@ -14,7 +14,7 @@ export const SolutionsElement = memo(
               <Icon src={img} loading="lazy" />
               <Title>{heading}</Title>
               <SubTitle>{description}</SubTitle>
-              {!hide && <StyledLick to="/solutionsInfo">Read More</StyledLick>}
+              {!hide && <StyledLick to="/solutions-info">Read More</StyledLick>}
             </Content>
           </Body>
         )}

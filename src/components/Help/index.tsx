@@ -7,7 +7,7 @@ import { useTranslate } from "@/hooks/useTranslate";
 import { options } from "./mock";
 import { Body, ButtonContent, Container, Text, Title } from "./styled";
 
-export const Help = memo(() => {
+export const Help = () => {
   const navigator = useNavigate();
 
   const handleClick = () => navigator("/Contacts");
@@ -19,10 +19,10 @@ export const Help = memo(() => {
       <Body className="element-animation">
         <Title>{title}</Title>
         <Text>{text}</Text>
-        <Button>
-          <ButtonContent onClick={handleClick}>{buttonText}</ButtonContent>
+        <Button onClick={handleClick}>
+          <ButtonContent>{buttonText}</ButtonContent>
         </Button>
       </Body>
     </Container>
   );
-});
+};

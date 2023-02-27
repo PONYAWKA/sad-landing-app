@@ -14,7 +14,7 @@ export const BlogItem = ({ text, icon, info, heading, id }: IBlogItem) => {
       <ElementTitle>{heading}</ElementTitle>
       <ElementText>{text}</ElementText>
       {id && (
-        <StyledLink to={`/BlogInfo?id=${heading?.replaceAll(" ", "-")}`}>
+        <StyledLink to={`/Blog-info?id=${heading?.replaceAll(" ", "-")}`}>
           Read more
         </StyledLink>
       )}

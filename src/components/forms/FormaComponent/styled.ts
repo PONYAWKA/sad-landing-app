@@ -65,7 +65,7 @@ export const ButtonContainer = styled.div`
   justify-content: end;
 `;
 
-export const ButtonText = styled.div`
+export const ButtonText = styled.div<IError>`
   margin: ${({ theme }) => theme.spaces.s}px ${({ theme }) => theme.spaces.mm}px;
 `;
 

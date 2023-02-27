@@ -12,7 +12,7 @@ export const ServiceElement = memo(
         <Title>{heading}</Title>
         <SubTitle>{description}</SubTitle>
         {!hide && (
-          <StyledLick to={`/servicesInfo?service=${id}`}>Read More</StyledLick>
+          <StyledLick to={`/services-info?service=${id}`}>Read More</StyledLick>
         )}
       </Body>
     );

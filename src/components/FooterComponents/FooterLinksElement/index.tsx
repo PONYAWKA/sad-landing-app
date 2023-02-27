@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import { useIsMobile } from "@/hooks/useMobile";
+import { useDevice } from "@/hooks/useMobile";
 
 import { IProps } from "./interface";
 import { AltLink, LinkContainer, LinkTitle, List, StyledLink } from "./styled";
 
-export const FooterLinkElement = ({ elements, title, alt }: IProps) => {
-  const { isMobile } = useIsMobile();
+export const FooterLinkElement = ({ routs, title, alt }: IProps) => {
+  const { isMobile } = useDevice();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +18,7 @@ export const FooterLinkElement = ({ elements, title, alt }: IProps) => {
     <List>
       <LinkTitle onClick={isOpenHandler}>{title}</LinkTitle>
       <LinkContainer isOpen={isMobile ? isOpen : true}>
-        {elements.map(({ title, to }) => {
+        {routs.map(({ title, to }) => {
           if (alt)
             return (
               <AltLink href={to} key={title}>

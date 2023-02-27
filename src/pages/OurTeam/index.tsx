@@ -5,7 +5,7 @@ import { DarkDescription } from "@/components/DarkDescription";
 import { ImageElement } from "@/components/OurTeam/ImageElement";
 import { OurTeamHeaderMobile } from "@/components/OurTeam/OurTeamHeaderMobile";
 import { profiles } from "@/constants/profiles";
-import { useIsMobile } from "@/hooks/useMobile";
+import { useDevice } from "@/hooks/useMobile";
 import { usePagination } from "@/hooks/usePagination";
 import { useTranslate } from "@/hooks/useTranslate";
 
@@ -15,7 +15,7 @@ import { Body, Content, ImageContainer } from "./styled";
 export const OurTeamPage = () => {
   const [posts, setPosts] = useState(profiles);
 
-  const { isMobile } = useIsMobile();
+  const { isMobile } = useDevice();
 
   const onPagination = () =>
     setPosts((prev) => {

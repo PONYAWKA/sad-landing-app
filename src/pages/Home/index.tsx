@@ -10,7 +10,7 @@ import { SolutionsSection } from "@/components/HomeComponents/SolutionsSection";
 import { Success } from "@/components/Success";
 import { blogArticles } from "@/constants/blogs";
 import { Testimonials } from "@/constants/Testimonials";
-import { useIsMobile } from "@/hooks/useMobile";
+import { useDevice } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { homeConfig } from "./mock";
@@ -23,7 +23,7 @@ import {
 } from "./styled";
 
 export const Home = () => {
-  const { isMobile, isFold } = useIsMobile();
+  const { isMobile, isFold } = useDevice();
   const { value } = useTranslate();
   const {
     benefitConfig,
@@ -34,11 +34,11 @@ export const Home = () => {
     successConfig,
   } = homeConfig[value];
 
-  const itemsToShow = () =>
+  const itemsToShow = (endpoint: number = elementsToShow.mobile) =>
     isFold
       ? elementsToShow.phone
       : isMobile
-      ? elementsToShow.mobile
+      ? endpoint
       : elementsToShow.desktop;
 
   const { elementsToShow } = homeConfig;

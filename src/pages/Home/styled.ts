@@ -36,7 +36,6 @@ export const CarouselContainer = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: ${({ theme }) => theme.spaces.mmm}px 0;
 `;
 
 export const PriceContainer = styled.section`

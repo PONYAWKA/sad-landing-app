@@ -10,7 +10,7 @@ const subscribeParams = (email: string) => ({
   subject: "You have subscribed to Anekdot.com",
   message: "You have subscribed to Anekdot.com",
 });
-const ContactParams = ({ email, theme, message }: IContactUs) => ({
+const contactParams = ({ email, theme, message }: IContactUs) => ({
   to_name: "Dev",
   to_email: "firstbloodcyclehasbegan@gmail.com",
   from_name: email,
@@ -20,24 +20,18 @@ const ContactParams = ({ email, theme, message }: IContactUs) => ({
 });
 
 export const SubEmail = (email: string) => {
-  emailjs
-    .send(
-      process.env.REACT_APP_MAIL_KEY as string,
-      process.env.REACT_APP_MAIL_TEMPLATE_SEND as string,
-      subscribeParams(email),
-      process.env.REACT_APP_MAIL_SECRET
-    )
-    .then(() => alert("The letter was sent"))
-    .catch(() => alert("The letter was not sent"));
+  emailjs.send(
+    process.env.REACT_APP_MAIL_KEY as string,
+    process.env.REACT_APP_MAIL_TEMPLATE_SEND as string,
+    subscribeParams(email),
+    process.env.REACT_APP_MAIL_SECRET
+  );
 };
-export const Contact = (params: IContactUs) => {
-  return emailjs
-    .send(
-      process.env.REACT_APP_MAIL_KEY as string,
-      process.env.REACT_APP_MAIL_TEMPLATE as string,
-      ContactParams(params),
-      process.env.REACT_APP_MAIL_SECRET
-    )
-    .then(() => alert("The letter was sent"))
-    .catch(() => alert("The letter was not sent"));
+export const contact = (params: IContactUs) => {
+  return emailjs.send(
+    process.env.REACT_APP_MAIL_KEY as string,
+    process.env.REACT_APP_MAIL_TEMPLATE as string,
+    contactParams(params),
+    process.env.REACT_APP_MAIL_SECRET
+  );
 };

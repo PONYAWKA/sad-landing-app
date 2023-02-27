@@ -6,7 +6,7 @@ import { SecondPageHeader } from "@/components/SecondPageHeader";
 import { Advantages } from "@/components/Solutions/Advantages";
 import { SolutionsList } from "@/components/Solutions/SolutionsList";
 import { Testimonials } from "@/constants/Testimonials";
-import { useIsMobile } from "@/hooks/useMobile";
+import { useDevice } from "@/hooks/useMobile";
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { options } from "./mock";
@@ -23,7 +23,7 @@ export const Solutions = () => {
   const { advantagesConfig, breadCrumb, pageHeaderConfig, solutionsItems } =
     options[value];
 
-  const { isMobile } = useIsMobile();
+  const { isMobile } = useDevice();
   return (
     <Body>
       <BreadCrumbContainer>

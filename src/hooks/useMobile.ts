@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { theme } from "@/theme";
 
-export const useIsMobile = (breakpoint = theme.endPoints.tablet) => {
+export const useDevice = (breakpoint = theme.endPoints.tablet) => {
   const checkForDevice = () => {
     return {
       tablet: document.documentElement.clientWidth < breakpoint,

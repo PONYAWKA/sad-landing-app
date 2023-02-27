@@ -1,10 +1,10 @@
 import { PageHeader } from "@/components/PageHeader";
 import { useTranslate } from "@/hooks/useTranslate";
 
+import { Forma } from "../../forms/AboutForm";
 import { Customers } from "../Customers";
 import { Description } from "../DescriptionSection";
 import { Numbers } from "../EnsomeInNumbers";
-import { Forma } from "../Form";
 import { config } from "./mock";
 import { Body, PageHeaderContainer } from "./styled";
 

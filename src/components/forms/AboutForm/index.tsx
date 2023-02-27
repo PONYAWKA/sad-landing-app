@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { useTranslate } from "@/hooks/useTranslate";
 
 import { ContactForm } from "../ContactForm";
@@ -25,10 +27,10 @@ export const Forma = () => {
             suscipit laboriosam, nisi ut aliquid ex ea commodi.
           </SubTitle>
           {elements.map(({ text, title }) => (
-            <>
+            <Fragment key={title}>
               <InfoText>{title}</InfoText>
               <Info>{text}</Info>
-            </>
+            </Fragment>
           ))}
         </Container>
         <Container>

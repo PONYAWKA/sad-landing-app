@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { LinkedBlogItem } from "sad-landing-lib";
 
 import { IRelatedPost } from "./interfaces";
@@ -9,20 +10,19 @@ export const RelatedPost = ({
   hideId,
   hiedText,
 }: IRelatedPost) => {
+  const slicedItems = useMemo(() => items.slice(0, 3), [items]);
   return (
     <Body>
       <PostTitle>{title}</PostTitle>
-      {items.length ? (
-        items
-          .slice(0, 3)
-          .map((e) => (
-            <LinkedBlogItem
-              {...e}
-              key={e.heading}
-              hideId={hideId}
-              hideText={hiedText}
-            />
-          ))
+      {slicedItems.length ? (
+        slicedItems.map((e) => (
+          <LinkedBlogItem
+            {...e}
+            key={e.heading}
+            hideId={hideId}
+            hideText={hiedText}
+          />
+        ))
       ) : (
         <NoPost>NoPost</NoPost>
       )}

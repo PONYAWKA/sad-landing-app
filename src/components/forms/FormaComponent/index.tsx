@@ -1,8 +1,8 @@
-import { useFormik } from "formik";
+import { Field, FormikProvider, useFormik } from "formik";
 import { Button } from "sad-landing-lib";
 
 import { IContactUs } from "@/api/interfaces";
-import { Contact } from "@/api/mailAPI";
+import { contact } from "@/api/mailAPI";
 
 import { initialValue, validScheme } from "./mock";
 import {
@@ -18,64 +18,78 @@ import {
 
 export const FormaComponent = () => {
   const onSubmitHandler = (e: IContactUs) => {
-    Contact(e).then(() => resetForm());
+    resetForm();
+    contact(e).catch(() =>
+      setErrors({ ...errors, sand: "The letter was'nt send" })
+    );
   };
-  const { handleSubmit, handleChange, values, errors, resetForm } = useFormik({
+  const form = useFormik({
     initialValues: initialValue,
     onSubmit: onSubmitHandler,
     validationSchema: validScheme,
   });
 
+  const { handleSubmit, handleChange, values, errors, resetForm, setErrors } =
+    form;
+
   return (
     <Body>
-      <StyledForma onSubmit={handleSubmit}>
-        <InputContainer>
+      <FormikProvider value={form}>
+        <StyledForma onSubmit={handleSubmit}>
+          <InputContainer>
+            <InputContainerText>
+              <Field
+                as={InputField}
+                name="email"
+                type="email"
+                onChange={handleChange}
+                error={!!errors.name}
+                value={values.email}
+                placeholder="Your email"
+              />
+            </InputContainerText>
+            <InputContainerText>
+              <Field
+                as={InputField}
+                name="name"
+                type="text"
+                onChange={handleChange}
+                value={values.name}
+                error={!!errors.name}
+                placeholder="Your name"
+              />
+            </InputContainerText>
+          </InputContainer>
           <InputContainerText>
-            <InputField
-              name="email"
-              type="email"
-              onChange={handleChange}
-              value={values.email}
-              error={!!errors.email}
-              placeholder="Your email"
-            />
-          </InputContainerText>
-          <InputContainerText>
-            <InputField
-              name="name"
+            <Field
+              as={InputField}
+              name="theme"
               type="text"
               onChange={handleChange}
-              value={values.name}
-              error={!!errors.name}
-              placeholder="Your name"
+              value={values.theme}
+              error={!!errors.theme}
+              placeholder="Theme"
             />
           </InputContainerText>
-        </InputContainer>
-        <InputContainerText>
-          <InputField
-            name="theme"
-            type="text"
-            onChange={handleChange}
-            value={values.theme}
-            error={!!errors.theme}
-            placeholder="Theme"
-          />
-        </InputContainerText>
-        <InputContainerText>
-          <BigInputField
-            name="message"
-            onChange={handleChange}
-            value={values.message}
-            error={!!errors.message}
-            placeholder="Your message"
-          />
-        </InputContainerText>
-        <ButtonContainer>
-          <Button type="submit">
-            <ButtonText>Send</ButtonText>
-          </Button>
-        </ButtonContainer>
-      </StyledForma>
+          <InputContainerText>
+            <Field
+              as={BigInputField}
+              name="message"
+              onChange={handleChange}
+              value={values.message}
+              error={!!errors.message}
+              placeholder="Your message"
+            />
+          </InputContainerText>
+          <ButtonContainer>
+            <Button type="submit">
+              <ButtonText error={!!errors.sand}>
+                {errors.sand ? "Error" : "Send"}
+              </ButtonText>
+            </Button>
+          </ButtonContainer>
+        </StyledForma>
+      </FormikProvider>
     </Body>
   );
 };

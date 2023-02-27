@@ -1,6 +1,6 @@
 export interface IProps {
   title: string;
-  elements: {
+  routs: {
     to: string;
     title: string;
   }[];
